@@ -5,6 +5,11 @@
     box-sizing: border-box;
 }
 
+:root {
+    --header-height: 80px;
+    --footer-height: 80px;
+}
+
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
     line-height: 1.6;
@@ -57,7 +62,7 @@ nav a:hover {
 
 /* Main content styles */
 main {
-    min-height: calc(100vh - 200px);
+    min-height: calc(100vh - var(--header-height) - var(--footer-height));
 }
 
 section {
