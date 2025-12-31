@@ -14,7 +14,7 @@ export async function POST(req: NextRequest) {
     }
 
     console.log("Groq key:", process.env.GROQ_API_KEY);
-    const apiKey = "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";
+    const apiKey = process.env.GROQ_API_KEY;
     if (!apiKey) {
       return NextResponse.json(
         { reply: "Groq API key is missing on the server." },
