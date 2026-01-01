@@ -11,18 +11,8 @@ export default function HomePage() {
   return (
     <div className="dosbre-root">
 
-      {/* HEADER */}
-      <header className="dosbre-header">
-        <div className="dosbre-logo">DOSREB LTD</div>
-        <nav>
-          <ul className="dosbre-nav">
-            <li><button onClick={() => scrollToId("what-is-dosbre")}>Service</button></li>
-            <li><button onClick={() => scrollToId("lumi")}>Lumi</button></li>
-            <li><button onClick={() => scrollToId("security")}>Security</button></li>
-            <li><button onClick={() => scrollToId("projects")}>Projects</button></li>
-            <li><button onClick={() => scrollToId("investors")}>Investors</button></li>
-          </ul>
-        </nav>
+      {/* MAIN CONTENT */}
+      <main className="dosbre-main">
       </header>
 
       {/* MAIN CONTENT */}
