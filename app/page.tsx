@@ -12,6 +12,11 @@ export default function HomePage() {
     if (el) el.scrollIntoView({ behavior: "smooth" });
   };
 
+  const scrollToTop = () => {
+    if (typeof window === "undefined") return;
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   return (
     <div className="dosbre-root">
 
@@ -124,6 +129,12 @@ export default function HomePage() {
         </section>
       </main>
       <LumiChat />
+      
+      {/* BACK TO TOP BUTTON */}
+      <button onClick={scrollToTop} className="back-to-top" aria-label="Back to top">
+        ↑
+      </button>
+
       {/* FOOTER */}
       <footer className="dosbre-footer">
         <div className="footer-links">
