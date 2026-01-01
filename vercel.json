@@ -1,0 +1,13 @@
+{
+  "buildCommand": "npm run build",
+  "devCommand": "npm run dev",
+  "installCommand": "npm install",
+  "framework": "nextjs",
+  "redirects": [
+    {
+      "source": "/dosbre.com/:path*",
+      "destination": "/dosreb.com/:path*",
+      "permanent": true
+    }
+  ]
+}

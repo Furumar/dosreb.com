@@ -48,7 +48,7 @@ export default function LumiChat() {
             {
               role: "system",
               content:
-                "You are Lumi, a calm, intelligent assistant for Dosbre.com. You help with real estate, construction, documents, and processes with clarity and emotional ease."
+                "You are Lumi, a calm, intelligent assistant for Dosreb.com. You help with real estate, construction, documents, and processes with clarity and emotional ease."
             },
             ...messages.map((m) => ({
               role: m.from === "user" ? "user" : "assistant",

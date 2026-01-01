@@ -19,8 +19,8 @@ export default function ContactPage() {
         </p>
 
         <div className="contact-box">
-          <p><strong>Email:</strong> info@dosbre.com</p>
-          <p><strong>Founder:</strong> marco@dosbre.com</p>
+          <p><strong>Email:</strong> info@dosreb.com</p>
+          <p><strong>Founder:</strong> marco@dosreb.com</p>
           <p><strong>Business ID:</strong> (add when ready)</p>
         </div>
 
