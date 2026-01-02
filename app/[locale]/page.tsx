@@ -22,12 +22,12 @@ export default function HomePage() {
   };
 
   return (
-    <div className="dosbre-root">
+    <div className="dosreb-root">
       {/* MAIN CONTENT */}
-      <main className="dosbre-main">
+      <main className="dosreb-main">
 
         {/* HERO SECTION */}
-        <section className="dosbre-hero" id="top">
+        <section className="dosreb-hero" id="top">
           <div className="hero-content">
             <div className="hero-text">
               <h1 className="hero-title">{t('hero.title')}</h1>
@@ -46,7 +46,7 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* ABOUT DOSBRE */}
+        {/* ABOUT DOSREB */}
         <section id="about" className="section-block">
           <h2>{t('about.title')}</h2>
           <p>{t('about.description')}</p>
@@ -124,7 +124,7 @@ export default function HomePage() {
       </button>
 
       {/* FOOTER */}
-      <footer className="dosbre-footer">
+      <footer className="dosreb-footer">
         <div className="footer-links">
           <Link href="#about">{t('nav.about')}</Link> | <Link href="#projects">{t('nav.projects')}</Link> | <Link href="#contact">{t('nav.contact')}</Link> | <Link href="#">{t('footer.privacyPolicy')}</Link>
         </div>

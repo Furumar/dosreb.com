@@ -7,7 +7,7 @@ export default async function ProjectsPage({ params }: { params: Promise<{ local
   const t = await getTranslations('projectsPage');
   
   return (
-    <div className="dosbre-page">
+    <div className="dosreb-page">
       <section className="page-hero">
         <h1>{t('title')}</h1>
         <p className="page-lead">

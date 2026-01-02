@@ -1,7 +1,7 @@
 # Domain Setup Guide: dosreb.com
 
 ## ✅ Completed
-- Updated all code references from dosbre.com to dosreb.com
+- Updated all code references from dosreb.com to dosreb.com
 - Updated package.json and regenerated package-lock.json
 - Cleaned up duplicate folders
 - Created Vercel configuration
@@ -12,9 +12,9 @@
 The GitHub CLI doesn't have permission to rename the repository automatically.
 
 **Manual steps:**
-1. Go to https://github.com/Furumar/dosbre.com/settings
+1. Go to https://github.com/Furumar/dosreb.com/settings
 2. Scroll down to "Repository name"
-3. Change from `dosbre.com` to `dosreb.com`
+3. Change from `dosreb.com` to `dosreb.com`
 4. Click "Rename"
 5. Update your local git remote:
    ```bash
@@ -65,6 +65,6 @@ After DNS propagation (5-30 minutes):
 - Check SSL certificate is valid
 
 ### 5. Optional: Redirect Old Domain
-If you still own dosbre.com and want to redirect traffic:
-- Keep dosbre.com pointing to the same hosting
+If you still own dosreb.com and want to redirect traffic:
+- Keep dosreb.com pointing to the same hosting
 - Add a redirect rule in your hosting platform

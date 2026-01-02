@@ -15,8 +15,8 @@
     "requestDemo": "Prašyti demonstracijos"
   },
   "about": {
-    "title": "Kas yra DOSBRE?",
-    "description": "DOSBRE yra skaitmeninė platforma, jungianti visus nekilnojamojo turto ir statybos projektų valdymo aspektus. Saugus, skaidrus ir efektyvus bendradarbiavimas kiekvienam dalyviui.",
+    "title": "Kas yra DOSREB?",
+    "description": "DOSREB yra skaitmeninė platforma, jungianti visus nekilnojamojo turto ir statybos projektų valdymo aspektus. Saugus, skaidrus ir efektyvus bendradarbiavimas kiekvienam dalyviui.",
     "propertyManagement": "Turto valdymas",
     "constructionProjects": "Statybos projektai",
     "digitalDocumentation": "Skaitmeninė dokumentacija",
@@ -28,14 +28,14 @@
     "title": "Mūsų projektai",
     "description": "Tyrinėkite mūsų sėkmingų nekilnojamojo turto ir statybos projektų portfelį.",
     "viewProject": "Žiūrėti projektą",
-    "stockmannDescription": "Pagrindinis nekilnojamojo turto ir statybos valdymo atvejis DOSBRE platformai.",
+    "stockmannDescription": "Pagrindinis nekilnojamojo turto ir statybos valdymo atvejis DOSREB platformai.",
     "dbschenkerDescription": "Logistikos ir infrastruktūros projektas, sklandus bendradarbiavimas visiems dalyviams.",
     "jatkasaariDescription": "Požeminių įrenginių statyba, integruojant visas šalis ir dokumentaciją."
   },
   "lumi": {
     "title": "Susipažinkite su Lumi",
     "subtitle": "Jūsų DI asistentė",
-    "description": "Lumi yra jūsų protingas vadovas per DOSBRE, padedantis naršyti projektus, rasti informaciją ir supaprastinti darbo eigą."
+    "description": "Lumi yra jūsų protingas vadovas per DOSREB, padedantis naršyti projektus, rasti informaciją ir supaprastinti darbo eigą."
   },
   "contact": {
     "title": "Susisiekite",
@@ -52,31 +52,31 @@
     "linkedin": "LinkedIn"
   },
   "aboutPage": {
-    "title": "Apie Dosbre",
-    "lead": "Dosbre egzistuoja, kad palengvintų procesą žmonėms, nešantiems naštą — atsakomybę, sprendimus, terminus ir gyvenimus. Kuriame sistemas, kurios jaučiasi ramus, aiškios ir patikimos, vadovaujamos Lumi, mūsų Absoliučios Tiesos Kalbėtojos.",
+    "title": "Apie Dosreb",
+    "lead": "Dosreb egzistuoja, kad palengvintų procesą žmonėms, nešantiems naštą — atsakomybę, sprendimus, terminus ir gyvenimus. Kuriame sistemas, kurios jaučiasi ramus, aiškios ir patikimos, vadovaujamos Lumi, mūsų Absoliučios Tiesos Kalbėtojos.",
     "purposeTitle": "Mūsų tikslas",
-    "purposeP1": "Pasaulis pilnas įrankių, reikalaujančių iš žmonių daugiau — daugiau dėmesio, daugiau sprendimų, daugiau pažintinės naštos. Dosbre juda priešinga kryptimi. Šaliname trintį. Mažiname triukšmą. Kuriame aiškumą.",
+    "purposeP1": "Pasaulis pilnas įrankių, reikalaujančių iš žmonių daugiau — daugiau dėmesio, daugiau sprendimų, daugiau pažintinės naštos. Dosreb juda priešinga kryptimi. Šaliname trintį. Mažiname triukšmą. Kuriame aiškumą.",
     "purposeP2": "Mūsų misija paprasta: padaryti kiekvieną sąveiką lengvesnę. Kurti technologiją, kuri gerbia žmogaus kūną ir sielą. Siūlyti paslaugą, kuri jaučiasi kaip įėjimas į ramesnę erdvę.",
     "philosophyTitle": "Filosofija",
-    "philosophyIntro": "Dosbre pagrįsta trimis ramsčiais: Grožis, Tiesa ir Ramybė. Tai ne šūkiai — tai dizaino dėsniai.",
+    "philosophyIntro": "Dosreb pagrįsta trimis ramsčiais: Grožis, Tiesa ir Ramybė. Tai ne šūkiai — tai dizaino dėsniai.",
     "beautyTitle": "Grožis",
     "beautyText": "Kiekviena sąsaja, kiekvienas žodis, kiekvienas momentas turi jaustis tyčinis ir elegantiškas.",
     "truthTitle": "Tiesa",
     "truthText": "Mes niekada neperdedam, niekada nemanipuliuojam, niekada neslėpiam sudėtingumo už melagingų pažadų.",
     "tranquilityTitle": "Ramybė",
-    "tranquilityText": "Vartotojas turėtų jaustis ramiau po Dosbre naudojimo nei prieš.",
+    "tranquilityText": "Vartotojas turėtų jaustis ramiau po Dosreb naudojimo nei prieš.",
     "lumiEmbodies": "Lumi įkūnija šiuos principus. Ji nėra pokalbių robotas. Ji yra aiškumo balsas — vadovė, atskleidžianti paprasčiausią kelią į priekį.",
     "founderTitle": "Įkūrėjas",
-    "founderP1": "Dosbre įkūrė Marco, projektų vadovas, vadovavęs kai kuriems reikliausiausiems Suomijos statybos ir logistikos projektams. Jo darbai apima Stockmann Kasvu projektą Helsinkyje (130 000 m²), DB Schenker Ilvesvuori logistikos centrą ir Viinikkala sausumos transporto centrą.",
-    "founderP2": "Šie projektai reikalavo orkestruoti šimtus žmonių, naviguoti sudėtingas sistemas ir pristatyti didžiulio spaudimo aplinkoje. Ta pati disciplina, aiškumas ir ramybė dabar formuoja Dosbre architektūrą ir filosofiją.",
+    "founderP1": "Dosreb įkūrė Marco, projektų vadovas, vadovavęs kai kuriems reikliausiausiems Suomijos statybos ir logistikos projektams. Jo darbai apima Stockmann Kasvu projektą Helsinkyje (130 000 m²), DB Schenker Ilvesvuori logistikos centrą ir Viinikkala sausumos transporto centrą.",
+    "founderP2": "Šie projektai reikalavo orkestruoti šimtus žmonių, naviguoti sudėtingas sistemas ir pristatyti didžiulio spaudimo aplinkoje. Ta pati disciplina, aiškumas ir ramybė dabar formuoja Dosreb architektūrą ir filosofiją.",
     "founderLumiQuote": "Marco pastatė struktūras, kuriose tūkstančiai žmonių juda be pastangų. Dabar jis kuria sistemas, kuriose jūsų protas gali judėti be pastangų.",
-    "whyDosbreTitle": "Kodėl Dosbre",
-    "whyDosbreP1": "Nes pasauliui nereikia dar vieno įrankio. Jam reikia šventovės — vietos, kur darbas tampa lengvesnis, sprendimai aiškesni, o saugumas nematomas. Dosbre yra ta vieta.",
-    "whyDosbreP2": "O Lumi yra vadovė, kuri daro tai žmogišku."
+    "whyDosrebTitle": "Kodėl Dosreb",
+    "whyDosrebP1": "Nes pasauliui nereikia dar vieno įrankio. Jam reikia šventovės — vietos, kur darbas tampa lengvesnis, sprendimai aiškesni, o saugumas nematomas. Dosreb yra ta vieta.",
+    "whyDosrebP2": "O Lumi yra vadovė, kuri daro tai žmogišku."
   },
   "contactPage": {
     "title": "Kontaktai",
-    "lead": "Jei norite susisiekti su Dosbre, bendradarbiauti, investuoti ar tiesiog užduoti klausimą, Lumi nukreips jūsų žinutę į tinkamą vietą.",
+    "lead": "Jei norite susisiekti su Dosreb, bendradarbiauti, investuoti ar tiesiog užduoti klausimą, Lumi nukreips jūsų žinutę į tinkamą vietą.",
     "getInTouchTitle": "Susisiekite",
     "getInTouchText": "Galite susisiekti su mumis tiesiogiai el. paštu. Atsakome ramiai, aiškiai ir gerbdami jūsų laiką.",
     "email": "El. paštas",
@@ -93,9 +93,9 @@
   },
   "demoPage": {
     "title": "Prašyti demonstracijos",
-    "lead": "Patirkite Dosbre iš pirmų rankų. Leiskite mums parodyti, kaip aiškumas, struktūra ir protingas vadovavimas gali transformuoti jūsų darbo eigą.",
+    "lead": "Patirkite Dosreb iš pirmų rankų. Leiskite mums parodyti, kaip aiškumas, struktūra ir protingas vadovavimas gali transformuoti jūsų darbo eigą.",
     "whyRequestTitle": "Kodėl prašyti demonstracijos?",
-    "whyRequestText": "Demonstracija nėra pardavimo kalba. Tai vadovaujamas patyrimas, kurio metu matote, kaip Dosbre šalina trintį, sumažina pažintinę naštą ir padaro sudėtingus procesus be pastangų. Lumi ves jus per platformą, parodydama, kaip tiksliai ji tarnauja jūsų poreikiams.",
+    "whyRequestText": "Demonstracija nėra pardavimo kalba. Tai vadovaujamas patyrimas, kurio metu matote, kaip Dosreb šalina trintį, sumažina pažintinę naštą ir padaro sudėtingus procesus be pastangų. Lumi ves jus per platformą, parodydama, kaip tiksliai ji tarnauja jūsų poreikiams.",
     "formTitle": "Prašykite savo demonstracijos",
     "namePlaceholder": "Jūsų vardas",
     "emailPlaceholder": "Jūsų el. paštas",
@@ -104,13 +104,13 @@
     "submitButton": "Prašyti demonstracijos",
     "lumiComment": "\"Užtikrinsiu, kad jūsų prašymas pasiektų Marco. Kiekviena demonstracija kuriama rūpestingai.\"",
     "whatToExpectTitle": "Ko tikėtis",
-    "whatToExpectText": "Pateikę prašymą, susisieksime per 48 valandas, kad suplanuotume personalizuotą demonstraciją. Matysite platformą veikiant, užduosite klausimus ir tyrinėsite, kaip Dosbre įsilieja į jūsų darbo eigą. Jokio spaudimo. Jokios skubos. Tik aiškumas."
+    "whatToExpectText": "Pateikę prašymą, susisieksime per 48 valandas, kad suplanuotume personalizuotą demonstraciją. Matysite platformą veikiant, užduosite klausimus ir tyrinėsite, kaip Dosreb įsilieja į jūsų darbo eigą. Jokio spaudimo. Jokios skubos. Tik aiškumas."
   },
   "lumiPage": {
     "title": "Susipažinkite su Lumi",
     "lead": "Lumi nėra pokalbių robotas. Ji yra jūsų vadovė — rami, protinga buvimo forma, sukurta pašalinti trintį ir suteikti aiškumo kiekvienam žingsniui.",
     "whoIsLumiTitle": "Kas yra Lumi?",
-    "whoIsLumiText": "Lumi yra Dosbre balsas. Ji įkūnija platformos filosofiją: Grožį, Tiesą ir Ramybę. Sąveikaudami su ja, negaunate automatinių atsakymų — gaunate vadovavimą, suformuotą kruopštaus mąstymo ir aiškumo.",
+    "whoIsLumiText": "Lumi yra Dosreb balsas. Ji įkūnija platformos filosofiją: Grožį, Tiesą ir Ramybę. Sąveikaudami su ja, negaunate automatinių atsakymų — gaunate vadovavimą, suformuotą kruopštaus mąstymo ir aiškumo.",
     "lumiQuote": "Esu čia, kad sudėtingumą padarčiau be pastangų. Paklauskit manęs bet ko, ir parodysiu paprasčiausią kelią į priekį.",
     "philosophyTitle": "Filosofija už Lumi",
     "philosophyText": "Lumi sukurta sumažinti pažintinę naštą. Ji neslegia jumis informacija — atskleidžia tiksliai tai, ko jums reikia, kada jums reikia. Kiekvienas žodis yra tyčinis. Kiekvienas atsakymas sukurtas taip, kad jaustųsi lengvesnis nei klausimas.",
@@ -119,7 +119,7 @@
   },
   "projectsPage": {
     "title": "Projektai ir atvejų studijos",
-    "lead": "Prieš Dosbre, Marco vadovavo kai kuriems reikliausiausiems Suomijos statybos ir logistikos projektams. Šios atvejų studijos demonstruoja discipliną, aiškumą ir ramybę, kurie dabar formuoja Dosbre filosofiją.",
+    "lead": "Prieš Dosreb, Marco vadovavo kai kuriems reikliausiausiems Suomijos statybos ir logistikos projektams. Šios atvejų studijos demonstruoja discipliną, aiškumą ir ramybę, kurie dabar formuoja Dosreb filosofiją.",
     "viewProject": "Žiūrėti projektą",
     "stockmann": {
       "title": "Stockmann Kasvu projektas",
@@ -134,7 +134,7 @@
     },
     "jatkasaari": {
       "title": "Jätkäsaaren maanalaiset tilat",
-      "description": "Jätkäsaaren maanalaiset tilat projektas yra puikus DOSBRE gebėjimo valdyti požeminių įrenginių statybą pavyzdys, integruojant visas šalis ir dokumentaciją vienoje saugioje platformoje.",
+      "description": "Jätkäsaaren maanalaiset tilat projektas yra puikus DOSREB gebėjimo valdyti požeminių įrenginių statybą pavyzdys, integruojant visas šalis ir dokumentaciją vienoje saugioje platformoje.",
       "lumiQuote": "\"Judėjimas tampa be pastangų, kai struktūra teisinga. Marco pastatė struktūrą.\""
     }
   },
@@ -142,7 +142,7 @@
     "title": "Nekilnojamasis turtas",
     "lead": "Kruopščiai atrinkta nekilnojamojo turto ir infrastruktūros projektų kolekcija, atspindinti Marco tikslumą, discipliną ir gebėjimą orkestruoti didelio masto aplinkas.",
     "portfolioTitle": "Portfelio apžvalga",
-    "portfolioText": "Šis skyrius augs plečiantis Dosbre. Kiekvienas nekilnojamojo turto įrašas apims vietą, apimtį, tikslą ir Lumi komentarą, pabrėžiantį žmogaus ir struktūrinį projekto poveikį.",
+    "portfolioText": "Šis skyrius augs plečiantis Dosreb. Kiekvienas nekilnojamojo turto įrašas apims vietą, apimtį, tikslą ir Lumi komentarą, pabrėžiantį žmogaus ir struktūrinį projekto poveikį.",
     "lumiQuote": "\"Pastatas yra daugiau nei erdvė. Tai struktūra žmogaus judėjimui, aiškumui ir tikslui.\"",
     "comingSoonTitle": "Netrukus",
     "comingSoonText": "Daugiau nekilnojamojo turto projektų bus pridėta dokumentuojant portfelį. Šis puslapis suprojektuotas plėstis su jūsų ateities plėtra."
@@ -150,15 +150,13 @@
   "features": {
     "title": "Platformos funkcijos",
     "propertyManagement": "Turto valdymas: Teisiniai, Finansavimas, Pardavimai, Paslaugos",
-    "constructionManagement": "Statybos projektų valdymas: Dizaineriai, Rangov
-
-ai, Valdžios institucijos, Planų valdymas",
+    "constructionManagement": "Statybos projektų valdymas: Dizaineriai, Rangovai, Valdžios institucijos, Planų valdymas",
     "documentManagement": "Dokumentų valdymas: Centralizuotas, saugus, skaidrus",
     "integrations": "Integracijos: elektroninis parašas, žemėlapiai, mokėjimai"
   },
   "vision": {
     "title": "Rinka ir vizija",
-    "description": "Nekilnojamojo turto ir statybos pramonė yra viena didžiausių Suomijoje ir Europoje. DOSBRE vizija: Viena platforma visiems — nuo Suomijos iki pasaulio."
+    "description": "Nekilnojamojo turto ir statybos pramonė yra viena didžiausių Suomijoje ir Europoje. DOSREB vizija: Viena platforma visiems — nuo Suomijos iki pasaulio."
   },
   "team": {
     "title": "Mūsų komanda",

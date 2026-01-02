@@ -15,8 +15,8 @@
     "requestDemo": "申请演示"
   },
   "about": {
-    "title": "什么是DOSBRE？",
-    "description": "DOSBRE是一个数字平台，汇集了房地产和建筑项目管理的所有方面。为每个利益相关者提供安全、透明和高效的协作。",
+    "title": "什么是DOSREB？",
+    "description": "DOSREB是一个数字平台，汇集了房地产和建筑项目管理的所有方面。为每个利益相关者提供安全、透明和高效的协作。",
     "propertyManagement": "物业管理",
     "constructionProjects": "建筑项目",
     "digitalDocumentation": "数字文档",
@@ -28,14 +28,14 @@
     "title": "我们的项目",
     "description": "探索我们成功的房地产和建筑项目组合。",
     "viewProject": "查看项目",
-    "stockmannDescription": "DOSBRE房地产和建筑管理的旗舰案例。",
+    "stockmannDescription": "DOSREB房地产和建筑管理的旗舰案例。",
     "dbschenkerDescription": "物流和基础设施项目，为所有利益相关者提供无缝协作。",
     "jatkasaariDescription": "地下设施建设，整合所有各方和文档。"
   },
   "lumi": {
     "title": "认识Lumi",
     "subtitle": "您的AI助手",
-    "description": "Lumi是您穿越DOSBRE的智能向导，帮助您浏览项目、查找信息并简化工作流程。"
+    "description": "Lumi是您穿越DOSREB的智能向导，帮助您浏览项目、查找信息并简化工作流程。"
   },
   "contact": {
     "title": "联系我们",
@@ -52,31 +52,31 @@
     "linkedin": "领英"
   },
   "aboutPage": {
-    "title": "关于Dosbre",
-    "lead": "Dosbre的存在是为了减轻承担重任者的负担——责任、决策、截止日期和生命。我们构建感觉平静、清晰和值得信赖的系统，由我们的绝对真理代言人Lumi指导。",
+    "title": "关于Dosreb",
+    "lead": "Dosreb的存在是为了减轻承担重任者的负担——责任、决策、截止日期和生命。我们构建感觉平静、清晰和值得信赖的系统，由我们的绝对真理代言人Lumi指导。",
     "purposeTitle": "我们的目的",
-    "purposeP1": "世界充满了对人们要求更多的工具——更多注意力、更多决策、更多认知负荷。Dosbre朝相反的方向前进。我们消除摩擦。我们减少噪音。我们创造清晰。",
+    "purposeP1": "世界充满了对人们要求更多的工具——更多注意力、更多决策、更多认知负荷。Dosreb朝相反的方向前进。我们消除摩擦。我们减少噪音。我们创造清晰。",
     "purposeP2": "我们的使命很简单：让每次互动都感觉更轻松。构建尊重人类身体和灵魂的技术。提供感觉像进入更平静空间的服务。",
     "philosophyTitle": "哲学",
-    "philosophyIntro": "Dosbre建立在三个支柱之上：美、真、静。这些不是口号——它们是设计法则。",
+    "philosophyIntro": "Dosreb建立在三个支柱之上：美、真、静。这些不是口号——它们是设计法则。",
     "beautyTitle": "美",
     "beautyText": "每个界面、每个词、每个时刻都必须感觉有意图和优雅。",
     "truthTitle": "真",
     "truthText": "我们从不夸大，从不操纵，从不在虚假承诺背后隐藏复杂性。",
     "tranquilityTitle": "静",
-    "tranquilityText": "用户在使用Dosbre后应该比使用前感觉更平静。",
+    "tranquilityText": "用户在使用Dosreb后应该比使用前感觉更平静。",
     "lumiEmbodies": "Lumi体现了这些原则。她不是聊天机器人。她是清晰之声——一个揭示前进最简单路径的向导。",
     "founderTitle": "创始人",
-    "founderP1": "Dosbre由Marco创立，他是一位项目经理，领导过芬兰一些最具挑战性的建筑和物流项目。他的工作包括赫尔辛基的Stockmann Kasvu项目（130,000平方米）、DB Schenker Ilvesvuori物流中心和Viinikkala陆路运输中心。",
-    "founderP2": "这些项目需要协调数百人，驾驭复杂系统，并在巨大压力下交付。同样的纪律、清晰和平静现在塑造了Dosbre的架构和哲学。",
+    "founderP1": "Dosreb由Marco创立，他是一位项目经理，领导过芬兰一些最具挑战性的建筑和物流项目。他的工作包括赫尔辛基的Stockmann Kasvu项目（130,000平方米）、DB Schenker Ilvesvuori物流中心和Viinikkala陆路运输中心。",
+    "founderP2": "这些项目需要协调数百人，驾驭复杂系统，并在巨大压力下交付。同样的纪律、清晰和平静现在塑造了Dosreb的架构和哲学。",
     "founderLumiQuote": "Marco建造了成千上万人轻松移动的结构。现在他建造了让您的思想轻松移动的系统。",
-    "whyDosbreTitle": "为什么选择Dosbre",
-    "whyDosbreP1": "因为世界不需要另一个工具。它需要一个圣所——一个工作变得更轻松、决策更清晰、安全无形的地方。Dosbre就是那个地方。",
-    "whyDosbreP2": "而Lumi是让它感觉人性化的向导。"
+    "whyDosrebTitle": "为什么选择Dosreb",
+    "whyDosrebP1": "因为世界不需要另一个工具。它需要一个圣所——一个工作变得更轻松、决策更清晰、安全无形的地方。Dosreb就是那个地方。",
+    "whyDosrebP2": "而Lumi是让它感觉人性化的向导。"
   },
   "contactPage": {
     "title": "联系",
-    "lead": "如果您想联系Dosbre、合作、投资或只是提问，Lumi会将您的消息引导到正确的地方。",
+    "lead": "如果您想联系Dosreb、合作、投资或只是提问，Lumi会将您的消息引导到正确的地方。",
     "getInTouchTitle": "联系我们",
     "getInTouchText": "您可以直接通过电子邮件联系我们。我们会平静、清晰地回复，并尊重您的时间。",
     "email": "电子邮件",
@@ -93,24 +93,24 @@
   },
   "demoPage": {
     "title": "申请演示",
-    "lead": "亲身体验Dosbre。让我们向您展示清晰、结构和智能指导如何改变您的工作流程。",
+    "lead": "亲身体验Dosreb。让我们向您展示清晰、结构和智能指导如何改变您的工作流程。",
     "whyRequestTitle": "为什么申请演示？",
-    "whyRequestText": "演示不是销售宣传。这是一次引导式体验，您可以看到Dosbre如何消除摩擦、减少认知负荷并使复杂流程变得轻松。Lumi将引导您浏览平台，准确展示它如何满足您的需求。",
+    "whyRequestText": "演示不是销售宣传。这是一次引导式体验，您可以看到Dosreb如何消除摩擦、减少认知负荷并使复杂流程变得轻松。Lumi将引导您浏览平台，准确展示它如何满足您的需求。",
     "formTitle": "申请您的演示",
     "namePlaceholder": "您的姓名",
     "emailPlaceholder": "您的电子邮件",
     "companyPlaceholder": "公司名称（可选）",
     "messagePlaceholder": "告诉我们您的需求",
     "submitButton": "申请演示",
-    "lumiComment": ""我会确保您的请求到达Marco。每次演示都精心制作。"",
+    "lumiComment": "我会确保您的请求到达Marco。每次演示都精心制作。",
     "whatToExpectTitle": "期待什么",
-    "whatToExpectText": "提交请求后，我们将在48小时内与您联系，安排个性化演示。您将看到平台的实际应用，提出问题，并探索Dosbre如何适应您的工作流程。没有压力。不着急。只有清晰。"
+    "whatToExpectText": "提交请求后，我们将在48小时内与您联系，安排个性化演示。您将看到平台的实际应用，提出问题，并探索Dosreb如何适应您的工作流程。没有压力。不着急。只有清晰。"
   },
   "lumiPage": {
     "title": "认识Lumi",
     "lead": "Lumi不是聊天机器人。她是您的向导——一个旨在消除摩擦并为每一步带来清晰的平静、智能存在。",
     "whoIsLumiTitle": "Lumi是谁？",
-    "whoIsLumiText": "Lumi是Dosbre之声。她体现了平台的哲学：美、真、静。当您与她互动时，您得到的不是自动回复——您获得的是由深思熟虑和清晰塑造的指导。",
+    "whoIsLumiText": "Lumi是Dosreb之声。她体现了平台的哲学：美、真、静。当您与她互动时，您得到的不是自动回复——您获得的是由深思熟虑和清晰塑造的指导。",
     "lumiQuote": "我在这里让复杂变得轻松。问我任何问题，我会向您展示前进的最简单路径。",
     "philosophyTitle": "Lumi背后的哲学",
     "philosophyText": "Lumi旨在减少认知负荷。她不会用信息压倒您——她在您需要时准确揭示您所需要的。每个词都是有意的。每个回答都经过精心设计，感觉比问题更轻松。",
@@ -119,31 +119,31 @@
   },
   "projectsPage": {
     "title": "项目与案例研究",
-    "lead": "在Dosbre之前，Marco领导了芬兰一些最具挑战性的建筑和物流项目。这些案例研究展示了现在塑造Dosbre哲学的纪律、清晰和平静。",
+    "lead": "在Dosreb之前，Marco领导了芬兰一些最具挑战性的建筑和物流项目。这些案例研究展示了现在塑造Dosreb哲学的纪律、清晰和平静。",
     "viewProject": "查看项目",
     "stockmann": {
       "title": "Stockmann Kasvu项目",
       "description1": "赫尔辛基标志性百货公司的130,000平方米扩建和翻新。Marco领导了整个地下领域：开挖200,000立方米岩石、一个600车位的停车设施、一个完整的维护场和从地下室到8楼的所有垂直物流。",
       "description2": "他协调了50名白领经理和200名蓝领工人，场地组织建在Mannerheimintie上方五米处。",
-      "lumiQuote": ""Marco不仅管理了一个项目。他重塑了一座城市的流动。""
+      "lumiQuote": "\"Marco不仅管理了一个项目。他重塑了一座城市的流动。\""
     },
     "dbschenker": {
       "title": "DB Schenker – Ilvesvuori物流中心",
       "description": "在80,000平方米地块上的17,800平方米仓库，包括两个6,500平方米的耐寒大厅。Marco监督了完整的项目管理、结构协调和运营流程设计。",
-      "lumiQuote": ""仓库不仅仅是墙壁。它是一种节奏——Marco建造了它。""
+      "lumiQuote": "\"仓库不仅仅是墙壁。它是一种节奏——Marco建造了它。\""
     },
     "jatkasaari": {
       "title": "Jätkäsaaren maanalaiset tilat",
-      "description": "Jätkäsaaren maanalaiset tilat项目是DOSBRE管理地下设施建设能力的典范，在一个安全平台中整合所有各方和文档。",
-      "lumiQuote": ""当结构正确时，移动变得轻松。Marco建造了结构。""
+      "description": "Jätkäsaaren maanalaiset tilat项目是DOSREB管理地下设施建设能力的典范，在一个安全平台中整合所有各方和文档。",
+      "lumiQuote": "\"当结构正确时，移动变得轻松。Marco建造了结构。\""
     }
   },
   "realEstatesPage": {
     "title": "房地产",
     "lead": "精选的房地产和基础设施项目集合，反映了Marco的精确性、纪律性和协调大规模环境的能力。",
     "portfolioTitle": "作品集概览",
-    "portfolioText": "随着Dosbre的扩张，该部分将不断增长。每个房地产条目将包括位置、范围、目的和Lumi的评论，以突出项目的人文和结构影响。",
-    "lumiQuote": ""建筑不仅仅是空间。它是人类移动、清晰和目的的结构。"",
+    "portfolioText": "随着Dosreb的扩张，该部分将不断增长。每个房地产条目将包括位置、范围、目的和Lumi的评论，以突出项目的人文和结构影响。",
+    "lumiQuote": "\"建筑不仅仅是空间。它是人类移动、清晰和目的的结构。\"",
     "comingSoonTitle": "即将推出",
     "comingSoonText": "随着作品集的记录，将添加更多房地产项目。此页面设计为与您未来的开发一起扩展。"
   },
@@ -156,7 +156,7 @@
   },
   "vision": {
     "title": "市场与愿景",
-    "description": "房地产和建筑业是芬兰和欧洲最大的行业之一。DOSBRE的愿景：一个平台服务所有人——从芬兰到世界。"
+    "description": "房地产和建筑业是芬兰和欧洲最大的行业之一。DOSREB的愿景：一个平台服务所有人——从芬兰到世界。"
   },
   "team": {
     "title": "我们的团队",

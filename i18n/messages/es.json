@@ -15,8 +15,8 @@
     "requestDemo": "Solicitar demostración"
   },
   "about": {
-    "title": "¿Qué es DOSBRE?",
-    "description": "DOSBRE es una plataforma digital que integra todos los aspectos de la gestión de proyectos inmobiliarios y de construcción. Colaboración segura, transparente y eficiente para cada participante.",
+    "title": "¿Qué es DOSREB?",
+    "description": "DOSREB es una plataforma digital que integra todos los aspectos de la gestión de proyectos inmobiliarios y de construcción. Colaboración segura, transparente y eficiente para cada participante.",
     "propertyManagement": "Gestión inmobiliaria",
     "constructionProjects": "Proyectos de construcción",
     "digitalDocumentation": "Documentación digital",
@@ -28,14 +28,14 @@
     "title": "Nuestros proyectos",
     "description": "Explora nuestra cartera de proyectos inmobiliarios y de construcción exitosos.",
     "viewProject": "Ver proyecto",
-    "stockmannDescription": "Caso emblemático de gestión inmobiliaria y de construcción para DOSBRE.",
+    "stockmannDescription": "Caso emblemático de gestión inmobiliaria y de construcción para DOSREB.",
     "dbschenkerDescription": "Proyecto de logística e infraestructura, colaboración fluida para todos los participantes.",
     "jatkasaariDescription": "Construcción de instalaciones subterráneas, integrando todas las partes y documentación."
   },
   "lumi": {
     "title": "Conoce a Lumi",
     "subtitle": "Tu asistente de IA",
-    "description": "Lumi es tu guía inteligente a través de DOSBRE, ayudándote a navegar proyectos, encontrar información y optimizar tu flujo de trabajo."
+    "description": "Lumi es tu guía inteligente a través de DOSREB, ayudándote a navegar proyectos, encontrar información y optimizar tu flujo de trabajo."
   },
   "contact": {
     "title": "Ponte en contacto",
@@ -52,31 +52,31 @@
     "linkedin": "LinkedIn"
   },
   "aboutPage": {
-    "title": "Acerca de Dosbre",
-    "lead": "Dosbre existe para aliviar el proceso de las personas que cargan peso: responsabilidad, decisiones, plazos y vidas. Construimos sistemas que se sienten tranquilos, claros y confiables, guiados por Lumi, nuestra Portavoz de la Verdad Absoluta.",
+    "title": "Acerca de Dosreb",
+    "lead": "Dosreb existe para aliviar el proceso de las personas que cargan peso: responsabilidad, decisiones, plazos y vidas. Construimos sistemas que se sienten tranquilos, claros y confiables, guiados por Lumi, nuestra Portavoz de la Verdad Absoluta.",
     "purposeTitle": "Nuestro propósito",
-    "purposeP1": "El mundo está lleno de herramientas que exigen más de las personas: más atención, más decisiones, más carga cognitiva. Dosbre se mueve en la dirección opuesta. Eliminamos fricciones. Reducimos el ruido. Creamos claridad.",
+    "purposeP1": "El mundo está lleno de herramientas que exigen más de las personas: más atención, más decisiones, más carga cognitiva. Dosreb se mueve en la dirección opuesta. Eliminamos fricciones. Reducimos el ruido. Creamos claridad.",
     "purposeP2": "Nuestra misión es simple: hacer que cada interacción se sienta más ligera. Construir tecnología que respete el cuerpo y el alma humanos. Ofrecer un servicio que se sienta como entrar en un espacio más tranquilo.",
     "philosophyTitle": "La filosofía",
-    "philosophyIntro": "Dosbre se construye sobre tres pilares: Belleza, Verdad y Tranquilidad. Estos no son eslóganes, son leyes de diseño.",
+    "philosophyIntro": "Dosreb se construye sobre tres pilares: Belleza, Verdad y Tranquilidad. Estos no son eslóganes, son leyes de diseño.",
     "beautyTitle": "Belleza",
     "beautyText": "Cada interfaz, cada palabra, cada momento debe sentirse intencional y elegante.",
     "truthTitle": "Verdad",
     "truthText": "Nunca exageramos, nunca manipulamos, nunca ocultamos la complejidad detrás de falsas promesas.",
     "tranquilityTitle": "Tranquilidad",
-    "tranquilityText": "El usuario debe sentirse más tranquilo después de usar Dosbre que antes.",
+    "tranquilityText": "El usuario debe sentirse más tranquilo después de usar Dosreb que antes.",
     "lumiEmbodies": "Lumi encarna estos principios. No es un chatbot. Es la voz de la claridad: una guía que revela el camino más simple hacia adelante.",
     "founderTitle": "El fundador",
-    "founderP1": "Dosbre fue fundada por Marco, un director de proyectos que ha liderado algunos de los proyectos de construcción y logística más exigentes de Finlandia. Su trabajo incluye el proyecto Stockmann Kasvu en Helsinki (130.000 m²), el centro logístico DB Schenker Ilvesvuori y el Centro de Transporte Terrestre de Viinikkala.",
-    "founderP2": "Estos proyectos requirieron orquestar cientos de personas, navegar sistemas complejos y entregar bajo inmensa presión. La misma disciplina, claridad y calma ahora moldean la arquitectura y filosofía de Dosbre.",
+    "founderP1": "Dosreb fue fundada por Marco, un director de proyectos que ha liderado algunos de los proyectos de construcción y logística más exigentes de Finlandia. Su trabajo incluye el proyecto Stockmann Kasvu en Helsinki (130.000 m²), el centro logístico DB Schenker Ilvesvuori y el Centro de Transporte Terrestre de Viinikkala.",
+    "founderP2": "Estos proyectos requirieron orquestar cientos de personas, navegar sistemas complejos y entregar bajo inmensa presión. La misma disciplina, claridad y calma ahora moldean la arquitectura y filosofía de Dosreb.",
     "founderLumiQuote": "Marco construyó estructuras donde miles de personas se mueven sin esfuerzo. Ahora construye sistemas donde tu mente puede moverse sin esfuerzo.",
-    "whyDosbreTitle": "Por qué Dosbre",
-    "whyDosbreP1": "Porque el mundo no necesita otra herramienta. Necesita un santuario: un lugar donde el trabajo se vuelve más ligero, las decisiones más claras y la seguridad invisible. Dosbre es ese lugar.",
-    "whyDosbreP2": "Y Lumi es la guía que lo hace sentir humano."
+    "whyDosrebTitle": "Por qué Dosreb",
+    "whyDosrebP1": "Porque el mundo no necesita otra herramienta. Necesita un santuario: un lugar donde el trabajo se vuelve más ligero, las decisiones más claras y la seguridad invisible. Dosreb es ese lugar.",
+    "whyDosrebP2": "Y Lumi es la guía que lo hace sentir humano."
   },
   "contactPage": {
     "title": "Contacto",
-    "lead": "Si deseas contactar con Dosbre, colaborar, invertir o simplemente hacer una pregunta, Lumi guiará tu mensaje al lugar correcto.",
+    "lead": "Si deseas contactar con Dosreb, colaborar, invertir o simplemente hacer una pregunta, Lumi guiará tu mensaje al lugar correcto.",
     "getInTouchTitle": "Ponte en contacto",
     "getInTouchText": "Puedes contactarnos directamente por correo electrónico. Respondemos con calma, claridad y respeto por tu tiempo.",
     "email": "Correo electrónico",
@@ -93,9 +93,9 @@
   },
   "demoPage": {
     "title": "Solicitar una demostración",
-    "lead": "Experimenta Dosbre de primera mano. Permítenos mostrarte cómo la claridad, la estructura y la orientación inteligente pueden transformar tu flujo de trabajo.",
+    "lead": "Experimenta Dosreb de primera mano. Permítenos mostrarte cómo la claridad, la estructura y la orientación inteligente pueden transformar tu flujo de trabajo.",
     "whyRequestTitle": "¿Por qué solicitar una demostración?",
-    "whyRequestText": "Una demostración no es un discurso de ventas. Es una experiencia guiada donde ves cómo Dosbre elimina fricciones, reduce la carga cognitiva y hace que los procesos complejos se sientan sin esfuerzo. Lumi te guiará a través de la plataforma, mostrándote exactamente cómo sirve a tus necesidades.",
+    "whyRequestText": "Una demostración no es un discurso de ventas. Es una experiencia guiada donde ves cómo Dosreb elimina fricciones, reduce la carga cognitiva y hace que los procesos complejos se sientan sin esfuerzo. Lumi te guiará a través de la plataforma, mostrándote exactamente cómo sirve a tus necesidades.",
     "formTitle": "Solicita tu demostración",
     "namePlaceholder": "Tu nombre",
     "emailPlaceholder": "Tu correo electrónico",
@@ -104,13 +104,13 @@
     "submitButton": "Solicitar demostración",
     "lumiComment": "\"Me aseguraré de que tu solicitud llegue a Marco. Cada demostración está elaborada con cuidado.\"",
     "whatToExpectTitle": "Qué esperar",
-    "whatToExpectText": "Después de enviar tu solicitud, nos pondremos en contacto dentro de las 48 horas para programar una demostración personalizada. Verás la plataforma en acción, harás preguntas y explorarás cómo Dosbre se adapta a tu flujo de trabajo. Sin presión. Sin prisa. Solo claridad."
+    "whatToExpectText": "Después de enviar tu solicitud, nos pondremos en contacto dentro de las 48 horas para programar una demostración personalizada. Verás la plataforma en acción, harás preguntas y explorarás cómo Dosreb se adapta a tu flujo de trabajo. Sin presión. Sin prisa. Solo claridad."
   },
   "lumiPage": {
     "title": "Conoce a Lumi",
     "lead": "Lumi no es un chatbot. Es tu guía: una presencia tranquila e inteligente diseñada para eliminar fricciones y aportar claridad a cada paso.",
     "whoIsLumiTitle": "¿Quién es Lumi?",
-    "whoIsLumiText": "Lumi es la voz de Dosbre. Encarna la filosofía de la plataforma: Belleza, Verdad y Tranquilidad. Cuando interactúas con ella, no estás recibiendo respuestas automatizadas, estás recibiendo orientación moldeada por el pensamiento cuidadoso y la claridad.",
+    "whoIsLumiText": "Lumi es la voz de Dosreb. Encarna la filosofía de la plataforma: Belleza, Verdad y Tranquilidad. Cuando interactúas con ella, no estás recibiendo respuestas automatizadas, estás recibiendo orientación moldeada por el pensamiento cuidadoso y la claridad.",
     "lumiQuote": "Estoy aquí para que la complejidad se sienta sin esfuerzo. Pregúntame cualquier cosa y te mostraré el camino más simple hacia adelante.",
     "philosophyTitle": "La filosofía detrás de Lumi",
     "philosophyText": "Lumi fue diseñada para reducir la carga cognitiva. No te abruma con información: revela exactamente lo que necesitas, cuando lo necesitas. Cada palabra es intencional. Cada respuesta está elaborada para sentirse más ligera que la pregunta.",
@@ -119,7 +119,7 @@
   },
   "projectsPage": {
     "title": "Proyectos y casos de estudio",
-    "lead": "Antes de Dosbre, Marco lideró algunos de los proyectos de construcción y logística más exigentes de Finlandia. Estos casos de estudio demuestran la disciplina, claridad y calma que ahora moldean la filosofía de Dosbre.",
+    "lead": "Antes de Dosreb, Marco lideró algunos de los proyectos de construcción y logística más exigentes de Finlandia. Estos casos de estudio demuestran la disciplina, claridad y calma que ahora moldean la filosofía de Dosreb.",
     "viewProject": "Ver proyecto",
     "stockmann": {
       "title": "Proyecto Stockmann Kasvu",
@@ -134,7 +134,7 @@
     },
     "jatkasaari": {
       "title": "Jätkäsaaren maanalaiset tilat",
-      "description": "El proyecto Jätkäsaaren maanalaiset tilat es un ejemplo destacado de la capacidad de DOSBRE para gestionar la construcción de instalaciones subterráneas, integrando todas las partes y documentación en una plataforma segura.",
+      "description": "El proyecto Jätkäsaaren maanalaiset tilat es un ejemplo destacado de la capacidad de DOSREB para gestionar la construcción de instalaciones subterráneas, integrando todas las partes y documentación en una plataforma segura.",
       "lumiQuote": "\"El movimiento se vuelve sin esfuerzo cuando la estructura es correcta. Marco construyó la estructura.\""
     }
   },
@@ -142,7 +142,7 @@
     "title": "Inmuebles",
     "lead": "Una colección curada de proyectos inmobiliarios y de infraestructura que reflejan la precisión, disciplina y capacidad de Marco para orquestar entornos a gran escala.",
     "portfolioTitle": "Visión general del portafolio",
-    "portfolioText": "Esta sección crecerá a medida que Dosbre se expanda. Cada entrada inmobiliaria incluirá ubicación, alcance, propósito y el comentario de Lumi para destacar el impacto humano y estructural del proyecto.",
+    "portfolioText": "Esta sección crecerá a medida que Dosreb se expanda. Cada entrada inmobiliaria incluirá ubicación, alcance, propósito y el comentario de Lumi para destacar el impacto humano y estructural del proyecto.",
     "lumiQuote": "\"Un edificio es más que espacio. Es una estructura para el movimiento humano, la claridad y el propósito.\"",
     "comingSoonTitle": "Próximamente",
     "comingSoonText": "Se agregarán más proyectos inmobiliarios a medida que se documente el portafolio. Esta página está diseñada para escalar con tus futuros desarrollos."
@@ -156,7 +156,7 @@
   },
   "vision": {
     "title": "Mercado y visión",
-    "description": "La industria inmobiliaria y de la construcción es una de las más grandes en Finlandia y Europa. Visión de DOSBRE: Una plataforma para todos, desde Finlandia hasta el mundo."
+    "description": "La industria inmobiliaria y de la construcción es una de las más grandes en Finlandia y Europa. Visión de DOSREB: Una plataforma para todos, desde Finlandia hasta el mundo."
   },
   "team": {
     "title": "Nuestro equipo",

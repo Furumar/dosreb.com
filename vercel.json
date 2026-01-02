@@ -5,7 +5,7 @@
   "framework": "nextjs",
   "redirects": [
     {
-      "source": "/dosbre.com/:path*",
+      "source": "/dosreb.com/:path*",
       "destination": "/dosreb.com/:path*",
       "permanent": true
     }

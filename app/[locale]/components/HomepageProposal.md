@@ -1,17 +1,17 @@
-# DOSBRE Homepage Layout Proposal
+# DOSREB Homepage Layout Proposal
 
 ## 1. Hero Section
-- **Logo & Slogan**: DOSBRE LTD — Ease your business process
+- **Logo & Slogan**: DOSREB LTD — Ease your business process
 - **Tagline**: "A digital platform for real estate and construction management."
 - **Call to Action**: Buttons for "Explore Projects", "Meet Lumi", "Request Demo"
 - **Visual**: Modern, professional hero image or animation
 
 ## 2. Lumi AI Assistant
 - **Floating Lumi Chat**: Always available in the corner
-- **Intro**: "Ask Lumi about DOSBRE, projects, or platform features."
+- **Intro**: "Ask Lumi about DOSREB, projects, or platform features."
 
-## 3. About DOSBRE
-- **What is DOSBRE?**: Short, bold summary of the business idea
+## 3. About DOSREB
+- **What is DOSREB?**: Short, bold summary of the business idea
 - **Key Features**: Icons or cards for Property, Construction Projects, Document Management, Collaboration, Security
 
 ## 4. Projects & Case Studies

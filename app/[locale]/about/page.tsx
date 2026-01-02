@@ -7,7 +7,7 @@ export default async function AboutPage() {
   const t = await getTranslations('aboutPage');
   
   return (
-    <div className="dosbre-page">
+    <div className="dosreb-page">
       <section className="page-hero">
         <h1>{t('title')}</h1>
         <p className="page-lead">
@@ -62,12 +62,12 @@ export default async function AboutPage() {
       </section>
 
       <section className="page-section">
-        <h2 className="section-title">{t('whyDosbreTitle')}</h2>
+        <h2 className="section-title">{t('whyDosrebTitle')}</h2>
         <p>
-          {t('whyDosbreP1')}
+          {t('whyDosrebP1')}
         </p>
         <p>
-          {t('whyDosbreP2')}
+          {t('whyDosrebP2')}
         </p>
       </section>
     </div>

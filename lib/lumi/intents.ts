@@ -13,7 +13,7 @@ export function detectIntent(input: string): LumiIntent {
 
   // ABOUT / COMPANY
   if (
-    text.includes("dosbre") ||
+    text.includes("dosreb") ||
     text.includes("about") ||
     text.includes("mitä te teette") ||
     text.includes("yritys")

@@ -17,13 +17,13 @@ export default function Header() {
   };
 
   return (
-    <header className="dosbre-header">
-      <div className="dosbre-logo">
+    <header className="dosreb-header">
+      <div className="dosreb-logo">
         <Link href={`/${locale}`}>DOSREB LTD</Link>
       </div>
 
       <nav>
-        <ul className="dosbre-nav">
+        <ul className="dosreb-nav">
           <li><Link className={isActive("/")} href={`/${locale}`}>{t('home')}</Link></li>
           <li><Link className={isActive("/about")} href={`/${locale}/about`}>{t('about')}</Link></li>
           <li><Link className={isActive("/lumi")} href={`/${locale}/lumi`}>{t('lumi')}</Link></li>

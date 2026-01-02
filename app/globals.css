@@ -1,4 +1,4 @@
-.dosbre-root {
+.dosreb-root {
   min-height: 100vh;
   background: linear-gradient(180deg, #000 0%, #0a0a0a 100%);
   color: #ffd700;
@@ -8,7 +8,7 @@
   flex-direction: column;
 }
 
-.dosbre-main {
+.dosreb-main {
   flex: 1 1 auto;
   padding: 4rem 5vw;
   max-width: 1400px;
@@ -61,27 +61,27 @@
 .section-block:nth-child(6) { animation-delay: 0.6s; }
 
 @media (max-width: 900px) {
-  .dosbre-header {
+  .dosreb-header {
     padding: 1rem 4vw;
     flex-wrap: wrap;
     gap: 1rem;
   }
   
-  .dosbre-logo {
+  .dosreb-logo {
     font-size: 1.3rem;
   }
   
-  .dosbre-nav {
+  .dosreb-nav {
     gap: 0.8rem;
     flex-wrap: wrap;
     font-size: 0.9rem;
   }
   
-  .dosbre-nav li {
+  .dosreb-nav li {
     font-size: 0.9rem;
   }
   
-  .dosbre-main {
+  .dosreb-main {
     padding: 2rem 4vw;
     gap: 2.5rem;
   }
@@ -99,7 +99,7 @@
     font-size: 1.2rem;
   }
   
-  .dosbre-hero {
+  .dosreb-hero {
     flex-direction: column;
     gap: 2rem;
   }
@@ -165,14 +165,14 @@ html {
   }
 }
 /* HOMEPAGE STYLES */
-.dosbre-root {
+.dosreb-root {
   min-height: 100vh;
   background: #000;
   color: #ffd700;
   font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
 }
 
-.dosbre-header {
+.dosreb-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -186,7 +186,7 @@ html {
   box-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
 }
 
-.dosbre-logo {
+.dosreb-logo {
   font-size: 1.6rem;
   font-weight: 700;
   letter-spacing: 0.15em;
@@ -195,7 +195,7 @@ html {
   transition: all 0.3s ease;
 }
 
-.dosbre-logo a {
+.dosreb-logo a {
   text-decoration: none;
   color: inherit;
   display: inline-block;
@@ -204,12 +204,12 @@ html {
   transition: all 0.3s ease;
 }
 
-.dosbre-logo a:hover {
+.dosreb-logo a:hover {
   text-shadow: 0 0 40px rgba(255, 215, 0, 0.6);
   transform: translateY(-2px);
 }
 
-.dosbre-nav {
+.dosreb-nav {
   display: flex;
   gap: 1.5rem;
   align-items: center;
@@ -218,12 +218,12 @@ html {
   padding: 0;
 }
 
-.dosbre-nav li {
+.dosreb-nav li {
   margin: 0;
 }
 
-.dosbre-nav a,
-.dosbre-nav button {
+.dosreb-nav a,
+.dosreb-nav button {
   background: none;
   border: none;
   color: #ffd700;
@@ -238,8 +238,8 @@ html {
   position: relative;
 }
 
-.dosbre-nav a:hover,
-.dosbre-nav button:hover {
+.dosreb-nav a:hover,
+.dosreb-nav button:hover {
   background: rgba(255, 215, 0, 0.1);
   color: #ffed4e;
 }
@@ -254,13 +254,13 @@ html {
   color: #ffd700;
 }
 
-.dosbre-main {
+.dosreb-main {
   padding: 2rem 3vw 4rem 3vw;
   max-width: 1200px;
   margin: 0 auto;
 }
 
-.dosbre-hero {
+.dosreb-hero {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -270,7 +270,7 @@ html {
   position: relative;
 }
 
-.dosbre-hero::before {
+.dosreb-hero::before {
   content: '';
   position: absolute;
   top: 50%;
@@ -444,7 +444,7 @@ html {
 }
 /* ABOUT PAGE STYLES */
 
-.dosbre-page {
+.dosreb-page {
   max-width: 900px;
   margin: 0 auto;
   padding: 2rem 1.5rem;
@@ -751,7 +751,7 @@ html {
 }
 
 /* Footer Styling */
-.dosbre-footer {
+.dosreb-footer {
   background: rgba(0, 0, 0, 0.95);
   border-top: 1px solid rgba(255, 215, 0, 0.15);
   padding: 3rem 5vw 2rem;
