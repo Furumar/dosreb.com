@@ -4,7 +4,10 @@ import { getMessages } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { locales } from '@/i18n/request';
 import Header from "./components/header";
+import dynamic from "next/dynamic";
 import "../globals.css";
+
+const LumiChat = dynamic(() => import("./components/LumiChat"), { ssr: false });
 
 export const metadata: Metadata = {
   title: "DOSREB LTD",
@@ -40,6 +43,7 @@ export default async function LocaleLayout({
           <main className="page-transition-wrapper">
             {children}
           </main>
+          <LumiChat />
         </NextIntlClientProvider>
       </body>
     </html>
