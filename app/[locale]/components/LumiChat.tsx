@@ -64,6 +64,60 @@ const systemPrompts: Record<string, string> = {
   sgs: "Jūs asat Lumi, mīros, protėngs asėstents Dosreb.com. Jūs padiedat so nakelmuojamu tortu, statuojėmu, dukumentās ė procesās so aiškumu ė emociniam vīgleimu. Atsakīkat žemaitėškā.",
 };
 
+const thinkingMessages: Record<string, string> = {
+  en: "Lumi is thinking for a moment...",
+  sv: "Lumi tänker ett ögonblick...",
+  fi: "Lumi ajattelee hetken...",
+  no: "Lumi tenker et øyeblikk...",
+  da: "Lumi tænker et øjeblik...",
+  es: "Lumi está pensando un momento...",
+  pt: "Lumi está pensando um momento...",
+  fr: "Lumi réfléchit un instant...",
+  de: "Lumi denkt einen Moment nach...",
+  zh: "Lumi 正在思考...",
+  ru: "Луми думает...",
+  lt: "Lumi galvoja akimirką...",
+  lv: "Lumi domā mirkli...",
+  ltg: "Lumi duoma myrkli...",
+  sgs: "Lumi golvuojė akelka...",
+};
+
+const inputPlaceholders: Record<string, string> = {
+  en: "Type your message...",
+  sv: "Skriv ditt meddelande...",
+  fi: "Kirjoita viestisi...",
+  no: "Skriv meldingen din...",
+  da: "Skriv din besked...",
+  es: "Escribe tu mensaje...",
+  pt: "Digite sua mensagem...",
+  fr: "Tapez votre message...",
+  de: "Geben Sie Ihre Nachricht ein...",
+  zh: "输入您的消息...",
+  ru: "Введите сообщение...",
+  lt: "Įveskite savo žinutę...",
+  lv: "Ierakstiet savu ziņojumu...",
+  ltg: "Rakstit sovu ziņu...",
+  sgs: "Rašīkat sava žėnotė...",
+};
+
+const sendButtonTexts: Record<string, string> = {
+  en: "Send",
+  sv: "Skicka",
+  fi: "Lähetä",
+  no: "Send",
+  da: "Send",
+  es: "Enviar",
+  pt: "Enviar",
+  fr: "Envoyer",
+  de: "Senden",
+  zh: "发送",
+  ru: "Отправить",
+  lt: "Siųsti",
+  lv: "Sūtīt",
+  ltg: "Syuteit",
+  sgs: "Sosėostė",
+};
+
 export default function LumiChat() {
   const locale = useLocale();
   const [open, setOpen] = useState(false);
@@ -188,7 +242,7 @@ export default function LumiChat() {
             ))}
             {loading && (
               <div className="lumi-msg-lumi">
-                Lumi is thinking for a moment...
+                {thinkingMessages[locale] || thinkingMessages.en}
               </div>
             )}
             <div ref={chatEndRef} />
@@ -199,11 +253,11 @@ export default function LumiChat() {
               type="text"
               value={input}
               onChange={(e) => setInput(e.target.value)}
-              placeholder="Type your message..."
+              placeholder={inputPlaceholders[locale] || inputPlaceholders.en}
               autoFocus
             />
             <button type="submit" disabled={loading}>
-              Send
+              {sendButtonTexts[locale] || sendButtonTexts.en}
             </button>
           </form>
         </div>

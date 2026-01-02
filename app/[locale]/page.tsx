@@ -3,11 +3,12 @@
 import Image from "next/image";
 import Link from "next/link";
 import dynamic from "next/dynamic";
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
 const LumiChat = dynamic(() => import("./components/LumiChat"), { ssr: false });
 
 export default function HomePage() {
   const t = useTranslations();
+  const locale = useLocale();
   
   const scrollToId = (id: string) => {
     if (typeof window === "undefined") return;
@@ -35,8 +36,8 @@ export default function HomePage() {
               </p>
               <div className="hero-buttons">
                 <button className="btn-primary" onClick={() => scrollToId("projects")}>{t('hero.exploreProjects')}</button>
-                <button className="btn-secondary" onClick={() => scrollToId("lumi")}>{t('hero.meetLumi')}</button>
-                <button className="btn-secondary" onClick={() => scrollToId("contact")}>{t('hero.requestDemo')}</button>
+                <Link href={`/${locale}/lumi`} className="btn-secondary">{t('hero.meetLumi')}</Link>
+                <Link href={`/${locale}/demo`} className="btn-secondary">{t('hero.requestDemo')}</Link>
               </div>
             </div>
             <aside className="hero-aside">
@@ -53,8 +54,8 @@ export default function HomePage() {
             <div className="feature-card">{t('about.propertyManagement')}</div>
             <div className="feature-card">{t('about.constructionProjects')}</div>
             <div className="feature-card">{t('about.digitalDocumentation')}</div>
-            <div className="feature-card">Collaboration</div>
-            <div className="feature-card">Security</div>
+            <div className="feature-card">{t('about.collaboration')}</div>
+            <div className="feature-card">{t('about.security')}</div>
           </div>
         </section>
 
@@ -65,53 +66,53 @@ export default function HomePage() {
             <div className="project-card">
               <Image src="/lumi-hero.png" alt="Stockmann" width={120} height={120} style={{borderRadius: '1rem'}} />
               <h3>Stockmann</h3>
-              <p>Flagship real estate and construction management case for DOSBRE.</p>
-              <Link href="/projects/stockmann" className="btn-primary">View Project</Link>
+              <p>{t('projects.stockmannDescription')}</p>
+              <Link href={`/${locale}/projects/stockmann`} className="btn-primary">{t('projects.viewProject')}</Link>
             </div>
             <div className="project-card">
               <Image src="/lumi-hero.png" alt="DB Schenker" width={120} height={120} style={{borderRadius: '1rem'}} />
               <h3>DB Schenker</h3>
-              <p>Logistics and infrastructure project, seamless collaboration for all stakeholders.</p>
-              <Link href="/projects/dbschenker" className="btn-primary">View Project</Link>
+              <p>{t('projects.dbschenkerDescription')}</p>
+              <Link href={`/${locale}/projects/dbschenker`} className="btn-primary">{t('projects.viewProject')}</Link>
             </div>
             <div className="project-card">
               <Image src="/lumi-hero.png" alt="Jätkäsaaren maanalaiset tilat" width={120} height={120} style={{borderRadius: '1rem'}} />
               <h3>Jätkäsaaren maanalaiset tilat</h3>
-              <p>Underground facility construction, integrating all parties and documentation.</p>
-              <Link href="/projects/jatkasaari" className="btn-primary">View Project</Link>
+              <p>{t('projects.jatkasaariDescription')}</p>
+              <Link href={`/${locale}/projects/jatkasaari`} className="btn-primary">{t('projects.viewProject')}</Link>
             </div>
           </div>
         </section>
 
         {/* PLATFORM FEATURES */}
         <section id="features" className="section-block">
-          <h2>Platform Features</h2>
+          <h2>{t('features.title')}</h2>
           <ul className="features-list">
-            <li><b>Property Management:</b> Legal, Financing, Sales, Services</li>
-            <li><b>Construction Project Management:</b> Designers, Contractors, Authorities, Plan Management</li>
-            <li><b>Document Management:</b> Centralized, secure, transparent</li>
-            <li><b>Integrations:</b> e-signature, maps, payments</li>
+            <li><b>{t('features.propertyManagement')}</b></li>
+            <li><b>{t('features.constructionManagement')}</b></li>
+            <li><b>{t('features.documentManagement')}</b></li>
+            <li><b>{t('features.integrations')}</b></li>
           </ul>
         </section>
 
         {/* MARKET & VISION */}
         <section id="vision" className="section-block">
-          <h2>Market & Vision</h2>
-          <p>The real estate and construction industry is one of the largest in Finland and Europe. DOSBRE’s vision: One platform for all — from Finland to the world.</p>
+          <h2>{t('vision.title')}</h2>
+          <p>{t('vision.description')}</p>
         </section>
 
         {/* TEAM & CONTACT */}
         <section id="team" className="section-block">
-          <h2>Our Team</h2>
-          <p>Founder, software developers, UI/UX designer, industry experts, and customer service.</p>
+          <h2>{t('team.title')}</h2>
+          <p>{t('team.description')}</p>
         </section>
         <section id="contact" className="section-block">
           <h2>{t('contact.title')}</h2>
           <form className="contact-form">
-            <input type="text" placeholder="Your Name" required />
-            <input type="email" placeholder="Your Email" required />
-            <textarea placeholder="Message" required />
-            <button type="submit" className="btn-primary">Send</button>
+            <input type="text" placeholder={t('contact.namePlaceholder')} required />
+            <input type="email" placeholder={t('contact.emailPlaceholder')} required />
+            <textarea placeholder={t('contact.messagePlaceholder')} required />
+            <button type="submit" className="btn-primary">{t('contact.sendButton')}</button>
           </form>
         </section>
       </main>
@@ -125,10 +126,10 @@ export default function HomePage() {
       {/* FOOTER */}
       <footer className="dosbre-footer">
         <div className="footer-links">
-          <Link href="#about">{t('nav.about')}</Link> | <Link href="#projects">{t('nav.projects')}</Link> | <Link href="#contact">{t('nav.contact')}</Link> | <Link href="#">Privacy Policy</Link>
+          <Link href="#about">{t('nav.about')}</Link> | <Link href="#projects">{t('nav.projects')}</Link> | <Link href="#contact">{t('nav.contact')}</Link> | <Link href="#">{t('footer.privacyPolicy')}</Link>
         </div>
         <div className="footer-socials">
-          <a href="#" aria-label="LinkedIn">LinkedIn</a>
+          <a href="#" aria-label="LinkedIn">{t('footer.linkedin')}</a>
         </div>
         <div className="footer-copy">{t('footer.copyright')}</div>
       </footer>

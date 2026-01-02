@@ -1,76 +1,165 @@
 {
   "nav": {
-    "home": "Home",
-    "about": "About",
-    "projects": "Projects",
-    "realEstates": "Real Estates",
+    "home": "Hjem",
+    "about": "Om oss",
+    "projects": "Prosjekter",
+    "realEstates": "Eiendom",
     "lumi": "Lumi",
-    "contact": "Contact"
+    "contact": "Kontakt"
   },
   "hero": {
-    "title": "Ease Your Business Process",
-    "subtitle": "A digital platform for real estate and construction management.",
-    "exploreProjects": "Explore Projects",
-    "meetLumi": "Meet Lumi",
-    "requestDemo": "Request Demo"
+    "title": "Forenkle Din Forretningsprosess",
+    "subtitle": "En digital plattform for eiendoms- og byggeprosjektledelse.",
+    "exploreProjects": "Utforsk Prosjekter",
+    "meetLumi": "Møt Lumi",
+    "requestDemo": "Be om Demo"
   },
   "about": {
-    "title": "What is DOSBRE?",
-    "description": "DOSBRE is a digital platform that brings together all aspects of real estate and construction project management. Secure, transparent, and efficient collaboration for every stakeholder.",
-    "propertyManagement": "Property Management",
-    "constructionProjects": "Construction Projects",
-    "digitalDocumentation": "Digital Documentation",
-    "workflow": "Workflow"
+    "title": "Hva er DOSBRE?",
+    "description": "DOSBRE er en digital plattform som samler alle aspekter av eiendoms- og byggeprosjektledelse. Sikker, gjennomsiktig og effektivt samarbeid for hver interessent.",
+    "propertyManagement": "Eiendomsforvaltning",
+    "constructionProjects": "Byggeprosjekter",
+    "digitalDocumentation": "Digital Dokumentasjon",
+    "workflow": "Arbeidsflyt",
+    "collaboration": "Samarbeid",
+    "security": "Sikkerhet"
   },
   "projects": {
-    "title": "Our Projects",
-    "description": "Explore our portfolio of successful real estate and construction projects."
+    "title": "Våre Prosjekter",
+    "description": "Utforsk vår portefølje av vellykkede eiendoms- og byggeprosjekter.",
+    "viewProject": "Vis Prosjekt",
+    "stockmannDescription": "Flaggskipseiendom og byggeledelsessak for DOSBRE.",
+    "dbschenkerDescription": "Logistikk- og infrastrukturprosjekt, sømløst samarbeid for alle interessenter.",
+    "jatkasaariDescription": "Underjordisk anleggskonstruksjon, integrerer alle parter og dokumentasjon."
   },
   "lumi": {
-    "title": "Meet Lumi",
-    "subtitle": "Your AI Assistant",
-    "description": "Lumi is your intelligent guide through DOSBRE, helping you navigate projects, find information, and streamline your workflow."
+    "title": "Møt Lumi",
+    "subtitle": "Din AI-assistent",
+    "description": "Lumi er din intelligente guide gjennom DOSBRE, hjelper deg med å navigere prosjekter, finne informasjon og effektivisere arbeidsflyten din."
   },
   "contact": {
-    "title": "Get in Touch",
-    "description": "Ready to transform your business process? Contact us for a demo."
+    "title": "Kontakt Oss",
+    "description": "Klar til å transformere forretningsprosessen din? Kontakt oss for en demo.",
+    "namePlaceholder": "Ditt navn",
+    "emailPlaceholder": "Din e-post",
+    "messagePlaceholder": "Melding",
+    "sendButton": "Send"
   },
   "footer": {
-    "copyright": "© 2026 DOSREB LTD. All rights reserved.",
-    "tagline": "Clarity, structure, and intelligent workflow guidance."
+    "copyright": "© 2026 DOSREB LTD. Alle rettigheter reservert.",
+    "tagline": "Klarhet, struktur og intelligent arbeidsflytledelse.",
+    "privacyPolicy": "Personvern",
+    "linkedin": "LinkedIn"
   },
   "aboutPage": {
-    "title": "About Dosbre",
-    "lead": "Dosbre exists to ease the process for people who carry weight — responsibility, decisions, deadlines, and lives. We build systems that feel calm, clear, and trustworthy, guided by Lumi, our Speaker for Absolute Truth.",
-    "purposeTitle": "Our Purpose",
-    "purposeP1": "The world is full of tools that demand more from people — more attention, more decisions, more cognitive load. Dosbre moves in the opposite direction. We remove friction. We reduce noise. We create clarity.",
-    "purposeP2": "Our mission is simple: to make every interaction feel lighter. To build technology that respects the human body and soul. To offer a service that feels like stepping into a calmer space.",
-    "philosophyTitle": "The Philosophy",
-    "philosophyIntro": "Dosbre is built on three pillars: Beauty, Truth, and Tranquility. These are not slogans — they are design laws."
+    "title": "Om Dosbre",
+    "lead": "Dosbre eksisterer for å lette prosessen for mennesker som bærer vekt — ansvar, beslutninger, frister og liv. Vi bygger systemer som føles rolige, klare og pålitelige, veiledet av Lumi, vår Talsmann for Absolutt Sannhet.",
+    "purposeTitle": "Vårt Formål",
+    "purposeP1": "Verden er full av verktøy som krever mer av mennesker — mer oppmerksomhet, flere beslutninger, mer kognitiv belastning. Dosbre beveger seg i motsatt retning. Vi fjerner friksjon. Vi reduserer støy. Vi skaper klarhet.",
+    "purposeP2": "Vårt oppdrag er enkelt: å gjøre hver interaksjon lettere. Å bygge teknologi som respekterer menneskekroppen og sjelen. Å tilby en tjeneste som føles som å tre inn i et roligere rom.",
+    "philosophyTitle": "Filosofien",
+    "philosophyIntro": "Dosbre er bygget på tre pilarer: Skjønnhet, Sannhet og Ro. Dette er ikke slagord — de er designlover.",
+    "beautyTitle": "Skjønnhet",
+    "beautyText": "Hvert grensesnitt, hvert ord, hvert øyeblikk må føles tilsiktet og elegant.",
+    "truthTitle": "Sannhet",
+    "truthText": "Vi overdriver aldri, manipulerer aldri, skjuler aldri kompleksitet bak falske løfter.",
+    "tranquilityTitle": "Ro",
+    "tranquilityText": "Brukeren bør føle seg roligere etter å ha brukt Dosbre enn før.",
+    "lumiEmbodies": "Lumi legemliggjør disse prinsippene. Hun er ikke en chatbot. Hun er klarhetens stemme — en guide som avslører den enkleste veien fremover.",
+    "founderTitle": "Grunnleggeren",
+    "founderP1": "Dosbre ble grunnlagt av Marco, en prosjektleder som har ledet noen av de mest krevende bygge- og logistikkprosjektene i Finland. Hans arbeid inkluderer Stockmann Kasvu-prosjektet i Helsinki (130 000 m²), DB Schenker Ilvesvuori logistikksenter og Viinikkala landtransportsenter.",
+    "founderP2": "Disse prosjektene krevde å koordinere hundrevis av mennesker, navigere komplekse systemer og levere under enormt press. Samme disiplin, klarhet og ro former nå Dosbres arkitektur og filosofi.",
+    "founderLumiQuote": "Marco bygde strukturer hvor tusenvis av mennesker beveger seg uanstrengt. Nå bygger han systemer hvor tankene dine kan bevege seg uanstrengt.",
+    "whyDosbreTitle": "Hvorfor Dosbre",
+    "whyDosbreP1": "Fordi verden ikke trenger et verktøy til. Den trenger en helligdom — et sted hvor arbeid blir lettere, beslutninger blir klarere og sikkerhet blir usynlig. Dosbre er det stedet.",
+    "whyDosbreP2": "Og Lumi er guiden som gjør det menneskelig."
   },
   "contactPage": {
-    "title": "Contact",
-    "lead": "Get in touch with us.",
-    "getInTouchTitle": "Get in touch",
-    "getInTouchText": "You can contact us directly by email. We respond calmly, clearly, and with respect for your time.",
-    "email": "Email",
-    "founder": "Founder",
-    "businessId": "Business ID",
-    "locationTitle": "Location",
-    "locationText": "Dosreb Ltd is based in Finland. We work globally, digitally, and with intention."
+    "title": "Kontakt",
+    "lead": "Hvis du vil nå Dosbre, samarbeide, investere eller bare stille et spørsmål, vil Lumi veilede meldingen din til rett sted.",
+    "getInTouchTitle": "Ta kontakt",
+    "getInTouchText": "Du kan kontakte oss direkte via e-post. Vi svarer rolig, tydelig og med respekt for tiden din.",
+    "email": "E-post",
+    "founder": "Grunnlegger",
+    "businessId": "Organisasjonsnummer",
+    "formTitle": "Send oss en melding",
+    "namePlaceholder": "Ditt navn",
+    "emailPlaceholder": "Din e-post",
+    "messagePlaceholder": "Din melding",
+    "submitButton": "Send melding",
+    "locationTitle": "Plassering",
+    "locationText": "Dosreb Ltd er basert i Finland. Vi jobber globalt, digitalt og med hensikt.",
+    "sendButton": "Send"
+  },
+  "demoPage": {
+    "title": "Be om Demo",
+    "lead": "Opplev Dosbre selv. La oss vise deg hvordan klarhet, struktur og intelligent veiledning kan transformere arbeidsflyten din.",
+    "whyRequestTitle": "Hvorfor be om en demo?",
+    "whyRequestText": "En demo er ikke en salgspitch. Det er en veiledet opplevelse hvor du ser hvordan Dosbre fjerner friksjon, reduserer kognitiv belastning og gjør komplekse prosesser enkle. Lumi vil guide deg gjennom plattformen og vise deg nøyaktig hvordan den tjener dine behov.",
+    "formTitle": "Be om din demo",
+    "namePlaceholder": "Ditt navn",
+    "emailPlaceholder": "Din e-post",
+    "companyPlaceholder": "Firmanavn (valgfritt)",
+    "messagePlaceholder": "Fortell oss om dine behov",
+    "submitButton": "Be om demo",
+    "lumiComment": "\"Jeg sørger for at forespørselen din når Marco. Hver demo er laget med omtanke.\"",
+    "whatToExpectTitle": "Hva du kan forvente",
+    "whatToExpectText": "Etter at du sender inn forespørselen din, tar vi kontakt innen 48 timer for å planlegge en personlig demo. Du vil se plattformen i aksjon, stille spørsmål og utforske hvordan Dosbre passer inn i arbeidsflyten din. Ingen press. Ingen hast. Bare klarhet."
+  },
+  "lumiPage": {
+    "title": "Møt Lumi",
+    "lead": "Lumi er ikke en chatbot. Hun er din guide — en rolig, intelligent tilstedeværelse designet for å fjerne friksjon og skape klarhet i hvert trinn.",
+    "whoIsLumiTitle": "Hvem er Lumi?",
+    "whoIsLumiText": "Lumi er Dosbres stemme. Hun legemliggjør plattformens filosofi: Skjønnhet, Sannhet og Ro. Når du samhandler med henne, får du ikke automatiserte svar — du mottar veiledning formet av nøye tanke og klarhet.",
+    "lumiQuote": "Jeg er her for å gjøre kompleksitet enkel. Spør meg om hva som helst, og jeg vil vise deg den enkleste veien fremover.",
+    "philosophyTitle": "Filosofien Bak Lumi",
+    "philosophyText": "Lumi ble designet for å redusere kognitiv belastning. Hun overvelder deg ikke med informasjon — hun avslører nøyaktig det du trenger, når du trenger det. Hvert ord er tilsiktet. Hvert svar er laget for å føles lettere enn spørsmålet.",
+    "howLumiHelpsTitle": "Hvordan Lumi Hjelper",
+    "howLumiHelpsText": "Enten du navigerer et prosjekt, søker etter dokumenter eller prøver å forstå en kompleks prosess, veileder Lumi deg med presisjon og ro. Hun er tilgjengelig 24/7, alltid tålmodig, alltid klar."
   },
   "projectsPage": {
-    "title": "Projects & Case Studies",
-    "lead": "Before Dosbre, Marco led some of Finland's most demanding construction and logistics projects. These case studies demonstrate the discipline, clarity, and calm that now shape Dosbre's philosophy.",
-    "viewProject": "View Project"
+    "title": "Prosjekter & Casestudier",
+    "lead": "Før Dosbre ledet Marco noen av Finlands mest krevende bygge- og logistikkprosjekter. Disse casestudiene demonstrerer disiplinen, klarheten og roen som nå former Dosbres filosofi.",
+    "viewProject": "Vis Prosjekt",
+    "stockmann": {
+      "title": "Stockmann Kasvu-Prosjekt",
+      "description1": "En 130 000 m² utvidelse og renovering av Helsinkis ikoniske varehus. Marco ledet hele det underjordiske området: utgraving av 200 000 m³ fjell, et 600-plassers parkeringsanlegg, en komplett vedlikeholdsgård og all vertikal logistikk fra kjeller til 8. etasje.",
+      "description2": "Han koordinerte 50 funksjonærer og 200 arbeidere, med en arbeidsplassorganisasjon bygget fem meter over Mannerheimveien.",
+      "lumiQuote": "\"Marco ledet ikke bare et prosjekt. Han omformet flyten i en by.\""
+    },
+    "dbschenker": {
+      "title": "DB Schenker – Ilvesvuori Logistikksenter",
+      "description": "Et 17 800 m² lager på en 80 000 m² tomt, inkludert to 6 500 m² kuldebestandige haller. Marco overvåket full prosjektledelse, strukturkoordinering og operasjonell flytdesign.",
+      "lumiQuote": "\"Et lager er mer enn vegger. Det er en rytme — og Marco bygde den.\""
+    },
+    "jatkasaari": {
+      "title": "Jätkäsaaren underjordiske rom",
+      "description": "Jätkäsaaren underjordiske rom-prosjektet er et utmerket eksempel på DOSBREs evne til å håndtere underjordisk anleggskonstruksjon, integrere alle parter og dokumentasjon i én sikker plattform.",
+      "lumiQuote": "\"Bevegelse blir enkel når strukturen er riktig. Marco bygde strukturen.\""
+    }
   },
   "realEstatesPage": {
-    "title": "Real Estates",
-    "lead": "A curated collection of real estate and infrastructure projects that reflect Marco's precision, discipline, and ability to orchestrate large-scale environments.",
-    "portfolioTitle": "Portfolio Overview",
-    "portfolioText": "This section will grow as Dosbre expands. Each real estate entry will include location, scope, purpose, and Lumi's commentary to highlight the human and structural impact of the project.",
-    "lumiQuote": "\"A building is more than space. It's a structure for human movement, clarity, and purpose.\"",
-    "comingSoonTitle": "Coming Soon",
-    "comingSoonText": "More real estate projects will be added as the portfolio is documented. This page is designed to scale with your future developments."
+    "title": "Eiendom",
+    "lead": "En kuratert samling av eiendoms- og infrastrukturprosjekter som gjenspeiler Marcos presisjon, disiplin og evne til å orkestrere store miljøer.",
+    "portfolioTitle": "Porteføljeoversikt",
+    "portfolioText": "Denne seksjonen vil vokse når Dosbre ekspanderer. Hver eiendomsoppføring vil inkludere plassering, omfang, formål og Lumis kommentarer for å fremheve prosjektets menneskelige og strukturelle påvirkning.",
+    "lumiQuote": "\"En bygning er mer enn plass. Det er en struktur for menneskelig bevegelse, klarhet og formål.\"",
+    "comingSoonTitle": "Kommer Snart",
+    "comingSoonText": "Flere eiendomsprosjekter vil bli lagt til når porteføljen dokumenteres. Denne siden er designet for å skalere med din fremtidige utvikling."
+  },
+  "features": {
+    "title": "Plattformfunksjoner",
+    "propertyManagement": "Eiendomsforvaltning: Juridisk, Finansiering, Salg, Tjenester",
+    "constructionManagement": "Byggeprosjektledelse: Designere, Entreprenører, Myndigheter, Planstyring",
+    "documentManagement": "Dokumenthåndtering: Sentralisert, sikker, gjennomsiktig",
+    "integrations": "Integrasjoner: e-signatur, kart, betalinger"
+  },
+  "vision": {
+    "title": "Marked & Visjon",
+    "description": "Eiendoms- og byggebransjen er en av de største i Finland og Europa. DOSBREs visjon: Én plattform for alle — fra Finland til verden."
+  },
+  "team": {
+    "title": "Vårt Team",
+    "description": "Grunnlegger, programvareutviklere, UI/UX-designer, bransjeksperter og kundeservice."
   }
 }

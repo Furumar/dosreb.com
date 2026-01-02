@@ -20,11 +20,17 @@
     "propertyManagement": "Kiinteistönhallinta",
     "constructionProjects": "Rakennusprojektit",
     "digitalDocumentation": "Digitaalinen Dokumentaatio",
-    "workflow": "Työnkulku"
+    "workflow": "Työnkulku",
+    "collaboration": "Yhteistyö",
+    "security": "Turvallisuus"
   },
   "projects": {
     "title": "Projektimme",
-    "description": "Tutustu portfolioomme onnistuneista kiinteistö- ja rakennusprojekteista."
+    "description": "Tutustu portfolioomme onnistuneista kiinteistö- ja rakennusprojekteista.",
+    "viewProject": "Näytä projekti",
+    "stockmannDescription": "Lippulaivakiinteistö ja rakennusjohtamistapaus DOSBRElle.",
+    "dbschenkerDescription": "Logistiikka- ja infrastruktuurihanke, saumatonta yhteistyötä kaikille sidosryhmille.",
+    "jatkasaariDescription": "Maanalaisten tilojen rakentaminen, kaikkien osapuolten ja dokumentaation integrointi."
   },
   "lumi": {
     "title": "Tapaa Lumi",
@@ -33,11 +39,17 @@
   },
   "contact": {
     "title": "Ota Yhteyttä",
-    "description": "Valmis muuttamaan liiketoimintaprosessisi? Ota meihin yhteyttä demon saamiseksi."
+    "description": "Valmis muuttamaan liiketoimintaprosessisi? Ota meihin yhteyttä demon saamiseksi.",
+    "namePlaceholder": "Nimesi",
+    "emailPlaceholder": "Sähköpostisi",
+    "messagePlaceholder": "Viesti",
+    "sendButton": "Lähetä"
   },
   "footer": {
     "copyright": "© 2026 DOSREB LTD. Kaikki oikeudet pidätetään.",
-    "tagline": "Selkeys, rakenne ja älykäs työnkulun ohjaus."
+    "tagline": "Selkeys, rakenne ja älykäs työnkulun ohjaus.",
+    "privacyPolicy": "Tietosuojakäytäntö",
+    "linkedin": "LinkedIn"
   },
   "aboutPage": {
     "title": "Tietoa Dosbrestä",
@@ -57,7 +69,13 @@
     "founder": "Perustaja",
     "businessId": "Y-tunnus",
     "locationTitle": "Sijainti",
-    "locationText": "Dosreb Ltd sijaitsee Suomessa. Toimimme maailmanlaajuisesti, digitaalisesti ja tarkoituksellisesti."
+    "locationText": "Dosreb Ltd sijaitsee Suomessa. Toimimme maailmanlaajuisesti, digitaalisesti ja tarkoituksellisesti.",
+    "formTitle": "Lähetä meille viesti",
+    "namePlaceholder": "Nimesi",
+    "emailPlaceholder": "Sähköpostisi",
+    "messagePlaceholder": "Viestisi",
+    "submitButton": "Lähetä viesti",
+    "sendButton": "Lähetä"
   },
   "projectsPage": {
     "title": "Projektit ja Tapaustutkimukset",
@@ -88,5 +106,46 @@
     "lumiQuote": "\"Rakennus on enemmän kuin tilaa. Se on rakenne ihmisten liikkeelle, selkeydelle ja tarkoitukselle.\"",
     "comingSoonTitle": "Tulossa pian",
     "comingSoonText": "Lisää kiinteistöhankkeita lisätään portfolion dokumentoinnin edetessä. Tämä sivu on suunniteltu skaalautumaan tulevaisuuden kehityksen mukana."
+  },
+  "demoPage": {
+    "title": "Pyydä Demo",
+    "lead": "Koe Dosbre omin silmin. Annamme sinulle näyttää, kuinka selkeys, rakenne ja älykäs ohjaus voivat muuttaa työnkulkuasi.",
+    "whyRequestTitle": "Miksi pyytää demoa?",
+    "whyRequestText": "Demo ei ole myyntipuhe. Se on ohjattu kokemus, jossa näet, kuinka Dosbre poistaa kitkaa, vähentää kognitiivista kuormaa ja tekee monimutkaisista prosesseista vaivattomia. Lumi opastaa sinua alustan läpi ja näyttää tarkalleen, kuinka se palvelee tarpeitasi.",
+    "formTitle": "Pyydä demosi",
+    "namePlaceholder": "Nimesi",
+    "emailPlaceholder": "Sähköpostisi",
+    "companyPlaceholder": "Yrityksen nimi (valinnainen)",
+    "messagePlaceholder": "Kerro meille tarpeistasi",
+    "submitButton": "Pyydä demoa",
+    "lumiComment": "\"Varmistan, että pyyntösi tavoittaa Marcon. Jokainen demo on laadittu huolella.\"",
+    "whatToExpectTitle": "Mitä odottaa",
+    "whatToExpectText": "Kun olet lähettänyt pyyntösi, otamme yhteyttä 48 tunnin kuluessa varaten henkilökohtaisen demon. Näet alustan toiminnassa, voit esittää kysymyksiä ja tutkia, kuinka Dosbre sopii työnkulkuusi. Ei painetta. Ei kiirettä. Vain selkeyttä."
+  },
+  "lumiPage": {
+    "title": "Tapaa Lumi",
+    "lead": "Lumi ei ole chatbot. Hän on oppaasi — rauhallinen, älykäs läsnäolo, joka on suunniteltu poistamaan kitkaa ja tuomaan selkeyttä jokaiseen vaiheeseen.",
+    "whoIsLumiTitle": "Kuka on Lumi?",
+    "whoIsLumiText": "Lumi on Dosbren ääni. Hän ruumiillistaa alustan filosofian: Kauneus, Totuus ja Rauhallisuus. Kun olet vuorovaikutuksessa hänen kanssaan, et saa automatisoituja vastauksia — saat ohjausta, joka on muotoiltu huolellisen ajattelun ja selkeyden kautta.",
+    "lumiQuote": "Olen täällä tehdakseni monimutkaisuudesta vaivatonta. Kysy minulta mitä tahansa, niin näytän sinulle yksinkertaisimman tien eteenpäin.",
+    "philosophyTitle": "Lumin taustalla oleva filosofia",
+    "philosophyText": "Lumi suunniteltiin vähentämään kognitiivista kuormaa. Hän ei ylikuormita sinua tiedolla — hän paljastaa tarkalleen sen, mitä tarvitset, silloin kun tarvitset sitä. Jokainen sana on tarkoituksellinen. Jokainen vastaus on laadittu tuntumaan kevyemmältä kuin kysymys.",
+    "howLumiHelpsTitle": "Kuinka Lumi auttaa",
+    "howLumiHelpsText": "Olipa kyseessä projektin navigointi, asiakirjojen etsiminen tai monimutkaisen prosessin ymmärtäminen, Lumi ohjaa sinua tarkkuudella ja rauhalla. Hän on saatavilla 24/7, aina kärsivällinen, aina selkeä."
+  },
+  "features": {
+    "title": "Alustan ominaisuudet",
+    "propertyManagement": "Kiinteistönhallinta: Laki, Rahoitus, Myynti, Palvelut",
+    "constructionManagement": "Rakennusprojektin hallinta: Suunnittelijat, Urakoitsijat, Viranomaiset, Suunnitelmien hallinta",
+    "documentManagement": "Dokumentinhallinta: Keskitetty, turvallinen, läpinäkyvä",
+    "integrations": "Integraatiot: sähköinen allekirjoitus, kartat, maksut"
+  },
+  "vision": {
+    "title": "Markkinat & Visio",
+    "description": "Kiinteistö- ja rakennusala on yksi suurimmista Suomessa ja Euroopassa. DOSBREn visio: Yksi alusta kaikille — Suomesta maailmalle."
+  },
+  "team": {
+    "title": "Tiimimme",
+    "description": "Perustaja, ohjelmistokehittäjät, UI/UX-suunnittelija, alan asiantuntijat ja asiakaspalvelu."
   }
 }

@@ -1,8 +1,8 @@
-// app/contact/page.tsx
+// app/demo/page.tsx
 import { getTranslations } from 'next-intl/server';
 
-export default async function ContactPage() {
-  const t = await getTranslations('contactPage');
+export default async function DemoPage() {
+  const t = await getTranslations('demoPage');
   
   return (
     <div className="dosbre-page">
@@ -14,16 +14,10 @@ export default async function ContactPage() {
       </section>
 
       <section className="page-section">
-        <h2 className="section-title">{t('getInTouchTitle')}</h2>
+        <h2 className="section-title">{t('whyRequestTitle')}</h2>
         <p>
-          {t('getInTouchText')}
+          {t('whyRequestText')}
         </p>
-
-        <div className="contact-box">
-          <p><strong>{t('email')}:</strong> info@dosreb.com</p>
-          <p><strong>{t('founder')}:</strong> marco@dosreb.com</p>
-          <p><strong>{t('businessId')}:</strong> (add when ready)</p>
-        </div>
       </section>
 
       <section className="page-section">
@@ -31,19 +25,20 @@ export default async function ContactPage() {
         <form className="contact-form">
           <input type="text" placeholder={t('namePlaceholder')} required />
           <input type="email" placeholder={t('emailPlaceholder')} required />
+          <input type="text" placeholder={t('companyPlaceholder')} />
           <textarea placeholder={t('messagePlaceholder')} required />
           <button type="submit" className="btn-primary">{t('submitButton')}</button>
         </form>
         
         <p className="lumi-comment">
-          “Tell me what you need. I’ll make sure it reaches the right hands.”
+          {t('lumiComment')}
         </p>
       </section>
 
       <section className="page-section">
-        <h2 className="section-title">{t('locationTitle')}</h2>
+        <h2 className="section-title">{t('whatToExpectTitle')}</h2>
         <p>
-          {t('locationText')}
+          {t('whatToExpectText')}
         </p>
       </section>
     </div>

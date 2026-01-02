@@ -33,53 +33,41 @@ export default async function AboutPage() {
 
         <ul className="about-list">
           <li>
-            <strong>Beauty</strong> — Every interface, every word, every moment must feel
-            intentional and elegant.
+            <strong>{t('beautyTitle')}</strong> — {t('beautyText')}
           </li>
           <li>
-            <strong>Truth</strong> — We never exaggerate, never manipulate, never hide
-            complexity behind false promises.
+            <strong>{t('truthTitle')}</strong> — {t('truthText')}
           </li>
           <li>
-            <strong>Tranquility</strong> — The user should feel calmer after using Dosbre
-            than before.
+            <strong>{t('tranquilityTitle')}</strong> — {t('tranquilityText')}
           </li>
         </ul>
 
         <p>
-          Lumi embodies these principles. She is not a chatbot. She is the voice of
-          clarity — a guide who reveals the simplest path forward.
+          {t('lumiEmbodies')}
         </p>
       </section>
 
       <section className="page-section">
-        <h2 className="section-title">The Founder</h2>
+        <h2 className="section-title">{t('founderTitle')}</h2>
         <p>
-          Dosbre was founded by Marco, a project manager who has led some of the most
-          demanding construction and logistics projects in Finland. His work includes
-          the Stockmann Kasvu-project in Helsinki (130,000 m²), the DB Schenker
-          Ilvesvuori logistics center, and the Viinikkala Land Transport Center.
+          {t('founderP1')}
         </p>
         <p>
-          These projects required orchestrating hundreds of people, navigating complex
-          systems, and delivering under immense pressure. The same discipline, clarity,
-          and calm now shape Dosbre’s architecture and philosophy.
+          {t('founderP2')}
         </p>
         <p className="lumi-comment">
-          “Marco built structures where thousands of people move effortlessly. Now he
-          builds systems where your mind can move effortlessly.”
+          {t('founderLumiQuote')}
         </p>
       </section>
 
       <section className="page-section">
-        <h2 className="section-title">Why Dosbre</h2>
+        <h2 className="section-title">{t('whyDosbreTitle')}</h2>
         <p>
-          Because the world does not need another tool. It needs a sanctuary — a place
-          where work becomes lighter, decisions become clearer, and security becomes
-          invisible. Dosbre is that place.
+          {t('whyDosbreP1')}
         </p>
         <p>
-          And Lumi is the guide who makes it feel human.
+          {t('whyDosbreP2')}
         </p>
       </section>
     </div>
