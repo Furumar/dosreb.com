@@ -62,7 +62,23 @@
   "projectsPage": {
     "title": "Projektit ja Tapaustutkimukset",
     "lead": "Ennen Dosbrea Marco johti joitakin Suomen vaativimmista rakennus- ja logistiikkaprojekteista. Nämä tapaustutkimukset osoittavat kurinalaisuuden, selkeyden ja rauhan, jotka nyt muokkaavat Dosbren filosofiaa.",
-    "viewProject": "Näytä projekti"
+    "viewProject": "Näytä projekti",
+    "stockmann": {
+      "title": "Stockmann Kasvu-Projekti",
+      "description1": "130 000 m² laajennus ja peruskorjaus Helsingin ikonisesta tavaratalosta. Marco johti koko maanalaista aluetta: 200 000 m³ kallion louhinta, 600-paikkainen pysäköintilaitos, täysi huoltopiha ja kaikki pystylogistiikka kellarista 8. kerrokseen.",
+      "description2": "Hän koordinoi 50 toimihenkilöä ja 200 työntekijää, työmaajärjestelyllä, joka rakennettiin viisi metriä Mannerheimintien yläpuolelle.",
+      "lumiQuote": "\"Marco ei vain johtanut projektia. Hän muutti kaupungin virtaa.\""
+    },
+    "dbschenker": {
+      "title": "DB Schenker – Ilvesvuori Logistiikkakeskus",
+      "description": "17 800 m² varasto 80 000 m² tontilla, sisältäen kaksi 6 500 m² kylmänkestävää hallia. Marco valvoi täydellistä projektinhallintaa, rakennekoordinointia ja toiminnallista virtaussuunnittelua.",
+      "lumiQuote": "\"Varasto on enemmän kuin seiniä. Se on rytmi — ja Marco rakensi sen.\""
+    },
+    "jatkasaari": {
+      "title": "Jätkäsaaren maanalaiset tilat",
+      "description": "Jätkäsaaren maanalaiset tilat -projekti on erinomainen esimerkki DOSBREn kyvystä hallita maanalaisten tilojen rakentamista, integroiden kaikki osapuolet ja dokumentaation yhteen turvalliseen alustaan.",
+      "lumiQuote": "\"Liikkuminen muuttuu vaivattomaksi, kun rakenne on oikea. Marco rakensi rakenteen.\""
+    }
   },
   "realEstatesPage": {
     "title": "Kiinteistöt",

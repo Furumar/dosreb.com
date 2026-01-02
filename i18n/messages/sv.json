@@ -50,7 +50,23 @@
   "projectsPage": {
     "title": "Projekt & Fallstudier",
     "lead": "Före Dosbre ledde Marco några av Finlands mest krävande bygg- och logistikprojekt. Dessa fallstudier visar den disciplin, klarhet och lugn som nu formar Dosbres filosofi.",
-    "viewProject": "Visa Projekt"
+    "viewProject": "Visa Projekt",
+    "stockmann": {
+      "title": "Stockmann Kasvu-Projekt",
+      "description1": "En 130 000 m² utbyggnad och renovering av Helsingfors ikoniska varuhus. Marco ledde hela det underjordiska området: utgrävning av 200 000 m³ berggrund, en 600-platsers parkeringsanläggning, en komplett underhållsgård och all vertikal logistik från källare till 8:e våningen.",
+      "description2": "Han koordinerade 50 tjänstemän och 200 arbetare, med en arbetsplatsorganisation byggd fem meter ovanför Mannerheimvägen.",
+      "lumiQuote": "\"Marco hanterade inte bara ett projekt. Han omformade flödet i en stad.\""
+    },
+    "dbschenker": {
+      "title": "DB Schenker – Ilvesvuori Logistikcenter",
+      "description": "Ett 17 800 m² lager på en 80 000 m² tomt, inklusive två 6 500 m² kylbeständiga hallar. Marco övervakade fullständig projektledning, strukturkoordinering och operativ flödesdesign.",
+      "lumiQuote": "\"Ett lager är mer än väggar. Det är en rytm — och Marco byggde den.\""
+    },
+    "jatkasaari": {
+      "title": "Jätkäsaaren underjordiska utrymmen",
+      "description": "Jätkäsaaren underjordiska utrymmen-projektet är ett utmärkt exempel på DOSBREs förmåga att hantera underjordisk anläggningskonstruktion, integrera alla parter och dokumentation i en säker plattform.",
+      "lumiQuote": "\"Rörelse blir enkel när strukturen är rätt. Marco byggde strukturen.\""
+    }
   },
   "realEstatesPage": {
     "title": "Fastigheter",
