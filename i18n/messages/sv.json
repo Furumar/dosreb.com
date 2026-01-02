@@ -1,0 +1,64 @@
+{
+  "nav": {
+    "home": "Hem",
+    "about": "Om oss",
+    "projects": "Projekt",
+    "realEstates": "Fastigheter",
+    "lumi": "Lumi",
+    "contact": "Kontakt"
+  },
+  "hero": {
+    "title": "Förenkla Din Affärsprocess",
+    "subtitle": "En digital plattform för fastighets- och byggprojektledning.",
+    "exploreProjects": "Utforska Projekt",
+    "meetLumi": "Möt Lumi",
+    "requestDemo": "Begär Demo"
+  },
+  "about": {
+    "title": "Vad är DOSBRE?",
+    "description": "DOSBRE är en digital plattform som samlar alla aspekter av fastighets- och byggprojektledning. Säker, transparent och effektiv samarbete för varje intressent.",
+    "propertyManagement": "Fastighetsförvaltning",
+    "constructionProjects": "Byggprojekt",
+    "digitalDocumentation": "Digital Dokumentation",
+    "workflow": "Arbetsflöde"
+  },
+  "projects": {
+    "title": "Våra Projekt",
+    "description": "Utforska vår portfölj av framgångsrika fastighets- och byggprojekt."
+  },
+  "lumi": {
+    "title": "Möt Lumi",
+    "subtitle": "Din AI-assistent",
+    "description": "Lumi är din intelligenta guide genom DOSBRE, hjälper dig navigera projekt, hitta information och effektivisera ditt arbetsflöde."
+  },
+  "contact": {
+    "title": "Kontakta Oss",
+    "description": "Redo att transformera din affärsprocess? Kontakta oss för en demo."
+  },
+  "footer": {
+    "copyright": "© 2026 DOSREB LTD. Alla rättigheter förbehållna.",
+    "tagline": "Tydlighet, struktur och intelligent arbetsflödesvägledning."
+  },
+  "aboutPage": {
+    "title": "Om Dosbre",
+    "lead": "Dosbre existerar för att underlätta processen för personer som bär ansvar — beslut, deadlines och liv."
+  },
+  "contactPage": {
+    "title": "Kontakt",
+    "lead": "Kontakta oss."
+  },
+  "projectsPage": {
+    "title": "Projekt & Fallstudier",
+    "lead": "Före Dosbre ledde Marco några av Finlands mest krävande bygg- och logistikprojekt. Dessa fallstudier visar den disciplin, klarhet och lugn som nu formar Dosbres filosofi.",
+    "viewProject": "Visa Projekt"
+  },
+  "realEstatesPage": {
+    "title": "Fastigheter",
+    "lead": "En kurerad samling av fastighets- och infrastrukturprojekt som återspeglar Marcos precision, disciplin och förmåga att orkestrera storskaliga miljöer.",
+    "portfolioTitle": "Portfolioöversikt",
+    "portfolioText": "Detta avsnitt kommer att växa när Dosbre expanderar. Varje fastighetspost kommer att inkludera plats, omfattning, syfte och Lumis kommentarer för att lyfta fram projektets mänskliga och strukturella påverkan.",
+    "lumiQuote": "\"En byggnad är mer än utrymme. Det är en struktur för mänsklig rörelse, klarhet och syfte.\"",
+    "comingSoonTitle": "Kommer Snart",
+    "comingSoonText": "Fler fastighetsprojekt kommer att läggas till när portföljen dokumenteras. Denna sida är utformad för att skala med din framtida utveckling."
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "nav": {
+    "home": "Etusivu",
+    "about": "Tietoa",
+    "projects": "Projektit",
+    "realEstates": "Kiinteistöt",
+    "lumi": "Lumi",
+    "contact": "Yhteystiedot"
+  },
+  "hero": {
+    "title": "Helpota Liiketoimintaprosessiasi",
+    "subtitle": "Digitaalinen alusta kiinteistö- ja rakennushankkeiden hallintaan.",
+    "exploreProjects": "Tutustu Projekteihin",
+    "meetLumi": "Tapaa Lumi",
+    "requestDemo": "Pyydä Demo"
+  },
+  "about": {
+    "title": "Mikä on DOSBRE?",
+    "description": "DOSBRE on digitaalinen alusta, joka yhdistää kaikki kiinteistö- ja rakennusprojektin hallinnan osa-alueet. Turvallinen, läpinäkyvä ja tehokas yhteistyö jokaiselle sidosryhmälle.",
+    "propertyManagement": "Kiinteistönhallinta",
+    "constructionProjects": "Rakennusprojektit",
+    "digitalDocumentation": "Digitaalinen Dokumentaatio",
+    "workflow": "Työnkulku"
+  },
+  "projects": {
+    "title": "Projektimme",
+    "description": "Tutustu portfolioomme onnistuneista kiinteistö- ja rakennusprojekteista."
+  },
+  "lumi": {
+    "title": "Tapaa Lumi",
+    "subtitle": "Tekoälyassistenttisi",
+    "description": "Lumi on älykäs oppaasi DOSBRE:n läpi, auttaa sinua navigoimaan projekteissa, löytämään tietoa ja tehostamaan työnkulkuasi."
+  },
+  "contact": {
+    "title": "Ota Yhteyttä",
+    "description": "Valmis muuttamaan liiketoimintaprosessisi? Ota meihin yhteyttä demon saamiseksi."
+  },
+  "footer": {
+    "copyright": "© 2026 DOSREB LTD. Kaikki oikeudet pidätetään.",
+    "tagline": "Selkeys, rakenne ja älykäs työnkulun ohjaus."
+  },
+  "aboutPage": {
+    "title": "Tietoa Dosbrestä",
+    "lead": "Dosbre on olemassa helpottamaan niiden prosesseja, jotka kantavat vastuuta — päätöksiä, määräaikoja ja ihmishenkiä. Rakennamme järjestelmiä, jotka tuntuvat rauhallisilta, selkeiltä ja luotettavilta, Lumin, Ehdottoman Totuuden Puhujan, ohjaamina.",
+    "purposeTitle": "Tarkoituksemme",
+    "purposeP1": "Maailma on täynnä työkaluja, jotka vaativat ihmisiltä enemmän — enemmän huomiota, enemmän päätöksiä, enemmän kognitiivista kuormaa. Dosbre liikkuu päinvastaiseen suuntaan. Poistamme kitkaa. Vähennämme melua. Luomme selkeyttä.",
+    "purposeP2": "Missiomme on yksinkertainen: tehdä jokaisesta vuorovaikutuksesta kevyempi. Rakentaa teknologiaa, joka kunnioittaa ihmisen kehoa ja sielua. Tarjota palvelua, joka tuntuu kuin astuisi rauhallisempaan tilaan.",
+    "philosophyTitle": "Filosofia",
+    "philosophyIntro": "Dosbre rakentuu kolmelle pilarille: Kauneus, Totuus ja Rauhallisuus. Nämä eivät ole iskulauseita — ne ovat suunnittelulakeja."
+  },
+  "contactPage": {
+    "title": "Yhteystiedot",
+    "lead": "Jos haluat tavoittaa Dosbren, tehdä yhteistyötä, sijoittaa tai vain kysyä kysymyksen, Lumi ohjaa viestisi oikeaan paikkaan.",
+    "getInTouchTitle": "Ota yhteyttä",
+    "getInTouchText": "Voit ottaa meihin yhteyttä suoraan sähköpostitse. Vastaamme rauhallisesti, selkeästi ja kunnioittaen aikaasi.",
+    "email": "Sähköposti",
+    "founder": "Perustaja",
+    "businessId": "Y-tunnus",
+    "locationTitle": "Sijainti",
+    "locationText": "Dosreb Ltd sijaitsee Suomessa. Toimimme maailmanlaajuisesti, digitaalisesti ja tarkoituksellisesti."
+  },
+  "projectsPage": {
+    "title": "Projektit ja Tapaustutkimukset",
+    "lead": "Ennen Dosbrea Marco johti joitakin Suomen vaativimmista rakennus- ja logistiikkaprojekteista. Nämä tapaustutkimukset osoittavat kurinalaisuuden, selkeyden ja rauhan, jotka nyt muokkaavat Dosbren filosofiaa.",
+    "viewProject": "Näytä projekti"
+  },
+  "realEstatesPage": {
+    "title": "Kiinteistöt",
+    "lead": "Huolellisesti valittu kokoelma kiinteistö- ja infrastruktuurihankkeita, jotka heijastavat Marcon tarkkuutta, kurinalaisuutta ja kykyä johtaa laajamittaisia ympäristöjä.",
+    "portfolioTitle": "Portfolio-katsaus",
+    "portfolioText": "Tämä osio kasvaa Dosbren laajentuessa. Jokainen kiinteistömerkintä sisältää sijainnin, laajuuden, tarkoituksen ja Lumin kommentit korostaakseen hankkeen inhimillistä ja rakenteellista vaikutusta.",
+    "lumiQuote": "\"Rakennus on enemmän kuin tilaa. Se on rakenne ihmisten liikkeelle, selkeydelle ja tarkoitukselle.\"",
+    "comingSoonTitle": "Tulossa pian",
+    "comingSoonText": "Lisää kiinteistöhankkeita lisätään portfolion dokumentoinnin edetessä. Tämä sivu on suunniteltu skaalautumaan tulevaisuuden kehityksen mukana."
+  }
+}

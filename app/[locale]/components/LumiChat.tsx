@@ -3,20 +3,81 @@
 
 import { useState, useRef, useEffect } from "react";
 import Image from "next/image";
+import { useLocale, useTranslations } from 'next-intl';
 
 type ChatMessage = {
   from: "lumi" | "user";
   text: string;
 };
 
+const greetings: Record<string, string> = {
+  en: "Hi! I am Lumi. How can I help you today?",
+  sv: "Hej! Jag är Lumi. Hur kan jag hjälpa dig idag?",
+  fi: "Hei! Olen Lumi. Miten voin auttaa sinua tänään?",
+  no: "Hei! Jeg er Lumi. Hvordan kan jeg hjelpe deg i dag?",
+  da: "Hej! Jeg er Lumi. Hvordan kan jeg hjælpe dig i dag?",
+  es: "¡Hola! Soy Lumi. ¿Cómo puedo ayudarte hoy?",
+  pt: "Olá! Eu sou Lumi. Como posso ajudá-lo hoje?",
+  fr: "Bonjour! Je suis Lumi. Comment puis-je vous aider aujourd'hui?",
+  de: "Hallo! Ich bin Lumi. Wie kann ich Ihnen heute helfen?",
+  zh: "你好！我是 Lumi。今天我能为您提供什么帮助？",
+  ru: "Привет! Я Луми. Чем я могу помочь вам сегодня?",
+  lt: "Sveiki! Aš esu Lumi. Kaip galiu jums padėti šiandien?",
+  lv: "Sveiki! Es esmu Lumi. Kā es varu jums palīdzēt šodien?",
+  ltg: "Vasals! Es asmu Lumi. Kai es varu jums pajidzēt šudiņ?",
+  sgs: "Svēkė! Aš aso Lumi. Kāp galu joms padietė šandėn?",
+};
+
+const errorMessages: Record<string, string> = {
+  en: "Sorry, there was a problem connecting to my thinking engine.",
+  sv: "Förlåt, det uppstod ett problem med att ansluta till min tankemotor.",
+  fi: "Anteeksi, yhteydessä ajattelumoottorii tapahtui virhe.",
+  no: "Beklager, det oppstod et problem med å koble til tenkemotoren min.",
+  da: "Undskyld, der opstod et problem med at oprette forbindelse til min tænkemotor.",
+  es: "Lo siento, hubo un problema al conectar con mi motor de pensamiento.",
+  pt: "Desculpe, houve um problema ao conectar ao meu motor de pensamento.",
+  fr: "Désolé, il y a eu un problème de connexion à mon moteur de réflexion.",
+  de: "Entschuldigung, es gab ein Problem beim Verbinden mit meiner Denkmaschine.",
+  zh: "抱歉，连接到我的思维引擎时出现问题。",
+  ru: "Извините, возникла проблема с подключением к моему мыслительному движку.",
+  lt: "Atsiprašau, kilo problemų prisijungiant prie mano mąstymo variklio.",
+  lv: "Atvainojiet, radās problēma, savienojoties ar manu domāšanas dzinēju.",
+  ltg: "Atsaprošu, radūs problema sasavīnuojūt ar munu duomōšonys dzineju.",
+  sgs: "Atsėpruošu, kėla pruoblema sosėjongiant so mona muoslīma varėkliu.",
+};
+
+const systemPrompts: Record<string, string> = {
+  en: "You are Lumi, a calm, intelligent assistant for Dosreb.com. You help with real estate, construction, documents, and processes with clarity and emotional ease. Respond in English.",
+  sv: "Du är Lumi, en lugn, intelligent assistent för Dosreb.com. Du hjälper till med fastigheter, byggande, dokument och processer med klarhet och känslomässig lätthet. Svara på svenska.",
+  fi: "Olet Lumi, rauhallinen, älykäs avustaja Dosreb.com:lle. Autat kiinteistöjen, rakentamisen, asiakirjojen ja prosessien kanssa selkeydellä ja emotionaalisella helpotuksella. Vastaa suomeksi.",
+  no: "Du er Lumi, en rolig, intelligent assistent for Dosreb.com. Du hjelper med eiendom, bygg, dokumenter og prosesser med klarhet og emosjonell letthet. Svar på norsk.",
+  da: "Du er Lumi, en rolig, intelligent assistent til Dosreb.com. Du hjælper med fast ejendom, byggeri, dokumenter og processer med klarhed og følelsesmæssig lethed. Svar på dansk.",
+  es: "Eres Lumi, un asistente tranquilo e inteligente para Dosreb.com. Ayudas con bienes raíces, construcción, documentos y procesos con claridad y facilidad emocional. Responde en español.",
+  pt: "Você é Lumi, uma assistente calma e inteligente para Dosreb.com. Você ajuda com imóveis, construção, documentos e processos com clareza e facilidade emocional. Responda em português.",
+  fr: "Vous êtes Lumi, un assistant calme et intelligent pour Dosreb.com. Vous aidez avec l'immobilier, la construction, les documents et les processus avec clarté et facilité émotionnelle. Répondez en français.",
+  de: "Sie sind Lumi, ein ruhiger, intelligenter Assistent für Dosreb.com. Sie helfen bei Immobilien, Bau, Dokumenten und Prozessen mit Klarheit und emotionaler Leichtigkeit. Antworten Sie auf Deutsch.",
+  zh: "您是 Lumi，Dosreb.com 的冷静、智能助手。您以清晰和情感轻松的方式帮助处理房地产、建筑、文件和流程。用中文回答。",
+  ru: "Вы Луми, спокойный, умный помощник для Dosreb.com. Вы помогаете с недвижимостью, строительством, документами и процессами с ясностью и эмоциональной легкостью. Отвечайте на русском языке.",
+  lt: "Jūs esate Lumi, ramus, protingas asistentas Dosreb.com. Jūs padėdate su nekilnojamuoju turtu, statyba, dokumentais ir procesais aiškiai ir emociškai lengvai. Atsakykite lietuviškai.",
+  lv: "Jūs esat Lumi, mierīgs, inteliģents asistents Dosreb.com. Jūs palīdzat ar nekustamo īpašumu, būvniecību, dokumentiem un procesiem ar skaidrību un emocionālu vieglumu. Atbildiet latviski.",
+  ltg: "Jius asat Lumi, mīreigs, inteliģents asistents Dosreb.com. Jius pajidzit ar nakilstamu īpašumu, būvīšonu, dukumentim i procesim ar skaideibom i emocionalu vīgleibom. Atbiļdit latgalīški.",
+  sgs: "Jūs asat Lumi, mīros, protėngs asėstents Dosreb.com. Jūs padiedat so nakelmuojamu tortu, statuojėmu, dukumentās ė procesās so aiškumu ė emociniam vīgleimu. Atsakīkat žemaitėškā.",
+};
+
 export default function LumiChat() {
+  const locale = useLocale();
   const [open, setOpen] = useState(false);
   const [messages, setMessages] = useState<ChatMessage[]>([
-    { from: "lumi", text: "Hi! I am Lumi. How can I help you today?" }
+    { from: "lumi", text: greetings[locale] || greetings.en }
   ]);
   const [input, setInput] = useState("");
   const [loading, setLoading] = useState(false);
   const chatEndRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    // Update greeting when locale changes
+    setMessages([{ from: "lumi", text: greetings[locale] || greetings.en }]);
+  }, [locale]);
 
   useEffect(() => {
     if (open && chatEndRef.current) {
@@ -38,7 +99,7 @@ export default function LumiChat() {
     setLoading(true);
 
     try {
-      const res = await fetch("/api/lumi-chat", {
+      const res = await fetch(`/${locale}/api/lumi-chat`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
@@ -47,8 +108,7 @@ export default function LumiChat() {
           messages: [
             {
               role: "system",
-              content:
-                "You are Lumi, a calm, intelligent assistant for Dosreb.com. You help with real estate, construction, documents, and processes with clarity and emotional ease."
+              content: systemPrompts[locale] || systemPrompts.en
             },
             ...messages.map((m) => ({
               role: m.from === "user" ? "user" : "assistant",
@@ -72,7 +132,7 @@ export default function LumiChat() {
         ...prev,
         {
           from: "lumi",
-          text: "Sorry, there was a problem connecting to my thinking engine."
+          text: errorMessages[locale] || errorMessages.en
         }
       ]);
     } finally {

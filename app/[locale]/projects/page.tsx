@@ -1,14 +1,17 @@
 // app/projects/page.tsx
+import { getTranslations } from 'next-intl/server';
+import Link from 'next/link';
 
-export default function ProjectsPage() {
+export default async function ProjectsPage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  const t = await getTranslations('projectsPage');
+  
   return (
     <div className="dosbre-page">
       <section className="page-hero">
-        <h1>Projects & Case Studies</h1>
+        <h1>{t('title')}</h1>
         <p className="page-lead">
-          Before Dosbre, Marco led some of Finland’s most demanding construction
-          and logistics projects. These case studies demonstrate the discipline,
-          clarity, and calm that now shape Dosbre’s philosophy.
+          {t('lead')}
         </p>
       </section>
 

@@ -3,9 +3,12 @@
 import Image from "next/image";
 import Link from "next/link";
 import dynamic from "next/dynamic";
+import { useTranslations } from 'next-intl';
 const LumiChat = dynamic(() => import("./components/LumiChat"), { ssr: false });
 
 export default function HomePage() {
+  const t = useTranslations();
+  
   const scrollToId = (id: string) => {
     if (typeof window === "undefined") return;
     const el = document.getElementById(id);
@@ -26,14 +29,14 @@ export default function HomePage() {
         <section className="dosbre-hero" id="top">
           <div className="hero-content">
             <div className="hero-text">
-              <h1 className="hero-title">Ease Your Business Process</h1>
+              <h1 className="hero-title">{t('hero.title')}</h1>
               <p className="hero-subtitle">
-                A digital platform for real estate and construction management.
+                {t('hero.subtitle')}
               </p>
               <div className="hero-buttons">
-                <button className="btn-primary" onClick={() => scrollToId("projects")}>Explore Projects</button>
-                <button className="btn-secondary" onClick={() => scrollToId("lumi")}>Meet Lumi</button>
-                <button className="btn-secondary" onClick={() => scrollToId("contact")}>Request Demo</button>
+                <button className="btn-primary" onClick={() => scrollToId("projects")}>{t('hero.exploreProjects')}</button>
+                <button className="btn-secondary" onClick={() => scrollToId("lumi")}>{t('hero.meetLumi')}</button>
+                <button className="btn-secondary" onClick={() => scrollToId("contact")}>{t('hero.requestDemo')}</button>
               </div>
             </div>
             <aside className="hero-aside">
@@ -44,12 +47,12 @@ export default function HomePage() {
 
         {/* ABOUT DOSBRE */}
         <section id="about" className="section-block">
-          <h2>What is DOSBRE?</h2>
-          <p>DOSBRE is a digital platform that brings together all aspects of real estate and construction project management. Secure, transparent, and efficient collaboration for every stakeholder.</p>
+          <h2>{t('about.title')}</h2>
+          <p>{t('about.description')}</p>
           <div className="feature-cards">
-            <div className="feature-card">Property Management</div>
-            <div className="feature-card">Construction Projects</div>
-            <div className="feature-card">Document Management</div>
+            <div className="feature-card">{t('about.propertyManagement')}</div>
+            <div className="feature-card">{t('about.constructionProjects')}</div>
+            <div className="feature-card">{t('about.digitalDocumentation')}</div>
             <div className="feature-card">Collaboration</div>
             <div className="feature-card">Security</div>
           </div>
@@ -57,7 +60,7 @@ export default function HomePage() {
 
         {/* PROJECTS & CASE STUDIES */}
         <section id="projects" className="section-block">
-          <h2>Featured Projects</h2>
+          <h2>{t('projects.title')}</h2>
           <div className="project-cards">
             <div className="project-card">
               <Image src="/lumi-hero.png" alt="Stockmann" width={120} height={120} style={{borderRadius: '1rem'}} />
@@ -103,7 +106,7 @@ export default function HomePage() {
           <p>Founder, software developers, UI/UX designer, industry experts, and customer service.</p>
         </section>
         <section id="contact" className="section-block">
-          <h2>Contact Us</h2>
+          <h2>{t('contact.title')}</h2>
           <form className="contact-form">
             <input type="text" placeholder="Your Name" required />
             <input type="email" placeholder="Your Email" required />
@@ -122,12 +125,12 @@ export default function HomePage() {
       {/* FOOTER */}
       <footer className="dosbre-footer">
         <div className="footer-links">
-          <Link href="#about">About</Link> | <Link href="#projects">Projects</Link> | <Link href="#contact">Contact</Link> | <Link href="#">Privacy Policy</Link>
+          <Link href="#about">{t('nav.about')}</Link> | <Link href="#projects">{t('nav.projects')}</Link> | <Link href="#contact">{t('nav.contact')}</Link> | <Link href="#">Privacy Policy</Link>
         </div>
         <div className="footer-socials">
           <a href="#" aria-label="LinkedIn">LinkedIn</a>
         </div>
-        <div className="footer-copy">&copy; {new Date().getFullYear()} DOSREB LTD</div>
+        <div className="footer-copy">{t('footer.copyright')}</div>
       </footer>
 
     </div>

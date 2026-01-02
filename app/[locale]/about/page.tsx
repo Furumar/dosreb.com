@@ -1,37 +1,34 @@
 // app/about/page.tsx
 import Image from "next/image";
+import { useTranslations } from 'next-intl';
+import { getTranslations } from 'next-intl/server';
 
-export default function AboutPage() {
+export default async function AboutPage() {
+  const t = await getTranslations('aboutPage');
+  
   return (
     <div className="dosbre-page">
       <section className="page-hero">
-        <h1>About Dosbre</h1>
+        <h1>{t('title')}</h1>
         <p className="page-lead">
-          Dosbre exists to ease the process for people who carry weight — responsibility,
-          decisions, deadlines, and lives. We build systems that feel calm, clear, and
-          trustworthy, guided by Lumi, our Speaker for Absolute Truth.
+          {t('lead')}
         </p>
       </section>
 
       <section className="page-section">
-        <h2 className="section-title">Our Purpose</h2>
+        <h2 className="section-title">{t('purposeTitle')}</h2>
         <p>
-          The world is full of tools that demand more from people — more attention,
-          more decisions, more cognitive load. Dosbre moves in the opposite direction.
-          We remove friction. We reduce noise. We create clarity.
+          {t('purposeP1')}
         </p>
         <p>
-          Our mission is simple: to make every interaction feel lighter. To build
-          technology that respects the human body and soul. To offer a service that
-          feels like stepping into a calmer space.
+          {t('purposeP2')}
         </p>
       </section>
 
       <section className="page-section">
-        <h2 className="section-title">The Philosophy</h2>
+        <h2 className="section-title">{t('philosophyTitle')}</h2>
         <p>
-          Dosbre is built on three pillars: <strong>Beauty</strong>, <strong>Truth</strong>,
-          and <strong>Tranquility</strong>. These are not slogans — they are design laws.
+          {t('philosophyIntro')}
         </p>
 
         <ul className="about-list">

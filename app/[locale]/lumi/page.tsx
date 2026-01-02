@@ -13,14 +13,9 @@ export default function HomePage() {
 
       {/* MAIN CONTENT */}
       <main className="dosbre-main">
-      </header>
-
-      {/* MAIN CONTENT */}
-      <main className="dosbre-main">
 
         {/* HERO SECTION */}
-        <section className="dosbre-hero" id="top">
-          <div>
+        <section className="dosbre-hero" id="top">\n          <div>
             <h1>Ease Your Process.</h1>
 
             <p className="hero-subtitle">
