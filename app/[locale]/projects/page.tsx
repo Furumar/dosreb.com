@@ -26,7 +26,7 @@ export default async function ProjectsPage({ params }: { params: Promise<{ local
         <p className="lumi-comment">
           {t('stockmann.lumiQuote')}
         </p>
-        <a href="/projects/stockmann" className="btn-primary">{t('viewProject')}</a>
+        <Link href={`/${locale}/projects/stockmann`} className="btn-primary">{t('viewProject')}</Link>
       </section>
 
       <section className="page-section">
@@ -37,7 +37,7 @@ export default async function ProjectsPage({ params }: { params: Promise<{ local
         <p className="lumi-comment">
           {t('dbschenker.lumiQuote')}
         </p>
-        <a href="/projects/dbschenker" className="btn-primary">{t('viewProject')}</a>
+        <Link href={`/${locale}/projects/dbschenker`} className="btn-primary">{t('viewProject')}</Link>
       </section>
 
       <section className="page-section">
@@ -48,7 +48,7 @@ export default async function ProjectsPage({ params }: { params: Promise<{ local
         <p className="lumi-comment">
           {t('jatkasaari.lumiQuote')}
         </p>
-        <a href="/projects/jatkasaari" className="btn-primary">{t('viewProject')}</a>
+        <Link href={`/${locale}/projects/jatkasaari`} className="btn-primary">{t('viewProject')}</Link>
       </section>
     </div>
   );
