@@ -2,6 +2,7 @@
 
 import React, { useEffect, useState, useRef } from 'react';
 import Image from 'next/image';
+import supabase from '@/lib/supabaseClient';
 
 type FileMeta = {
   id: string;
@@ -56,10 +57,27 @@ export default function ProjectsManager() {
 
   const createProject = () => {
     if (!title.trim()) return;
-    const p: Project = { id: uid(), title: title.trim(), files: [], createdAt: new Date().toISOString() };
-    setProjects([p, ...projects]);
+    const localP: Project = { id: uid(), title: title.trim(), files: [], createdAt: new Date().toISOString() };
+    setProjects([localP, ...projects]);
     setTitle('');
-    setSelected(p);
+    setSelected(localP);
+
+    // If Supabase is configured, also create project record in DB
+    if (supabase) {
+      (async () => {
+        try {
+          const { data, error } = await supabase.from('projects').insert({ title: title.trim() }).select('id').single();
+          if (!error && data && data.id) {
+            // update local project id mapping
+            const updated = projects.map(p => p.id === localP.id ? { ...p, id: data.id } : p);
+            setProjects([...(updated as Project[])]);
+            setSelected({ ...localP, id: data.id });
+          }
+        } catch (e) {
+          console.warn('Supabase create project failed', e);
+        }
+      })();
+    }
   };
 
   const dropHandler = (e: React.DragEvent) => {
@@ -70,6 +88,37 @@ export default function ProjectsManager() {
 
   const handleFiles = (files: File[]) => {
     if (!selected) return alert('Select or create a project first');
+
+    // If Supabase configured, upload to storage and insert metadata to DB
+    if (supabase) {
+      (async () => {
+        for (const f of files) {
+          try {
+            const path = `${selected.id}/${Date.now()}_${f.name}`;
+            const { data: uploadData, error: uploadError } = await supabase.storage.from('projects').upload(path, f, { cacheControl: '3600', upsert: false });
+            if (uploadError) {
+              console.error('Upload error', uploadError);
+              continue;
+            }
+            // create public URL
+            const { data: publicData } = supabase.storage.from('projects').getPublicUrl(path);
+            const fileMeta: FileMeta = { id: uid(), name: f.name, type: f.type, size: f.size, dataUrl: publicData.publicUrl, createdAt: new Date().toISOString() };
+            // insert metadata to DB
+            await supabase.from('files').insert({ project_id: selected.id, filename: f.name, storage_path: path, mime_type: f.type, size: f.size });
+
+            // update local state
+            const updated = projects.map(p => p.id === selected.id ? { ...p, files: [fileMeta, ...p.files] } : p);
+            setProjects(updated);
+            setSelected(updated.find(p => p.id === selected.id) || null);
+          } catch (e) {
+            console.error(e);
+          }
+        }
+      })();
+      return;
+    }
+
+    // fallback to local previews (no Supabase)
     const readers: Promise<FileMeta>[] = files.map(f => {
       return new Promise((res) => {
         const reader = new FileReader();
