@@ -31,7 +31,7 @@ export default function HomePage() {
           <div className="hero-content">
             <div className="hero-text">
               <h1 className="hero-title">{t('hero.title')}</h1>
-              <p className="hero-subtitle">
+              <p className="hero-subtitle" style={{ color: 'rgba(255, 251, 230, 0.9)' }}>
                 {t('hero.subtitle')}
               </p>
               <div className="hero-buttons">
