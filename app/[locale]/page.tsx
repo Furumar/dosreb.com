@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from 'next/navigation';
 import dynamic from "next/dynamic";
 import { useTranslations, useLocale } from 'next-intl';
 const LumiChat = dynamic(() => import("./components/LumiChat"), { ssr: false });
@@ -9,6 +10,7 @@ const LumiChat = dynamic(() => import("./components/LumiChat"), { ssr: false });
 export default function HomePage() {
   const t = useTranslations();
   const locale = useLocale();
+  const router = useRouter();
   
   const scrollToId = (id: string) => {
     if (typeof window === "undefined") return;
@@ -36,8 +38,8 @@ export default function HomePage() {
               </p>
               <div className="hero-buttons">
                 <button className="btn-primary" onClick={() => scrollToId("projects")}>{t('hero.exploreProjects')}</button>
-                <Link href={`/${locale}/lumi`} className="btn-secondary-link">{t('hero.meetLumi')}</Link>
-                <Link href={`/${locale}/demo`} className="btn-secondary-link">{t('hero.requestDemo')}</Link>
+                <button className="btn-secondary-link" onClick={() => router.push(`/${locale}/lumi`)}>{t('hero.meetLumi')}</button>
+                <button className="btn-secondary-link" onClick={() => router.push(`/${locale}/demo`)}>{t('hero.requestDemo')}</button>
               </div>
             </div>
             <aside className="hero-aside">
