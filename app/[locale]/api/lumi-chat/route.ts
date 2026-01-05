@@ -49,7 +49,10 @@ export async function POST(req: NextRequest) {
       const errorText = await response.text();
       console.error('Groq API error:', response.status, errorText);
       return NextResponse.json(
-        { reply: "Lumi could not reach her thinking engine just now." },
+        { 
+          reply: "Lumi could not reach her thinking engine just now.",
+          debug: `Status: ${response.status}, Error: ${errorText.substring(0, 100)}`
+        },
         { status: 502 }
       );
     }
