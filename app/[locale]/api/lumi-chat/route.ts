@@ -13,9 +13,10 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    console.log("Groq key:", process.env.GROQ_API_KEY);
+    console.log("Groq key:", process.env.GROQ_API_KEY ? 'SET' : 'MISSING');
     const apiKey = process.env.GROQ_API_KEY;
     if (!apiKey) {
+      console.error('GROQ_API_KEY environment variable is not set');
       return NextResponse.json(
         { reply: "Groq API key is missing on the server." },
         { status: 500 }
@@ -38,6 +39,8 @@ export async function POST(req: NextRequest) {
     );
 
     if (!response.ok) {
+      const errorText = await response.text();
+      console.error('Groq API error:', response.status, errorText);
       return NextResponse.json(
         { reply: "Lumi could not reach her thinking engine just now." },
         { status: 502 }
@@ -51,6 +54,7 @@ export async function POST(req: NextRequest) {
 
     return NextResponse.json({ reply });
   } catch (error) {
+    console.error('Lumi API error:', error);
     return NextResponse.json(
       { reply: "Something went wrong while I was thinking about your question." },
       { status: 500 }
