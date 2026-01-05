@@ -6,9 +6,9 @@
 
 ## What is installed
 
-✅ **Supabase JavaScript Client** (`@supabase/supabase-js` v2.89.0)
+✅ **Supabase JavaScript Client** (`@supabase/supabase-js`)
 - This is installed as a dependency in `package.json`
-- Used in `lib/supabaseClient.ts` for client-side database operations
+- Used for client-side database operations
 - Sufficient for frontend/client interactions with Supabase
 
 ## Do you need the Supabase CLI?
