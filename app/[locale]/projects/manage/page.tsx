@@ -5,6 +5,8 @@ import { useSearchParams } from 'next/navigation';
 import FileUpload from '../../components/FileUpload';
 import FileGallery from '../../components/FileGallery';
 
+// Project management page for file uploads and organization
+
 interface Project {
   id: string;
   title: string;
