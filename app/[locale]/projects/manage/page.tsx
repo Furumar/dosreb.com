@@ -195,16 +195,4 @@ export default function ManageProjectPage() {
       `}</style>
     </div>
   );
-}    Promise.all(readers).then(metas => {
-      const updated = projects.map(p => p.id === selected.id ? { ...p, files: [...metas, ...p.files] } : p);
-      setProjects(updated);
-      setSelected(updated.find(p => p.id === selected.id) || null);
-    });
-  };
-
-  const removeFile = (fileId: string) => {
-    if (!selected) return;
-    const updated = projects.map(p => p.id === selected.id ? { ...p, files: p.files.filter(f => f.id !== fileId) } : p);
-    setProjects(updated);
-    setSelected(updated.find(p => p.id === selected.id) || null);
 }
