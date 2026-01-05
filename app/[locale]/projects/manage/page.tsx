@@ -1,140 +1,201 @@
-"use client";
+'use client';
 
-import React, { useEffect, useState, useRef } from 'react';
-import Image from 'next/image';
-import supabase from '@/lib/supabaseClient';
+import { useState, useEffect } from 'react';
+import { useSearchParams } from 'next/navigation';
+import FileUpload from '../../components/FileUpload';
+import FileGallery from '../../components/FileGallery';
 
-type FileMeta = {
-  id: string;
-  name: string;
-  type: string;
-  size: number;
-  dataUrl?: string;
-  createdAt: string;
-};
-
-type Project = {
+interface Project {
   id: string;
   title: string;
   description?: string;
-  files: FileMeta[];
-  createdAt: string;
-};
-
-const STORAGE_KEY = 'dosreb.projects.v1';
-
-function uid() {
-  return Math.random().toString(36).slice(2, 9);
+  visibility: string;
 }
 
-function readProjects(): Project[] {
-  try {
-    const raw = localStorage.getItem(STORAGE_KEY);
-    if (!raw) return [];
-    return JSON.parse(raw) as Project[];
-  } catch (e) {
-    return [];
+interface FileRecord {
+  id: string;
+  filename: string;
+  storage_path: string;
+  mime_type: string;
+  size: number;
+  metadata: {
+    folder?: string;
+  };
+  created_at: string;
+}
+
+export default function ManageProjectPage() {
+  const searchParams = useSearchParams();
+  const projectId = searchParams.get('id');
+
+  const [project, setProject] = useState<Project | null>(null);
+  const [files, setFiles] = useState<FileRecord[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [activeTab, setActiveTab] = useState<'documents' | 'designs' | 'photos'>('documents');
+
+  useEffect(() => {
+    if (projectId) {
+      loadProject();
+      loadFiles();
+    }
+  }, [projectId]);
+
+  const loadProject = async () => {
+    try {
+      const response = await fetch(`/api/projects?id=${projectId}`);
+      const data = await response.json();
+      setProject(data);
+    } catch (error) {
+      console.error('Error loading project:', error);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const loadFiles = async () => {
+    try {
+      const response = await fetch(`/api/files?projectId=${projectId}`);
+      const data = await response.json();
+      setFiles(data);
+    } catch (error) {
+      console.error('Error loading files:', error);
+    }
+  };
+
+  const handleUploadComplete = (file: FileRecord) => {
+    setFiles((prev) => [file, ...prev]);
+  };
+
+  const handleDeleteFile = async (fileId: string, storagePath: string) => {
+    try {
+      const response = await fetch(
+        `/api/files?id=${fileId}&storagePath=${encodeURIComponent(storagePath)}`,
+        { method: 'DELETE' }
+      );
+
+      if (response.ok) {
+        setFiles((prev) => prev.filter((f) => f.id !== fileId));
+      }
+    } catch (error) {
+      console.error('Error deleting file:', error);
+      alert('Failed to delete file');
+    }
+  };
+
+  if (loading) {
+    return <div className="dosreb-page">Loading...</div>;
   }
-}
 
-function writeProjects(projects: Project[]) {
-  localStorage.setItem(STORAGE_KEY, JSON.stringify(projects));
-}
+  if (!project) {
+    return (
+      <div className="dosreb-page">
+        <p>Project not found</p>
+      </div>
+    );
+  }
 
-export default function ProjectsManager() {
-  const [projects, setProjects] = useState<Project[]>([]);
-  const [title, setTitle] = useState('');
-  const [selected, setSelected] = useState<Project | null>(null);
-  const fileRef = useRef<HTMLInputElement | null>(null);
+  return (
+    <div className="dosreb-page">
+      <section className="page-hero">
+        <h1>{project.title}</h1>
+        {project.description && (
+          <p className="page-lead">{project.description}</p>
+        )}
+      </section>
 
-  useEffect(() => {
-    setProjects(readProjects());
-  }, []);
+      <section className="page-section">
+        <div className="project-tabs">
+          <button
+            className={activeTab === 'documents' ? 'active' : ''}
+            onClick={() => setActiveTab('documents')}
+          >
+            📄 Documents
+          </button>
+          <button
+            className={activeTab === 'designs' ? 'active' : ''}
+            onClick={() => setActiveTab('designs')}
+          >
+            🎨 Designs
+          </button>
+          <button
+            className={activeTab === 'photos' ? 'active' : ''}
+            onClick={() => setActiveTab('photos')}
+          >
+            📸 Photos
+          </button>
+        </div>
 
-  useEffect(() => {
-    writeProjects(projects);
-  }, [projects]);
+        <div className="project-content">
+          <div className="upload-section">
+            <h3>Upload {activeTab}</h3>
+            <FileUpload
+              projectId={projectId!}
+              folder={activeTab}
+              onUploadComplete={handleUploadComplete}
+            />
+          </div>
 
-  const createProject = () => {
-    if (!title.trim()) return;
-    const localP: Project = { id: uid(), title: title.trim(), files: [], createdAt: new Date().toISOString() };
-    setProjects([localP, ...projects]);
-    setTitle('');
-    setSelected(localP);
+          <div className="files-section">
+            <FileGallery
+              projectId={projectId!}
+              files={files}
+              onDelete={handleDeleteFile}
+              onRefresh={loadFiles}
+            />
+          </div>
+        </div>
+      </section>
 
-    // If Supabase is configured, also create project record in DB
-    if (supabase) {
-      (async () => {
-        try {
-          const { data, error } = await supabase.from('projects').insert({ title: title.trim() }).select('id').single();
-          if (!error && data && data.id) {
-            // update local project id mapping
-            const updated = projects.map(p => p.id === localP.id ? { ...p, id: data.id } : p);
-            setProjects([...(updated as Project[])]);
-            setSelected({ ...localP, id: data.id });
+      <style jsx>{`
+        .project-tabs {
+          display: flex;
+          gap: 1rem;
+          margin-bottom: 2rem;
+          border-bottom: 2px solid #e5e5e5;
+        }
+
+        .project-tabs button {
+          padding: 1rem 1.5rem;
+          border: none;
+          background: transparent;
+          cursor: pointer;
+          font-size: 1rem;
+          border-bottom: 2px solid transparent;
+          margin-bottom: -2px;
+          transition: all 0.2s;
+        }
+
+        .project-tabs button:hover {
+          background: #f5f5f5;
+        }
+
+        .project-tabs button.active {
+          border-bottom-color: #0070f3;
+          color: #0070f3;
+          font-weight: 500;
+        }
+
+        .project-content {
+          display: grid;
+          grid-template-columns: 1fr;
+          gap: 2rem;
+        }
+
+        .upload-section h3,
+        .files-section h3 {
+          margin: 0 0 1rem;
+          font-size: 1.25rem;
+        }
+
+        @media (min-width: 768px) {
+          .project-content {
+            grid-template-columns: 1fr 2fr;
           }
-        } catch (e) {
-          console.warn('Supabase create project failed', e);
         }
-      })();
-    }
-  };
-
-  const dropHandler = (e: React.DragEvent) => {
-    e.preventDefault();
-    const items = Array.from(e.dataTransfer.files || []);
-    handleFiles(items);
-  };
-
-  const handleFiles = (files: File[]) => {
-    if (!selected) return alert('Select or create a project first');
-
-    // If Supabase configured, upload to storage and insert metadata to DB
-    if (supabase) {
-      (async () => {
-        for (const f of files) {
-          try {
-            const path = `${selected.id}/${Date.now()}_${f.name}`;
-            const { data: uploadData, error: uploadError } = await supabase.storage.from('projects').upload(path, f, { cacheControl: '3600', upsert: false });
-            if (uploadError) {
-              console.error('Upload error', uploadError);
-              continue;
-            }
-            // create public URL
-            const { data: publicData } = supabase.storage.from('projects').getPublicUrl(path);
-            const fileMeta: FileMeta = { id: uid(), name: f.name, type: f.type, size: f.size, dataUrl: publicData.publicUrl, createdAt: new Date().toISOString() };
-            // insert metadata to DB
-            await supabase.from('files').insert({ project_id: selected.id, filename: f.name, storage_path: path, mime_type: f.type, size: f.size });
-
-            // update local state
-            const updated = projects.map(p => p.id === selected.id ? { ...p, files: [fileMeta, ...p.files] } : p);
-            setProjects(updated);
-            setSelected(updated.find(p => p.id === selected.id) || null);
-          } catch (e) {
-            console.error(e);
-          }
-        }
-      })();
-      return;
-    }
-
-    // fallback to local previews (no Supabase)
-    const readers: Promise<FileMeta>[] = files.map(f => {
-      return new Promise((res) => {
-        const reader = new FileReader();
-        reader.onload = () => {
-          const dataUrl = typeof reader.result === 'string' ? reader.result : undefined;
-          res({ id: uid(), name: f.name, type: f.type, size: f.size, dataUrl, createdAt: new Date().toISOString() });
-        };
-        if (f.type.startsWith('image/') || f.type === 'application/pdf') reader.readAsDataURL(f);
-        else {
-          // for other files, do not read large content - store minimal info
-          res({ id: uid(), name: f.name, type: f.type, size: f.size, createdAt: new Date().toISOString() });
-        }
-      });
-    });
-
-    Promise.all(readers).then(metas => {
+      `}</style>
+    </div>
+  );
+}    Promise.all(readers).then(metas => {
       const updated = projects.map(p => p.id === selected.id ? { ...p, files: [...metas, ...p.files] } : p);
       setProjects(updated);
       setSelected(updated.find(p => p.id === selected.id) || null);
@@ -146,73 +207,4 @@ export default function ProjectsManager() {
     const updated = projects.map(p => p.id === selected.id ? { ...p, files: p.files.filter(f => f.id !== fileId) } : p);
     setProjects(updated);
     setSelected(updated.find(p => p.id === selected.id) || null);
-  };
-
-  return (
-    <div className="dosreb-page">
-      <section className="page-hero">
-        <h1>Project Manager (PoC)</h1>
-        <p className="page-lead">A simple local Proof-of-Concept for project creation, drag-and-drop uploads and gallery.</p>
-      </section>
-
-      <section className="page-section" style={{ display: 'flex', gap: '2rem' }}>
-        <div style={{ flex: 1, maxWidth: 420 }}>
-          <h3>Create Project</h3>
-          <input placeholder="Project title" value={title} onChange={e => setTitle(e.target.value)} />
-          <div style={{ height: '0.5rem' }} />
-          <button className="btn-primary" onClick={createProject}>Create</button>
-
-          <h3 style={{ marginTop: '1.5rem' }}>Your Projects</h3>
-          <div style={{ display: 'grid', gap: '0.75rem' }}>
-            {projects.map(p => (
-              <div key={p.id} className="project-card" style={{ cursor: 'pointer' }} onClick={() => setSelected(p)}>
-                <h4 style={{ margin: '0.5rem 0' }}>{p.title}</h4>
-                <div style={{ fontSize: '.9rem', color: 'rgba(255,255,255,0.75)' }}>{p.files.length} files</div>
-              </div>
-            ))}
-            {projects.length === 0 && <div>No projects yet</div>}
-          </div>
-        </div>
-
-        <div style={{ flex: 2 }}>
-          <h3>Project Detail</h3>
-          {!selected && <div>Select or create a project</div>}
-          {selected && (
-            <div>
-              <h2>{selected.title}</h2>
-              <div
-                onDrop={dropHandler}
-                onDragOver={e => e.preventDefault()}
-                style={{ border: '2px dashed rgba(255,215,0,0.2)', borderRadius: '0.75rem', padding: '1.25rem', marginBottom: '1rem' }}
-              >
-                <div style={{ marginBottom: '.5rem' }}>Drop files here to upload (images/PDFs previewed)</div>
-                <div style={{ display: 'flex', gap: '.5rem' }}>
-                  <input ref={fileRef} type="file" multiple onChange={e => { if (e.target.files) handleFiles(Array.from(e.target.files)); }} />
-                  <button className="btn-secondary" onClick={() => fileRef.current?.click()}>Choose files</button>
-                </div>
-              </div>
-
-              <div className="project-cards" style={{ marginTop: '1rem' }}>
-                {selected.files.map(f => (
-                  <div key={f.id} className="project-card" style={{ textAlign: 'left' }}>
-                    {f.dataUrl ? (
-                      <img src={f.dataUrl} alt={f.name} style={{ width: '100%', borderRadius: '0.75rem' }} />
-                    ) : (
-                      <div style={{ height: 64, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>{f.name}</div>
-                    )}
-                    <h4 style={{ marginTop: '.75rem' }}>{f.name}</h4>
-                    <div style={{ display: 'flex', gap: '.5rem' }}>
-                      <a className="btn-primary" href={f.dataUrl || '#'} target="_blank" rel="noreferrer">View</a>
-                      <button className="btn-secondary" onClick={() => removeFile(f.id)}>Remove</button>
-                    </div>
-                  </div>
-                ))}
-                {selected.files.length === 0 && <div>No files uploaded</div>}
-              </div>
-            </div>
-          )}
-        </div>
-      </section>
-    </div>
-  );
 }
