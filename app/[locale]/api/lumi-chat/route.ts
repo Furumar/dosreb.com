@@ -1,6 +1,13 @@
 // app/api/lumi-chat/route.ts
 import { NextRequest, NextResponse } from "next/server";
 
+export async function GET() {
+  return NextResponse.json(
+    { error: "This endpoint only accepts POST requests" },
+    { status: 405 }
+  );
+}
+
 export async function POST(req: NextRequest) {
   try {
     const body = await req.json();

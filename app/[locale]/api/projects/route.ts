@@ -16,10 +16,10 @@ export async function GET(request: NextRequest) {
 
     const projects = await getProjects(MOCK_USER_ID);
     return NextResponse.json(projects);
-  } catch (error) {
+  } catch (error: any) {
     console.error('Error fetching projects:', error);
     return NextResponse.json(
-      { error: 'Failed to fetch projects' },
+      { error: 'Failed to fetch projects', details: error?.message },
       { status: 500 }
     );
   }
@@ -30,10 +30,10 @@ export async function POST(request: NextRequest) {
     const body = await request.json();
     const project = await createProject(body, MOCK_USER_ID);
     return NextResponse.json(project, { status: 201 });
-  } catch (error) {
+  } catch (error: any) {
     console.error('Error creating project:', error);
     return NextResponse.json(
-      { error: 'Failed to create project' },
+      { error: 'Failed to create project', details: error?.message },
       { status: 500 }
     );
   }
@@ -54,10 +54,10 @@ export async function PUT(request: NextRequest) {
     const body = await request.json();
     const project = await updateProject(projectId, body);
     return NextResponse.json(project);
-  } catch (error) {
+  } catch (error: any) {
     console.error('Error updating project:', error);
     return NextResponse.json(
-      { error: 'Failed to update project' },
+      { error: 'Failed to update project', details: error?.message },
       { status: 500 }
     );
   }
@@ -77,10 +77,10 @@ export async function DELETE(request: NextRequest) {
 
     await deleteProject(projectId);
     return NextResponse.json({ success: true });
-  } catch (error) {
+  } catch (error: any) {
     console.error('Error deleting project:', error);
     return NextResponse.json(
-      { error: 'Failed to delete project' },
+      { error: 'Failed to delete project', details: error?.message },
       { status: 500 }
     );
   }
