@@ -175,7 +175,8 @@ export default function LumiChat() {
 
       const data = await res.json();
       const aiReply: string =
-        data.reply || "I am here, but I could not get a clear reply this time.";
+        (data.reply || "I am here, but I could not get a clear reply this time.") +
+        (data.debug ? ` (debug: ${data.debug})` : "");
 
       setMessages((prev) => [
         ...prev,
