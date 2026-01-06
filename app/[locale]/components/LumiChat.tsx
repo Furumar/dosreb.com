@@ -153,7 +153,7 @@ export default function LumiChat() {
     setLoading(true);
 
     try {
-      const res = await fetch(`/${locale}/api/lumi-chat`, {
+      const res = await fetch(`/api/lumi-chat`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
