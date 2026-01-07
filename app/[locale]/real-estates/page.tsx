@@ -133,16 +133,19 @@ export default function RealEstatesPage() {
         </p>
       </section>
 
-      <section className="page-section">
+      <section className="page-section" style={{ position: 'relative', zIndex: 1 }}>
         <div className="section-header">
           <h2 className="section-title">Your Real Estate Projects</h2>
           <button
-            onClick={() => {
-              console.log('Button clicked, showForm:', showForm);
+            onClick={(e) => {
+              e.preventDefault();
+              e.stopPropagation();
+              console.log('Button clicked!', { showForm, event: e });
               setShowForm(!showForm);
             }}
-            className="btn-primary"
+            className="btn-primary new-project-btn"
             type="button"
+            style={{ position: 'relative', zIndex: 10, pointerEvents: 'auto' }}
           >
             {showForm ? 'Cancel' : '+ New Project'}
           </button>
@@ -185,21 +188,16 @@ export default function RealEstatesPage() {
           justify-content: space-between;
           align-items: center;
           margin-bottom: 2rem;
+          gap: 1rem;
+          flex-wrap: wrap;
+          position: relative;
+          z-index: 10;
         }
-
-        .btn-primary {
-          padding: 0.75rem 1.5rem;
-          background: #0070f3;
-          color: white;
-          border: none;
-          border-radius: 4px;
-          font-size: 1rem;
-          cursor: pointer;
-          transition: background 0.2s;
-        }
-
-        .btn-primary:hover {
-          background: #0051cc;
+        
+        :global(.new-project-btn) {
+          position: relative !important;
+          z-index: 100 !important;
+          pointer-events: auto !important;
         }
       `}</style>
     </div>
