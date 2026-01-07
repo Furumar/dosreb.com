@@ -105,8 +105,12 @@ export default function RealEstatesPage() {
         <div className="section-header">
           <h2 className="section-title">Your Real Estate Projects</h2>
           <button
-            onClick={() => setShowForm(!showForm)}
+            onClick={() => {
+              console.log('Button clicked, showForm:', showForm);
+              setShowForm(!showForm);
+            }}
             className="btn-primary"
+            type="button"
           >
             {showForm ? 'Cancel' : '+ New Project'}
           </button>
