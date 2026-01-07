@@ -1,5 +1,17 @@
 // Supabase Storage helpers for file uploads and management
-import supabase from '../supabaseClient';
+import { createClient } from '@supabase/supabase-js';
+
+// Use service role key for storage operations (server-side only)
+const supabase = createClient(
+  process.env.NEXT_PUBLIC_SUPABASE_URL!,
+  process.env.SUPABASE_SERVICE_ROLE_KEY!,
+  {
+    auth: {
+      persistSession: false,
+      autoRefreshToken: false,
+    },
+  }
+);
 
 export const STORAGE_BUCKET = 'projects';
 
