@@ -2,7 +2,8 @@ import { NextRequest, NextResponse } from 'next/server';
 import { createProject, getProjects, getProject, updateProject, deleteProject } from '@/lib/supabase/projects';
 
 // Mock user ID - replace with actual auth when implemented
-const MOCK_USER_ID = 'test-user-123';
+// Using a valid UUID format for development
+const MOCK_USER_ID = '00000000-0000-0000-0000-000000000001';
 
 export async function GET(request: NextRequest) {
   try {

@@ -36,7 +36,17 @@ How to run
 Important: use a service role / privileged key for schema changes. Do NOT run migrations from
 the browser or with an anon/public key.
 
+Migrations
+----------
+1. `001_init.sql` - Initial schema (projects, files, comments, invites, templates)
+2. `002_add_user_profiles.sql` - User profiles with role management and superuser support
+   - Adds `user_profiles` table with role management (user/admin/superuser)
+   - Creates marco.furu@gmail.com as superuser
+   - Grants superusers full access to all projects, files, and comments
+   - Auto-creates profiles for new users via trigger
+
 Next steps
 - Create the `projects` storage bucket in Supabase Storage.
+- Run both migrations in order: `001_init.sql` then `002_add_user_profiles.sql`
 - Create additional migration files for indexes, materialized views, or schema changes.
 - Add CI steps to run migrations on deploy using a secure service key if desired.

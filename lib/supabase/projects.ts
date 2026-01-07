@@ -32,15 +32,21 @@ export interface UpdateProjectInput {
 export async function createProject(input: CreateProjectInput, userId: string) {
   if (!supabase) throw new Error('Supabase not initialized');
 
+  const insertData: any = {
+    owner: userId,
+    title: input.title,
+    description: input.description || null,
+    visibility: input.visibility || 'private',
+  };
+
+  // Only include metadata if provided
+  if (input.metadata) {
+    insertData.metadata = input.metadata;
+  }
+
   const { data, error } = await supabase
     .from('projects')
-    .insert({
-      owner: userId,
-      title: input.title,
-      description: input.description || null,
-      visibility: input.visibility || 'private',
-      metadata: input.metadata || {},
-    })
+    .insert(insertData)
     .select()
     .single();
 

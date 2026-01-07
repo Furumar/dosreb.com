@@ -34,17 +34,23 @@ export interface CreateFileInput {
 export async function createFileRecord(input: CreateFileInput) {
   if (!supabase) throw new Error('Supabase not initialized');
 
+  const insertData: any = {
+    project_id: input.project_id,
+    uploaded_by: input.uploaded_by || null,
+    filename: input.filename,
+    storage_path: input.storage_path,
+    mime_type: input.mime_type,
+    size: input.size,
+  };
+
+  // Only include metadata if provided
+  if (input.metadata) {
+    insertData.metadata = input.metadata;
+  }
+
   const { data, error } = await supabase
     .from('files')
-    .insert({
-      project_id: input.project_id,
-      uploaded_by: input.uploaded_by || null,
-      filename: input.filename,
-      storage_path: input.storage_path,
-      mime_type: input.mime_type,
-      size: input.size,
-      metadata: input.metadata || {},
-    })
+    .insert(insertData)
     .select()
     .single();
 
