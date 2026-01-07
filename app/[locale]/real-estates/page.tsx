@@ -18,6 +18,7 @@ export default function RealEstatesPage() {
   const [showForm, setShowForm] = useState(false);
   const [editingProject, setEditingProject] = useState<Project | null>(null);
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
     loadProjects();
@@ -25,11 +26,22 @@ export default function RealEstatesPage() {
 
   const loadProjects = async () => {
     try {
+      console.log('Loading projects...');
       const response = await fetch('/api/projects');
+      console.log('Response status:', response.status);
+      
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+      
       const data = await response.json();
+      console.log('Projects loaded:', data);
       setProjects(data);
+      setError(null);
     } catch (error) {
       console.error('Error loading projects:', error);
+      setError(error instanceof Error ? error.message : 'Failed to load projects');
+      setProjects([]);
     } finally {
       setLoading(false);
     }
@@ -89,7 +101,27 @@ export default function RealEstatesPage() {
   };
 
   if (loading) {
-    return <div className="dosreb-page">Loading...</div>;
+    return (
+      <div className="dosreb-page">
+        <section className="page-hero">
+          <h1>Loading...</h1>
+        </section>
+      </div>
+    );
+  }
+
+  if (error) {
+    return (
+      <div className="dosreb-page">
+        <section className="page-hero">
+          <h1>Error</h1>
+          <p style={{ color: 'red' }}>{error}</p>
+          <button onClick={loadProjects} className="btn-primary">
+            Retry
+          </button>
+        </section>
+      </div>
+    );
   }
 
   return (
