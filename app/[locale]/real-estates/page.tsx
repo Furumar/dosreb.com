@@ -1,5 +1,5 @@
 'use client';
-
+// Force rebuild - button fix v2
 import { useState, useEffect } from 'react';
 import ProjectList from '../components/ProjectList';
 import ProjectForm, { ProjectFormData } from '../components/ProjectForm';
