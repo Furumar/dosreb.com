@@ -107,15 +107,10 @@ CREATE POLICY "plan_library_public_read" ON plan_library
   USING (visibility = 'public');
 
 -- Superusers can access all plans
+-- Using is_superuser() function to avoid recursion
 CREATE POLICY "plan_library_superuser_access" ON plan_library
   FOR ALL
-  USING (
-    EXISTS (
-      SELECT 1 FROM user_profiles 
-      WHERE user_profiles.id = auth.uid() 
-      AND user_profiles.role = 'superuser'
-    )
-  );
+  USING (is_superuser());
 
 -- RLS for project_plans
 ALTER TABLE project_plans ENABLE ROW LEVEL SECURITY;
@@ -132,13 +127,7 @@ CREATE POLICY "project_plans_owner_access" ON project_plans
 
 CREATE POLICY "project_plans_superuser_access" ON project_plans
   FOR ALL
-  USING (
-    EXISTS (
-      SELECT 1 FROM user_profiles 
-      WHERE user_profiles.id = auth.uid() 
-      AND user_profiles.role = 'superuser'
-    )
-  );
+  USING (is_superuser());
 
 -- RLS for plan_favorites
 ALTER TABLE plan_favorites ENABLE ROW LEVEL SECURITY;
