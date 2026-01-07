@@ -36,6 +36,7 @@ export default function PlanLibraryBrowser({
   const [selectedCategory, setSelectedCategory] = useState<string>('');
   const [searchTerm, setSearchTerm] = useState('');
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
     loadCategories();
@@ -45,10 +46,14 @@ export default function PlanLibraryBrowser({
   const loadCategories = async () => {
     try {
       const response = await fetch('/api/plan-library?action=categories');
+      if (!response.ok) {
+        throw new Error('Database not set up');
+      }
       const data = await response.json();
-      setCategories(data);
+      setCategories(Array.isArray(data) ? data : []);
     } catch (error) {
       console.error('Error loading categories:', error);
+      setError('Database tables not created yet. Please run migrations.');
     }
   };
 
@@ -59,10 +64,15 @@ export default function PlanLibraryBrowser({
       if (searchTerm) params.set('search', searchTerm);
 
       const response = await fetch(`/api/plan-library?${params}`);
+      if (!response.ok) {
+        throw new Error('Database not set up');
+      }
       const data = await response.json();
-      setPlans(data);
+      setPlans(Array.isArray(data) ? data : []);
     } catch (error) {
       console.error('Error loading plans:', error);
+      setError('Database tables not created yet. Please run migrations.');
+      setPlans([]);
     } finally {
       setLoading(false);
     }
@@ -93,6 +103,85 @@ export default function PlanLibraryBrowser({
 
   if (loading) {
     return <div className="plan-library-browser">Loading Plan Library...</div>;
+  }
+
+  if (error) {
+    return (
+      <div className="plan-library-browser">
+        <div className="error-state">
+          <h2>⚠️ Database Setup Required</h2>
+          <p>{error}</p>
+          <div className="setup-instructions">
+            <h3>Quick Setup (5 minutes):</h3>
+            <ol>
+              <li>Go to your <a href="https://app.supabase.com" target="_blank" rel="noopener">Supabase Dashboard</a></li>
+              <li>Open the SQL Editor</li>
+              <li>Run the migrations from <code>db/migrations/</code> folder in order:
+                <ul>
+                  <li>001_init.sql</li>
+                  <li>002_add_user_profiles.sql</li>
+                  <li>003_plan_library.sql</li>
+                </ul>
+              </li>
+              <li>Refresh this page</li>
+            </ol>
+            <p>📖 See <code>db/SETUP_INSTRUCTIONS.md</code> for detailed guide</p>
+          </div>
+        </div>
+        <style jsx>{`
+          .error-state {
+            background: #fff3cd;
+            border: 2px solid #ffc107;
+            border-radius: 8px;
+            padding: 2rem;
+            max-width: 800px;
+            margin: 2rem auto;
+          }
+          .error-state h2 {
+            color: #856404;
+            margin-bottom: 1rem;
+          }
+          .error-state p {
+            color: #856404;
+            margin-bottom: 1rem;
+          }
+          .setup-instructions {
+            background: white;
+            border-radius: 4px;
+            padding: 1.5rem;
+            margin-top: 1rem;
+          }
+          .setup-instructions h3 {
+            color: #333;
+            margin-bottom: 1rem;
+          }
+          .setup-instructions ol {
+            margin-left: 1.5rem;
+            color: #666;
+          }
+          .setup-instructions li {
+            margin-bottom: 0.5rem;
+          }
+          .setup-instructions ul {
+            margin-top: 0.5rem;
+            margin-left: 1rem;
+          }
+          .setup-instructions code {
+            background: #f5f5f5;
+            padding: 0.2rem 0.4rem;
+            border-radius: 3px;
+            font-family: monospace;
+          }
+          .setup-instructions a {
+            color: #0070f3;
+            text-decoration: none;
+          }
+          .setup-instructions a:hover {
+            text-decoration: underline;
+          }
+        `}</style>
+      </div>
+    );
   }
 
   return (

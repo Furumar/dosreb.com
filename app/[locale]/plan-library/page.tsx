@@ -5,6 +5,7 @@ import PlanLibraryBrowser from '../components/PlanLibraryBrowser';
 
 export default function PlanLibraryPage() {
   const [showUploadForm, setShowUploadForm] = useState(false);
+  const [showSetupAlert, setShowSetupAlert] = useState(true);
   const [uploadData, setUploadData] = useState({
     title: '',
     description: '',
@@ -36,6 +37,25 @@ export default function PlanLibraryPage() {
           {showUploadForm ? 'Cancel' : '+ Upload New Plan'}
         </button>
       </section>
+
+      {showSetupAlert && (
+        <section className="page-section">
+          <div className="alert-info">
+            <div className="alert-header">
+              <h3>ℹ️ New Feature!</h3>
+              <button onClick={() => setShowSetupAlert(false)} className="close-btn">×</button>
+            </div>
+            <p>
+              The Plan Library lets you upload and reuse floor plans, sections, and facades across all your projects.
+              This dramatically speeds up project creation!
+            </p>
+            <p style={{ marginTop: '1rem', fontSize: '0.9rem', color: '#666' }}>
+              <strong>Note:</strong> If you see an error below, you need to run the database migrations first.
+              See <code>db/SETUP_INSTRUCTIONS.md</code> for details.
+            </p>
+          </div>
+        </section>
+      )}
 
       {showUploadForm && (
         <section className="page-section">
@@ -260,6 +280,50 @@ export default function PlanLibraryPage() {
 
         .feature p {
           color: #666;
+        }
+
+        .alert-info {
+          background: #e3f2fd;
+          border-left: 4px solid #2196f3;
+          padding: 1.5rem;
+          border-radius: 4px;
+        }
+
+        .alert-header {
+          display: flex;
+          justify-content: space-between;
+          align-items: start;
+          margin-bottom: 1rem;
+        }
+
+        .alert-header h3 {
+          margin: 0;
+          color: #1976d2;
+        }
+
+        .close-btn {
+          background: none;
+          border: none;
+          font-size: 1.5rem;
+          color: #1976d2;
+          cursor: pointer;
+          padding: 0;
+          width: 30px;
+          height: 30px;
+          line-height: 1;
+        }
+
+        .close-btn:hover {
+          background: rgba(33, 150, 243, 0.1);
+          border-radius: 4px;
+        }
+
+        .alert-info code {
+          background: rgba(25, 118, 210, 0.1);
+          padding: 0.2rem 0.4rem;
+          border-radius: 3px;
+          font-family: monospace;
+          font-size: 0.9em;
         }
       `}</style>
     </div>
