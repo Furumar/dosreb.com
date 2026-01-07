@@ -57,7 +57,9 @@ export default function FileUpload({ projectId, onUploadComplete, folder = 'docu
         });
 
         if (!response.ok) {
-          throw new Error('Upload failed');
+          const errorData = await response.json().catch(() => ({}));
+          console.error('Upload failed:', errorData);
+          throw new Error(errorData.details || errorData.error || 'Upload failed');
         }
 
         const result = await response.json();

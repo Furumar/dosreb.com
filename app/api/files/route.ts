@@ -2,9 +2,6 @@ import { NextRequest, NextResponse } from 'next/server';
 import { uploadFile, getFileUrl, deleteFile } from '@/lib/supabase/storage';
 import { createFileRecord, getProjectFiles, deleteFileRecord } from '@/lib/supabase/files';
 
-// Mock user ID - replace with actual auth when implemented
-const MOCK_USER_ID = 'test-user-123';
-
 export async function POST(request: NextRequest) {
   try {
     const formData = await request.formData();
@@ -34,7 +31,6 @@ export async function POST(request: NextRequest) {
     // Create file record in database
     const fileRecord = await createFileRecord({
       project_id: projectId,
-      uploaded_by: MOCK_USER_ID,
       filename: file.name,
       storage_path: path,
       mime_type: file.type,
@@ -49,8 +45,10 @@ export async function POST(request: NextRequest) {
     return NextResponse.json(fileRecord, { status: 201 });
   } catch (error) {
     console.error('Error uploading file:', error);
+    const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+    console.error('Error details:', errorMessage);
     return NextResponse.json(
-      { error: 'Failed to upload file' },
+      { error: 'Failed to upload file', details: errorMessage },
       { status: 500 }
     );
   }

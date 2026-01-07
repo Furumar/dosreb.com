@@ -1,5 +1,17 @@
 // Database operations for projects
-import supabase from '../supabaseClient';
+import { createClient } from '@supabase/supabase-js';
+
+// Use service role key for project operations (server-side only)
+const supabase = createClient(
+  process.env.NEXT_PUBLIC_SUPABASE_URL!,
+  process.env.SUPABASE_SERVICE_ROLE_KEY!,
+  {
+    auth: {
+      persistSession: false,
+      autoRefreshToken: false,
+    },
+  }
+);
 
 export interface Project {
   id: string;
