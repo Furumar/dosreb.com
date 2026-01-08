@@ -924,6 +924,60 @@ html {
   box-shadow: 0 10px 30px rgba(255, 215, 0, 0.2);
 }
 
+/* Project Gallery Styles */
+.project-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.gallery-item {
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  border-radius: 1rem;
+  border: 2px solid rgba(255, 215, 0, 0.2);
+  transition: all 0.3s ease;
+  background: rgba(17, 17, 17, 0.5);
+}
+
+.gallery-item:hover {
+  transform: translateY(-5px);
+  border-color: rgba(255, 215, 0, 0.5);
+  box-shadow: 0 12px 40px rgba(255, 215, 0, 0.3);
+}
+
+.gallery-item img {
+  transition: transform 0.3s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.05);
+}
+
+.image-modal {
+  max-width: 90vw;
+  max-height: 90vh;
+  padding: 2rem;
+}
+
+.image-modal img {
+  max-width: 100%;
+  max-height: calc(90vh - 4rem);
+  object-fit: contain;
+}
+
+@media (max-width: 768px) {
+  .project-gallery {
+    grid-template-columns: 1fr;
+  }
+  
+  .image-modal {
+    padding: 1rem;
+  }
+}
+
 @media (max-width: 768px) {
   .modal-overlay {
     padding: 1rem;

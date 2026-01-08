@@ -129,13 +129,13 @@ export default function RealEstatesPage() {
       <section className="page-hero">
         <h1>Real Estate Portfolio</h1>
         <p className="page-lead">
-          Manage your real estate projects, designs, and documentation
+          Manage your real estate properties, designs, and documentation. For construction projects, please visit the <a href="/projects" style={{ color: '#ffd700', textDecoration: 'underline' }}>Projects page</a>.
         </p>
       </section>
 
       <section className="page-section" style={{ position: 'relative', zIndex: 1 }}>
         <div className="section-header">
-          <h2 className="section-title">Your Real Estate Projects</h2>
+          <h2 className="section-title">Your Real Estate Properties</h2>
           <button
             onClick={(e) => {
               e.preventDefault();
