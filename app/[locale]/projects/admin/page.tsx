@@ -1,9 +1,15 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Image from 'next/image';
 
 type ReferenceProject = 'stockmann' | 'dbschenker' | 'jatkasaari';
+
+interface ProjectFile {
+  name: string;
+  url: string;
+  path: string;
+}
 
 export default function ProjectAdminPage() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -13,6 +19,8 @@ export default function ProjectAdminPage() {
   const [uploading, setUploading] = useState(false);
   const [uploadedFiles, setUploadedFiles] = useState<string[]>([]);
   const [message, setMessage] = useState('');
+  const [existingFiles, setExistingFiles] = useState<ProjectFile[]>([]);
+  const [loadingFiles, setLoadingFiles] = useState(false);
 
   const handleLogin = (e: React.FormEvent) => {
     e.preventDefault();
@@ -22,6 +30,52 @@ export default function ProjectAdminPage() {
       setAuthError('');
     } else {
       setAuthError('Invalid password');
+    }
+  };
+
+  useEffect(() => {
+    if (isAuthenticated) {
+      loadExistingFiles();
+    }
+  }, [isAuthenticated, selectedProject]);
+
+  const loadExistingFiles = async () => {
+    setLoadingFiles(true);
+    try {
+      const response = await fetch(`/api/files?project=${selectedProject}&folder=photos`);
+      if (response.ok) {
+        const data = await response.json();
+        setExistingFiles(data.files || []);
+      }
+    } catch (error) {
+      console.error('Error loading files:', error);
+    } finally {
+      setLoadingFiles(false);
+    }
+  };
+
+  const handleDeleteFile = async (filePath: string, fileName: string) => {
+    if (!confirm(`Are you sure you want to delete ${fileName}?`)) {
+      return;
+    }
+
+    try {
+      const response = await fetch(`/api/reference-projects/delete`, {
+        method: 'DELETE',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ path: filePath }),
+      });
+
+      if (response.ok) {
+        setMessage(`✓ Successfully deleted ${fileName}`);
+        loadExistingFiles();
+      } else {
+        const errorData = await response.json();
+        setMessage(`✗ Failed to delete ${fileName}: ${errorData.error}`);
+      }
+    } catch (error) {
+      console.error('Delete error:', error);
+      setMessage(`✗ Error deleting file: ${error instanceof Error ? error.message : 'Unknown error'}`);
     }
   };
 
@@ -124,6 +178,7 @@ export default function ProjectAdminPage() {
       
       if (uploaded.length > 0) {
         setMessage(`✓ Successfully uploaded ${uploaded.length} image(s) to ${projectNames[selectedProject]}`);
+        loadExistingFiles(); // Refresh the file list
       }
       
       if (errors.length > 0) {
@@ -270,6 +325,80 @@ export default function ProjectAdminPage() {
             </ul>
           </div>
         )}
+
+        {/* Existing Photos Gallery */}
+        <div style={{ marginTop: '3rem' }}>
+          <h2 className="section-title">Current Photos for {projectNames[selectedProject]}</h2>
+          
+          {loadingFiles ? (
+            <p style={{ color: 'rgba(255, 251, 230, 0.7)' }}>Loading photos...</p>
+          ) : existingFiles.length === 0 ? (
+            <p style={{ color: 'rgba(255, 251, 230, 0.7)' }}>No photos uploaded yet.</p>
+          ) : (
+            <div style={{
+              display: 'grid',
+              gridTemplateColumns: 'repeat(auto-fill, minmax(250px, 1fr))',
+              gap: '1.5rem',
+              marginTop: '1.5rem'
+            }}>
+              {existingFiles.map((file, index) => (
+                <div
+                  key={index}
+                  style={{
+                    background: 'rgba(255, 215, 0, 0.05)',
+                    border: '1px solid rgba(255, 215, 0, 0.2)',
+                    borderRadius: '0.75rem',
+                    padding: '1rem',
+                    position: 'relative'
+                  }}
+                >
+                  <div style={{
+                    width: '100%',
+                    height: '200px',
+                    position: 'relative',
+                    marginBottom: '0.75rem',
+                    borderRadius: '0.5rem',
+                    overflow: 'hidden'
+                  }}>
+                    <Image
+                      src={file.url}
+                      alt={file.name}
+                      fill
+                      style={{ objectFit: 'cover' }}
+                    />
+                  </div>
+                  <p style={{
+                    fontSize: '0.85rem',
+                    color: 'rgba(255, 251, 230, 0.8)',
+                    marginBottom: '0.75rem',
+                    wordBreak: 'break-all'
+                  }}>
+                    {file.name}
+                  </p>
+                  <button
+                    onClick={() => handleDeleteFile(file.path, file.name)}
+                    style={{
+                      width: '100%',
+                      padding: '0.5rem',
+                      background: 'rgba(255, 0, 0, 0.8)',
+                      color: '#fff',
+                      border: 'none',
+                      borderRadius: '0.5rem',
+                      cursor: 'pointer',
+                      fontSize: '0.9rem',
+                      fontWeight: 600,
+                      transition: 'background 0.2s'
+                    }}
+                    onMouseOver={(e) => e.currentTarget.style.background = 'rgba(255, 0, 0, 1)'}
+                    onMouseOut={(e) => e.currentTarget.style.background = 'rgba(255, 0, 0, 0.8)'}
+                  >
+                    🗑️ Delete
+                  </button>
+                </div>
+              ))}
+            </div>
+          )}
+        </div>
       </section>
     </div>
   );
