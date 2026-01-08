@@ -21,6 +21,7 @@ interface ProjectListProps {
 
 export default function ProjectList({ projects, onEdit, onDelete, locale }: ProjectListProps) {
   const [searchQuery, setSearchQuery] = useState('');
+  const [contextMenu, setContextMenu] = useState<{ x: number; y: number; project: Project } | null>(null);
 
   const filteredProjects = projects.filter((project) =>
     project.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -35,8 +36,26 @@ export default function ProjectList({ projects, onEdit, onDelete, locale }: Proj
     });
   };
 
+  const handleContextMenu = (e: React.MouseEvent, project: Project) => {
+    e.preventDefault();
+    setContextMenu({ x: e.clientX, y: e.clientY, project });
+  };
+
+  const handleDoubleClick = (project: Project) => {
+    onEdit(project);
+  };
+
+  const closeContextMenu = () => {
+    setContextMenu(null);
+  };
+
+  // Close context menu when clicking anywhere
+  const handleClickOutside = () => {
+    if (contextMenu) closeContextMenu();
+  };
+
   return (
-    <div className="project-list">
+    <div className="project-list" onClick={handleClickOutside}>
       <div className="search-bar">
         <input
           type="text"
@@ -53,7 +72,12 @@ export default function ProjectList({ projects, onEdit, onDelete, locale }: Proj
       ) : (
         <div className="projects-grid">
           {filteredProjects.map((project) => (
-            <div key={project.id} className="project-card">
+            <div 
+              key={project.id} 
+              className="project-card"
+              onDoubleClick={() => handleDoubleClick(project)}
+              onContextMenu={(e) => handleContextMenu(e, project)}
+            >
               <div className="project-header">
                 <h3>{project.title}</h3>
                 <span className="visibility-badge">{project.visibility}</span>
@@ -71,9 +95,6 @@ export default function ProjectList({ projects, onEdit, onDelete, locale }: Proj
                 <Link href={`/${locale}/projects/manage?id=${project.id}`} className="btn-view">
                   View
                 </Link>
-                <button onClick={() => onEdit(project)} className="btn-edit">
-                  Edit
-                </button>
                 <button
                   onClick={() => {
                     if (confirm('Are you sure you want to delete this project?')) {
@@ -87,6 +108,38 @@ export default function ProjectList({ projects, onEdit, onDelete, locale }: Proj
               </div>
             </div>
           ))}
+        </div>
+      )}
+
+      {/* Context Menu */}
+      {contextMenu && (
+        <div
+          className="context-menu"
+          style={{
+            position: 'fixed',
+            top: contextMenu.y,
+            left: contextMenu.x,
+            zIndex: 1000
+          }}
+          onClick={(e) => e.stopPropagation()}
+        >
+          <button onClick={() => {
+            onEdit(contextMenu.project);
+            closeContextMenu();
+          }}>
+            ✏️ Edit
+          </button>
+          <Link href={`/${locale}/projects/manage?id=${contextMenu.project.id}`}>
+            👁️ View
+          </Link>
+          <button onClick={() => {
+            if (confirm('Are you sure you want to delete this project?')) {
+              onDelete(contextMenu.project.id);
+            }
+            closeContextMenu();
+          }}>
+            🗑️ Delete
+          </button>
         </div>
       )}
 
@@ -212,6 +265,36 @@ export default function ProjectList({ projects, onEdit, onDelete, locale }: Proj
 
         .btn-delete:hover {
           background: #cc0000;
+        }
+
+        .context-menu {
+          background: white;
+          border: 1px solid #e5e5e5;
+          border-radius: 8px;
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+          padding: 0.5rem;
+          min-width: 150px;
+        }
+
+        .context-menu button,
+        .context-menu a {
+          display: block;
+          width: 100%;
+          padding: 0.75rem 1rem;
+          border: none;
+          background: transparent;
+          text-align: left;
+          cursor: pointer;
+          font-size: 0.9rem;
+          color: #333;
+          text-decoration: none;
+          border-radius: 4px;
+          transition: background-color 0.2s;
+        }
+
+        .context-menu button:hover,
+        .context-menu a:hover {
+          background: #f5f5f5;
         }
       `}</style>
     </div>
