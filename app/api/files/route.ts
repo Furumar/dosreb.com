@@ -58,12 +58,48 @@ export async function GET(request: NextRequest) {
   try {
     const { searchParams } = new URL(request.url);
     const projectId = searchParams.get('projectId');
+    const projectName = searchParams.get('project');
+    const folder = searchParams.get('folder');
     const filePath = searchParams.get('filePath');
 
     if (filePath) {
       // Get signed URL for file
       const url = await getFileUrl(filePath);
       return NextResponse.json({ url });
+    }
+
+    if (projectName && folder) {
+      // Get files from Supabase storage by project name
+      // This is for static reference projects like stockmann, dbschenker, jatkasaari
+      const { createClient } = await import('@supabase/supabase-js');
+      const supabase = createClient(
+        process.env.NEXT_PUBLIC_SUPABASE_URL!,
+        process.env.SUPABASE_SERVICE_ROLE_KEY!
+      );
+      
+      const { data: files, error } = await supabase.storage
+        .from('projects')
+        .list(`${projectName}/${folder}`);
+
+      if (error) {
+        console.error('Error listing files:', error);
+        return NextResponse.json({ files: [] });
+      }
+
+      // Get signed URLs for all files
+      const filesWithUrls = await Promise.all(
+        (files || []).map(async (file) => {
+          const path = `${projectName}/${folder}/${file.name}`;
+          const url = await getFileUrl(path, 3600);
+          return {
+            name: file.name,
+            url,
+            path,
+          };
+        })
+      );
+
+      return NextResponse.json({ files: filesWithUrls });
     }
 
     if (projectId) {

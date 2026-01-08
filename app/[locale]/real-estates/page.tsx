@@ -147,7 +147,7 @@ export default function RealEstatesPage() {
             type="button"
             style={{ position: 'relative', zIndex: 10, pointerEvents: 'auto' }}
           >
-            {showForm ? 'Cancel' : '+ New Project'}
+            {showForm ? 'Cancel' : '+ Add New Real Estate'}
           </button>
         </div>
 

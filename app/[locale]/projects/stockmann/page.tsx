@@ -2,17 +2,38 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function StockmannProject() {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
+  const [projectImages, setProjectImages] = useState<{ src: string; alt: string }[]>([]);
+  const [loading, setLoading] = useState(true);
 
-  // Placeholder images - replace with actual project images
-  const projectImages = [
-    { src: "/lumi-hero.png", alt: "Stockmann Project View 1" },
-    { src: "/lumi-hero.png", alt: "Stockmann Project View 2" },
-    { src: "/lumi-hero.png", alt: "Stockmann Project View 3" },
-  ];
+  useEffect(() => {
+    // Fetch images from Supabase storage for Stockmann project
+    // Format: /api/files?project=stockmann&folder=photos
+    fetch('/api/files?project=stockmann&folder=photos')
+      .then(res => res.json())
+      .then(data => {
+        if (data.files && data.files.length > 0) {
+          setProjectImages(data.files.map((file: any, i: number) => ({
+            src: file.url,
+            alt: `Stockmann Project View ${i + 1}`
+          })));
+        } else {
+          // Fallback to placeholder images if no images in Supabase
+          setProjectImages([
+            { src: "/lumi-hero.png", alt: "Stockmann Project - Upload images to Supabase" },
+          ]);
+        }
+      })
+      .catch(() => {
+        setProjectImages([
+          { src: "/lumi-hero.png", alt: "Stockmann Project - Upload images to Supabase" },
+        ]);
+      })
+      .finally(() => setLoading(false));
+  }, []);
 
   return (
     <div className="dosreb-page">
