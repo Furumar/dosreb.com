@@ -93,10 +93,21 @@ export async function uploadFile({ projectId, file, folder = 'documents' }: Uplo
 
 /**
  * Get a signed URL for downloading a file
+ * If bucket is public, returns public URL instead
  */
 export async function getFileUrl(storagePath: string, expiresIn = 3600) {
   if (!supabase) throw new Error('Supabase not initialized');
 
+  // First, try to get public URL (works if bucket is public)
+  const { data: publicData } = supabase.storage
+    .from(STORAGE_BUCKET)
+    .getPublicUrl(storagePath);
+
+  if (publicData?.publicUrl) {
+    return publicData.publicUrl;
+  }
+
+  // Fall back to signed URL if bucket is private
   const { data, error } = await supabase.storage
     .from(STORAGE_BUCKET)
     .createSignedUrl(storagePath, expiresIn);

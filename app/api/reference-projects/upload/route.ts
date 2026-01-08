@@ -49,6 +49,19 @@ export async function POST(request: NextRequest) {
 
     if (error) {
       console.error('Supabase upload error:', error);
+      
+      // Check if error is due to bucket not existing
+      if (error.message.includes('not found') || error.message.includes('Bucket')) {
+        return NextResponse.json(
+          { 
+            error: 'Storage bucket not configured', 
+            details: 'The "projects" storage bucket does not exist. Please create it in Supabase Dashboard.',
+            setupInstructions: 'Go to Supabase Dashboard > Storage > Create a new bucket named "projects" with public access enabled.'
+          },
+          { status: 500 }
+        );
+      }
+      
       throw error;
     }
 

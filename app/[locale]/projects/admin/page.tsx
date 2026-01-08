@@ -6,10 +6,81 @@ import Image from 'next/image';
 type ReferenceProject = 'stockmann' | 'dbschenker' | 'jatkasaari';
 
 export default function ProjectAdminPage() {
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [password, setPassword] = useState('');
+  const [authError, setAuthError] = useState('');
   const [selectedProject, setSelectedProject] = useState<ReferenceProject>('stockmann');
   const [uploading, setUploading] = useState(false);
   const [uploadedFiles, setUploadedFiles] = useState<string[]>([]);
   const [message, setMessage] = useState('');
+
+  const handleLogin = (e: React.FormEvent) => {
+    e.preventDefault();
+    // Simple password check - in production, use proper authentication
+    if (password === 'dosreb2026admin') {
+      setIsAuthenticated(true);
+      setAuthError('');
+    } else {
+      setAuthError('Invalid password');
+    }
+  };
+
+  if (!isAuthenticated) {
+    return (
+      <div className="dosreb-page">
+        <section className="page-hero">
+          <h1>Admin Login</h1>
+          <p className="page-lead">Enter password to access admin panel</p>
+        </section>
+        <section className="page-section">
+          <form onSubmit={handleLogin} style={{ maxWidth: '400px', margin: '0 auto' }}>
+            <div style={{ marginBottom: '1.5rem' }}>
+              <label style={{ display: 'block', marginBottom: '0.5rem', color: '#ffd700', fontWeight: 600 }}>
+                Password:
+              </label>
+              <input
+                type="password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                style={{
+                  width: '100%',
+                  padding: '0.75rem',
+                  borderRadius: '0.5rem',
+                  border: '1px solid rgba(255, 215, 0, 0.3)',
+                  background: 'rgba(255, 215, 0, 0.08)',
+                  color: '#ffd700',
+                  fontSize: '1rem'
+                }}
+                placeholder="Enter admin password"
+                autoFocus
+              />
+            </div>
+            {authError && (
+              <p style={{ color: '#f00', marginBottom: '1rem', fontSize: '0.9rem' }}>
+                {authError}
+              </p>
+            )}
+            <button
+              type="submit"
+              style={{
+                width: '100%',
+                padding: '0.75rem',
+                background: 'linear-gradient(135deg, #ffd700 0%, #ffed4e 100%)',
+                color: '#000',
+                fontWeight: 600,
+                borderRadius: '0.5rem',
+                border: 'none',
+                cursor: 'pointer',
+                fontSize: '1rem'
+              }}
+            >
+              Login
+            </button>
+          </form>
+        </section>
+      </div>
+    );
+  }
 
   const projectNames = {
     stockmann: 'Stockmann',
@@ -24,6 +95,7 @@ export default function ProjectAdminPage() {
     setUploading(true);
     setMessage('');
     const uploaded: string[] = [];
+    const errors: string[] = [];
 
     try {
       for (const file of Array.from(files)) {
@@ -40,13 +112,23 @@ export default function ProjectAdminPage() {
         if (response.ok) {
           const data = await response.json();
           uploaded.push(file.name);
+          console.log('Upload success:', data);
         } else {
-          throw new Error(`Failed to upload ${file.name}`);
+          const errorData = await response.json();
+          console.error('Upload failed:', errorData);
+          errors.push(`${file.name}: ${errorData.details || errorData.error}`);
         }
       }
 
       setUploadedFiles([...uploadedFiles, ...uploaded]);
-      setMessage(`✓ Successfully uploaded ${uploaded.length} image(s) to ${projectNames[selectedProject]}`);
+      
+      if (uploaded.length > 0) {
+        setMessage(`✓ Successfully uploaded ${uploaded.length} image(s) to ${projectNames[selectedProject]}`);
+      }
+      
+      if (errors.length > 0) {
+        setMessage(prev => prev + '\n\n✗ Errors:\n' + errors.join('\n'));
+      }
       
       // Clear file input
       e.target.value = '';
@@ -138,7 +220,8 @@ export default function ProjectAdminPage() {
               ? 'rgba(0, 255, 0, 0.1)' 
               : 'rgba(255, 0, 0, 0.1)',
             border: `1px solid ${message.includes('✓') ? 'rgba(0, 255, 0, 0.3)' : 'rgba(255, 0, 0, 0.3)'}`,
-            color: message.includes('✓') ? '#0f0' : '#f00'
+            color: message.includes('✓') ? '#0f0' : '#f00',
+            whiteSpace: 'pre-wrap'
           }}>
             {message}
           </div>
