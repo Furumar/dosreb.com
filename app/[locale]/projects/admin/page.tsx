@@ -2,6 +2,8 @@
 
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
+import FileUpload from '../../components/FileUpload';
+import FileGallery from '../../components/FileGallery';
 
 type AdminTab = 'reference-photos' | 'projects' | 'real-estates';
 type ReferenceProject = 'stockmann' | 'dbschenker' | 'jatkasaari';
@@ -10,6 +12,18 @@ interface ProjectFile {
   name: string;
   url: string;
   path: string;
+}
+
+interface FileRecord {
+  id: string;
+  filename: string;
+  storage_path: string;
+  mime_type: string;
+  size: number;
+  metadata: {
+    folder?: string;
+  };
+  created_at: string;
 }
 
 interface Project {
@@ -62,6 +76,10 @@ export default function AdminDashboard() {
     price: '', 
     status: 'available' 
   });
+  const [selectedRealEstate, setSelectedRealEstate] = useState<string | null>(null);
+  const [realEstateFiles, setRealEstateFiles] = useState<FileRecord[]>([]);
+  const [uploadingRealEstateFile, setUploadingRealEstateFile] = useState(false);
+  const [activeFileTab, setActiveFileTab] = useState<'documents' | 'designs' | 'photos'>('photos');
 
   const projectNames = {
     stockmann: 'Stockmann',
@@ -312,6 +330,50 @@ export default function AdminDashboard() {
       if (response.ok) {
         setMessage(`✓ Deleted "${title}"`);
         loadRealEstates();
+      } else {
+        const error = await response.json();
+        setMessage(`✗ Failed: ${error.error}`);
+      }
+    } catch (error) {
+      setMessage(`✗ Error: ${error instanceof Error ? error.message : 'Unknown error'}`);
+    }
+  };
+
+  // Real Estate File Management Functions
+  const loadRealEstateFiles = async (realEstateId: string) => {
+    setUploadingRealEstateFile(true);
+    try {
+      const response = await fetch(`/api/files?projectId=${realEstateId}`);
+      if (response.ok) {
+        const files = await response.json();
+        setRealEstateFiles(files);
+      }
+    } catch (error) {
+      console.error('Error loading real estate files:', error);
+    } finally {
+      setUploadingRealEstateFile(false);
+    }
+  };
+
+  const handleRealEstateFileUpload = async () => {
+    if (!selectedRealEstate) return;
+    await loadRealEstateFiles(selectedRealEstate);
+    setMessage('✓ Files uploaded successfully');
+  };
+
+  const handleDeleteRealEstateFile = async (storagePath: string, fileId: string) => {
+    if (!confirm(`Delete this file?`)) return;
+    try {
+      const response = await fetch('/api/files', {
+        method: 'DELETE',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ fileId }),
+      });
+      if (response.ok) {
+        setMessage(`✓ File deleted`);
+        if (selectedRealEstate) {
+          await loadRealEstateFiles(selectedRealEstate);
+        }
       } else {
         const error = await response.json();
         setMessage(`✗ Failed: ${error.error}`);
@@ -929,6 +991,22 @@ export default function AdminDashboard() {
                     </div>
                     <div style={{ display: 'flex', gap: '0.5rem' }}>
                       <button
+                        onClick={() => {
+                          setSelectedRealEstate(estate.id);
+                          loadRealEstateFiles(estate.id);
+                        }}
+                        style={{
+                          padding: '0.5rem 1rem',
+                          background: 'rgba(100, 149, 237, 0.2)',
+                          color: '#6495ED',
+                          border: '1px solid rgba(100, 149, 237, 0.3)',
+                          borderRadius: '0.3rem',
+                          cursor: 'pointer'
+                        }}
+                      >
+                        📁 Files
+                      </button>
+                      <button
                         onClick={() => setEditingRealEstate(estate)}
                         style={{
                           padding: '0.5rem 1rem',
@@ -957,6 +1035,72 @@ export default function AdminDashboard() {
                     </div>
                   </div>
                 ))}
+              </div>
+            )}
+
+            {/* Real Estate File Management Panel */}
+            {selectedRealEstate && (
+              <div style={{ marginTop: '2rem', padding: '1.5rem', background: 'rgba(100, 149, 237, 0.1)', borderRadius: '0.5rem', border: '1px solid rgba(100, 149, 237, 0.3)' }}>
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1rem' }}>
+                  <h3 style={{ color: '#6495ED' }}>
+                    📁 Manage Files: {realEstates.find(e => e.id === selectedRealEstate)?.title}
+                  </h3>
+                  <button
+                    onClick={() => {
+                      setSelectedRealEstate(null);
+                      setRealEstateFiles([]);
+                    }}
+                    style={{
+                      padding: '0.5rem 1rem',
+                      background: 'rgba(255, 0, 0, 0.2)',
+                      color: '#fff',
+                      border: '1px solid rgba(255, 0, 0, 0.3)',
+                      borderRadius: '0.3rem',
+                      cursor: 'pointer'
+                    }}
+                  >
+                    ✕ Close
+                  </button>
+                </div>
+
+                {/* File Type Tabs */}
+                <div style={{ display: 'flex', gap: '0.5rem', marginBottom: '1rem', borderBottom: '1px solid rgba(100, 149, 237, 0.3)', paddingBottom: '0.5rem' }}>
+                  {(['photos', 'documents', 'designs'] as const).map(tab => (
+                    <button
+                      key={tab}
+                      onClick={() => setActiveFileTab(tab)}
+                      style={{
+                        padding: '0.5rem 1rem',
+                        background: activeFileTab === tab ? 'rgba(100, 149, 237, 0.3)' : 'transparent',
+                        color: activeFileTab === tab ? '#6495ED' : 'rgba(255, 251, 230, 0.7)',
+                        border: activeFileTab === tab ? '1px solid rgba(100, 149, 237, 0.5)' : '1px solid transparent',
+                        borderRadius: '0.3rem',
+                        cursor: 'pointer',
+                        fontWeight: activeFileTab === tab ? 600 : 400,
+                        textTransform: 'capitalize'
+                      }}
+                    >
+                      {tab === 'photos' && '📷'} {tab === 'documents' && '📄'} {tab === 'designs' && '🎨'} {tab}
+                    </button>
+                  ))}
+                </div>
+
+                {/* File Upload */}
+                <div style={{ marginBottom: '1.5rem' }}>
+                  <FileUpload
+                    projectId={selectedRealEstate}
+                    folder={activeFileTab}
+                    onUploadComplete={handleRealEstateFileUpload}
+                  />
+                </div>
+
+                {/* File Gallery */}
+                <FileGallery
+                  projectId={selectedRealEstate}
+                  files={realEstateFiles.filter(f => f.metadata?.folder === activeFileTab)}
+                  onDelete={(fileId, storagePath) => handleDeleteRealEstateFile(storagePath, fileId)}
+                  onRefresh={() => loadRealEstateFiles(selectedRealEstate)}
+                />
               </div>
             )}
           </div>
