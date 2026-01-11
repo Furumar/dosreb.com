@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import DesignGroupSelector from '../../../components/DesignGroupSelector'
+import DesignGroupSelector from '../../admin/design/components/DesignGroupSelector'
 import { createClient } from '@supabase/supabase-js'
 
 const supabase = createClient(
