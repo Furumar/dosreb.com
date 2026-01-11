@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server'
-import { db } from '@/lib/db' // your Supabase client
+import { db } from '../../../lib/db'
 
 export async function GET() {
   const { data, error } = await db
