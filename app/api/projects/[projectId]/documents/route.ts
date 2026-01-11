@@ -1,7 +1,6 @@
 import { NextResponse } from 'next/server'
-import { db } from '@/lib/db' // ← your Supabase client
+import { db } from '../../../../lib/db/design'
 import { cookies } from 'next/headers'
-
 export async function GET(request: Request, { params }: { params: { projectId: string } }) {
   const projectId = params.projectId
 
