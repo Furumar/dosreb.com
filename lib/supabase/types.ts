@@ -24,6 +24,7 @@ export type Project = {
   name: string
   description: string | null
   created_at: string
+  design_groups?: ProjectDesignGroup[] // ← Add this line
 }
 
 export type ProjectDesignGroup = {
