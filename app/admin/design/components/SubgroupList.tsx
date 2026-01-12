@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from 'react';
-import { getSubgroupsByGroup } from '@/lib/db/design';
+import { getSubgroupsByGroup } from '../../../../lib/db/design';
 import { DesignSubgroup } from '@/lib/supabase/types';
 
 export default function SubgroupList({ groupId }: { groupId: string }) {

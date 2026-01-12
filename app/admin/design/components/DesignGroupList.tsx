@@ -1,7 +1,7 @@
 'use client'
 
 import { useEffect, useState } from 'react'
-import { getDesignGroups } from '@/lib/db/design'
+import { getDesignGroups } from '../../../../lib/db/design'
 
 import { DesignGroup } from '@/lib/supabase/types'
 import SubgroupList from './SubgroupList'

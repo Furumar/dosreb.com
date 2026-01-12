@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react'
 import { DesignGroup, ProjectDesignGroup } from '@/lib/supabase/types'
-import { getDesignGroups, addDesignGroupToProject, removeDesignGroupFromProject } from '@/lib/db/design'
+import { getDesignGroups, addDesignGroupToProject, removeDesignGroupFromProject } from '../../../../lib/db/design'
 
 type Props = {
   projectId: string
