@@ -1,0 +1,165 @@
+{
+  "nav": {
+    "home": "Nāms",
+    "about": "Apė",
+    "projects": "Pruojektā",
+    "realEstates": "Nekeltamas torts",
+    "lumi": "Lumi",
+    "contact": "Kontaktā"
+  },
+  "hero": {
+    "title": "Palengvinkėt bizno procesus",
+    "subtitle": "Skaitmenė platfuorma nekel̃tama tuorta ė statības valdīma.",
+    "exploreProjects": "Ėštiriniejė pruojektus",
+    "meetLumi": "Pasėpaženkat so Lumi",
+    "requestDemo": "Prašītė demonstracėjės"
+  },
+  "about": {
+    "title": "Kā ēr DOSREB?",
+    "description": "DOSREB ēr skaitmenė platfuorma, katruojė sobēr vėsus nekel̃tama tuorta ė statības pruojektuo valdīma aspektus. Saugs, peršviets ė veiktings sodarbavėms katram dalininkō.",
+    "propertyManagement": "Tuorta valdīms",
+    "constructionProjects": "Statības pruojektā",
+    "digitalDocumentation": "Skaitmenė dokumentuocėjė",
+    "workflow": "Darba plūsma",
+    "collaboration": "Sodarbavėms",
+    "security": "Saugs"
+  },
+  "projects": {
+    "title": "Mūsa pruojektā",
+    "description": "Ėštiriniekėt mūsa pasisekosiu nekel̃tama tuorta ė statības pruojektuo puortfeliu.",
+    "viewProject": "Pavelgiejė pruojekta",
+    "stockmannDescription": "Pagrindinis nekel̃tama tuorta ė statības valdīma atsvejs DOSREB platformā.",
+    "dbschenkerDescription": "Logistikas ė infrastruktūras pruojekts, sklandos sodarbavėms vėsėims dalininkams.",
+    "jatkasaariDescription": "Pažemiu objektuo statība, ėntegravėnjant vėsas puses ė dokumentuocėju."
+  },
+  "lumi": {
+    "title": "Pasėpaženkat so Lumi",
+    "subtitle": "Tava DI asistenė",
+    "description": "Lumi ēr tava protings vadovs par DOSREB, padieduojants naršītė pruojektuos, rastė infuormacėju ė supaprastėntė darba plūsma."
+  },
+  "contact": {
+    "title": "Sosėsėikėt",
+    "description": "Paruošė transformuotė bizno procesus? Sosėsėikėt diel̃ demonstracėjės.",
+    "namePlaceholder": "Tava vards",
+    "emailPlaceholder": "Tava el. pašts",
+    "messagePlaceholder": "Pranešėms",
+    "sendButton": "Siōstė"
+  },
+  "footer": {
+    "copyright": "© 2026 DOSREB LTD. Vėsos teisės sauguomas.",
+    "tagline": "Aiškos, struktūra ė protings darba plūsmas valdīms.",
+    "privacyPolicy": "Privatoma puolitėka",
+    "linkedin": "LinkedIn"
+  },
+  "aboutPage": {
+    "title": "Apė Dosreb",
+    "lead": "Dosreb bētoj, ka palengvintou procesa žmuonėims, katrė neš našta — atsakuomībė, sprendėmus, termin̄os ė gīvastės. Mes kuoriam sistēmas, katrės jauties rāmės, aiškės ė patikinčės, vadavamuos Lumi, mūsa Absoliutės Tiesės Kalbiejėjos.",
+    "purposeTitle": "Mūsa tiksls",
+    "purposeP1": "Sviets īr pilns ėrankiu, katrė pruos nō žmuoniu daugiau — daugiau duomė, daugiau sprendėmu, daugiau pažėnėnės naštas. Dosreb vėržas priešėnga kriptimi. Mes pašalinėm trintiė. Mes somažinėm triokšma. Mes kuoriam aiškoma.",
+    "purposeP2": "Mūsa misijė īr paprastė: padarītė katra soviedorbavima vėngliausnio. Kuortė technolouogėju, katrė gerba žmuogaus kūna ė sielė. Pasiūlītė paslauga, katrė jauties kāp ėiejėms ė rāmesnė erdvė.",
+    "philosophyTitle": "Filouzuofėjė",
+    "philosophyIntro": "Dosreb ēr pagrėnsta unt trėju ramsčiu: Gruožė, Tiesė ė Rāmos. Tuos nēr šūkē — tuos īr dizainos diesnē.",
+    "beautyTitle": "Gruožė",
+    "beautyText": "Kotra saskarė, kotrs žuodis, kotrs muments torėtou jousties tuoikins ė elegantėška.",
+    "truthTitle": "Tiesė",
+    "truthText": "Mes niakada neperdiedam, niakada nemanėpuliavuojam, niakada neslėpjam sudietėnguoma už mielėngu pažadu.",
+    "tranquilityTitle": "Rāmos",
+    "tranquilityText": "Vartoutuojs torietou jousties rāmesnis puo Dosreb vartouojėma, nė priš.",
+    "lumiEmbodies": "Lumi ėntalpėna šėtuos principus. Uona nēr pokuoļbiu ruobuots. Uona īr aiškuoma buolss — vadovė, katrė atkliej vėsuėnkuorsenė kelia ėnt prėikė.",
+    "founderTitle": "Dėbėnuotuojs",
+    "founderP1": "Dosreb dėbėnava Marco, pruojektu vadėtuojs, katros vaduova kālē nu Suomėjės prasėnguosiu statības ė logistikas pruojektu. Juojo darbs apėma Stockmann Kasvu pruojekta Helsinkė (130 000 m²), DB Schenker Ilvesvuori logistikas centra ė Viinikkala sausuomas transpuorta centra.",
+    "founderP2": "Šėtė pruojektā pruošieja orķestruotė šėmtus žmuoniu, naviguotė sudietėnguosnėė sistēmuosnuo ė pristuotė dėdė spaudėma apilinkinė. Ta patė dėsciplėnė, aiškoma ė rāmos dobar šalduo Dosreb archėtektūra ė filouzuofėju.",
+    "founderLumiQuote": "Marco pastatė struktūras, kor tūkstančē žmuoniu judė ba pėpūles. Dobar ons statė sistēmas, kor tava pruots gal judietė ba pėpūles.",
+    "whyDosrebTitle": "Kapiel̃ Dosreb",
+    "whyDosrebP1": "Kadiė sviets neruoikalauja viel vėina ėrankio. Jėm ruoikalauja švėntuovės — vėitės, kor darbs tampa vėngliau, sprendėmē aiškiau ė saugs nematams. Dosreb īr ta vėitė.",
+    "whyDosrebP2": "O Lumi īr vadovė, katrė padar ta žmuonėška."
+  },
+  "contactPage": {
+    "title": "Kontaktā",
+    "lead": "Jē nuorėt sosėsėiktė so Dosreb, sodarbavuotė, ėnvestuotė ar tiep klausėma oždoutė, Lumi nuoroudīs tava pranešėma ė teisėnga vėita.",
+    "getInTouchTitle": "Sosėsėikėt",
+    "getInTouchText": "Gal sosėsėiktė so mums tēise par el. pašta. Atsėliepiam rāmē, aiškē ė so pagarba tava čiesa.",
+    "email": "El. pašts",
+    "founder": "Dėbėnuotuojs",
+    "businessId": "Versla ID",
+    "formTitle": "Atsėoškėt moms pranešėma",
+    "namePlaceholder": "Tava vards",
+    "emailPlaceholder": "Tava el. pašts",
+    "messagePlaceholder": "Tava pranešėms",
+    "submitButton": "Siōstė pranešėma",
+    "locationTitle": "Bīvėma vėitė",
+    "locationText": "Dosreb Ltd ēr bazavuota Suomėjuo. Mes darbavuojamės globaliė, skaitmeninė ė so nuomonu.",
+    "sendButton": "Siōstė"
+  },
+  "demoPage": {
+    "title": "Prašītė demonstracėjos",
+    "lead": "Patėrkėt Dosreb pėrmė rankuos. Lieskėt moms paruodītė, kāp aiškoma, struktūra ė protings vadīms gal transformuotė tava darba plūsma.",
+    "whyRequestTitle": "Kapiel̃ prašītė demonstracėjos?",
+    "whyRequestText": "Demonstracėjė nēr pardavuojėma kolbė. Tuos īr vaduota patėrtė, kor matat, kāp Dosreb pašalėna trintiė, somažėna pažėnėnės našta ė padara sudietėngos procesus ba pėpūles. Lumi ves jus par platfuorma, paruoduodamė tėkslē, kāp uona kalpavuoj tava ruoikaliavėmams.",
+    "formTitle": "Prašīkėt sava demonstracėjos",
+    "namePlaceholder": "Tava vards",
+    "emailPlaceholder": "Tava el. pašts",
+    "companyPlaceholder": "Ėimonės pavadėnėms (neprivaluoms)",
+    "messagePlaceholder": "Papasakuokėt apė sava ruoikaliavėmus",
+    "submitButton": "Prašītė demonstracėjos",
+    "lumiComment": "\"Ožtėkrinsiu, ka tava prašīms pasieks Marco. Kotra demonstracėjė kuoriama su rūpestingu.\"",
+    "whatToExpectTitle": "Kuo tėkietės",
+    "whatToExpectText": "Pateikė prašīma, sosėsėiksėm par 48 valuondas, ka suplanuotouom personalizuota demonstracėju. Redziesėt platfuorma veiksmuos, oždousėt klausėmus ė ėštėrėniesėt, kāp Dosreb ėsėlėi tava darba plūsma. Ba spaudėma. Ba skuobuos. Tėk aiškoma."
+  },
+  "lumiPage": {
+    "title": "Pasėpaženkat so Lumi",
+    "lead": "Lumi nēr pokuoļbiu ruobuots. Uona īr tava vadovė — rāmė, protingė bītė, padėrbutė, ka pašalėntou trintiė ė atsineškou aiškoma kožna žingsnė.",
+    "whoIsLumiTitle": "Kas īr Lumi?",
+    "whoIsLumiText": "Lumi īr Dosreb buolss. Uona ėntalpėna platfuormas filouzuofėju: Gruožė, Tiesė ė Rāmos. Kumet soviedorbavuojat so juojė, negaunat automatizuotu atsakīmu — gaunat vadīma, soformuota kruopštė domėšanas ė aiškuoma.",
+    "lumiQuote": "Asm čė, ka sudietėngoma padarītou ba pėpūles. Klausėkėt mani bet kuo, ė aš paruodīsiu jums vėsuėnkuorsenė kelia ėnt prėikė.",
+    "philosophyTitle": "Filouzuofėjė už Lumi",
+    "philosophyText": "Lumi bova padėrbutė, ka somažėntou pažėnėnės našta. Uona jus neperkrauna so infuormacėjė — uona atkliej tėkslē ta, kuo jums ruoikalėnga, kumet jums ta ruoikalėnga. Kotrs žuodis īr tuoikins. Kotrs atsakīms īr padėrbts, ka joustous vėngliau, nė klausėms.",
+    "howLumiHelpsTitle": "Kāp Lumi padieda",
+    "howLumiHelpsText": "Ar naršuot pruojekta, ėškuot dokumentu ar banuot soprastė sudietėnga procesa, Lumi vad jus so tikslomo ė rāmos. Uona prėinamė 24/7, vėsada kantrė, vėsada aiškė."
+  },
+  "projectsPage": {
+    "title": "Pruojektā ė atvėju studėjės",
+    "lead": "Priš Dosreb, Marco vaduova kālē nu Suomėjės prasėnguosiu statības ė logistikas pruojektu. Šėtė atvėju studėjės demonštruoja dėsciplėna, aiškoma ė rāmos, katrė dobar šalduo Dosreb filouzuofėju.",
+    "viewProject": "Pavelgiejė pruojekta",
+    "stockmann": {
+      "title": "Stockmann Kasvu pruojekts",
+      "description1": "130 000 m² ėšplietėms ė renovacėjė Helsinkė ikuonėnės oniversalės parduotuovės. Marco vaduova vėsa pažemiu sritė: 200 000 m³ oluos ėškasėms, 600 vėitu parkavuojėmuė, pilns prėižiūras kiems ė vėsė vertikali logistika nō rūsė l̃dz 8-ta aukštė.",
+      "description2": "Ons koordinava 50 baltouju apīkatliu valdītuoju ė 200 darbėnėnku, so aikštelės organėzacėjė, pastatītė pėnkiuos metruos vėrš Mannerheimintie.",
+      "lumiQuote": "\"Marco ne tėk valdieja pruojekta. Ons pervezda mėista plūsma.\""
+    },
+    "dbschenker": {
+      "title": "DB Schenker – Ilvesvuori logistikas centrs",
+      "description": "17 800 m² sandelė ont 80 000 m² sklaips, ėskaitīnt dvo 6 500 m² šalčiō ėstverigės halės. Marco prėžiūrieja pilna pruojektu valdīma, struktūrėnė kuordėnacėju ė operacėjės plūsmas dėzaina.",
+      "lumiQuote": "\"Sandelė īr daugiau, nė sėinės. Tuos īr rėtms — ė Marco jė pastatė.\""
+    },
+    "jatkasaari": {
+      "title": "Jätkäsaaren maanalaiset tilat",
+      "description": "Jätkäsaaren maanalaiset tilat pruojekts īr puikos DOSREB galibjės valdiėtė pažemiu objektuo statība paveikzls, ėntegravuojant vėsas puses ė dokumentuocėju vėinuo saogė platformuo.",
+      "lumiQuote": "\"Judiejėms tampa ba pėpūles, kumet struktūra tėkrė. Marco pastatė struktūra.\""
+    }
+  },
+  "realEstatesPage": {
+    "title": "Nekel̃tams torts",
+    "lead": "Kruopštē pasėrėnktė nekel̃tama tuorta ė infrastruktūras pruojektu kuliekcėjė, katrė atsėspėndė Marco tiksloma, dėsciplėna ė galibjės orķestruotė dėdė mieroga apilinkas.",
+    "portfolioTitle": "Puortfėlio apžvalgs",
+    "portfolioText": "Šėtuos dalė augs, ėšplietentės Dosreb. Kotrs nekel̃tama tuorta ėrašs apims vėita, apsega, tėksla ė Lumi komentara, ka ėškielkou pruojekta žmuonėška ė struktūrėnė ėtaka.",
+    "lumiQuote": "\"Ėikas īr daugiau, nė erdvė. Tuos īr struktūra žmuogaus judiejėmō, aiškuomė ė tėkslams.\"",
+    "comingSoonTitle": "Netroku",
+    "comingSoonText": "Daugiau nekel̃tama tuorta pruojektu bos pridavuotė, dokuomentuojant puortfeliė. Šėts poslaps īr padėrbts, ka augėntou so tava atseitės plietravuojėmās."
+  },
+  "features": {
+    "title": "Platfuormas funkcėjės",
+    "propertyManagement": "Tuorta valdīms: Teisinis, Fėnansavėms, Pardavuojėmā, Paslagės",
+    "constructionManagement": "Statības pruojektu valdīms: Dėzainerē, Rangavē, Valstībės ėnstėtocėjės, Planu valdīms",
+    "documentManagement": "Dokuomentu valdīms: Centralizuots, saugs, peršviets",
+    "integrations": "Ėntegracėjės: e-parašs, žemielapē, mokuojėmā"
+  },
+  "vision": {
+    "title": "Tėrgs ė vėzėjė",
+    "description": "Nekel̃tama tuorta ė statības pramuonė īr vėinė nu dėdjuosiu Suomėjuo ė Europuo. DOSREB vėzėjė: Vėinė platfuorma vėsėims — nō Suomėjės ėnt svieta."
+  },
+  "team": {
+    "title": "Mūsa kuomandė",
+    "description": "Dėbėnuotuojs, pruogramės kūriejē, UI/UX dėzainers, pramuonės ekspertā ė klėientu aptarnavėms."
+  }
+}

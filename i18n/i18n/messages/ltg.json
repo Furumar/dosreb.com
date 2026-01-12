@@ -1,0 +1,165 @@
+{
+  "nav": {
+    "home": "Sāktys",
+    "about": "Par",
+    "projects": "Projekti",
+    "realEstates": "Namatleibys",
+    "lumi": "Lumi",
+    "contact": "Kontakti"
+  },
+  "hero": {
+    "title": "Vienkāršojit biznesa procesus",
+    "subtitle": "Digitaluo platforma namatleibys i būvnīceibys puorvaļdeibai.",
+    "exploreProjects": "Izpētīt projektus",
+    "meetLumi": "Satykojit Lumi",
+    "requestDemo": "Pīpraseit demonstraceju"
+  },
+  "about": {
+    "title": "Kas ir DOSREB?",
+    "description": "DOSREB ir digitaluo platforma, kas apvīnoj vysus namatleibys i būvnīceibys projektu puorvaļdeibys aspektus. Drūša, puorskaidra i efektiva sadarbeiba kotram īnteresātajam.",
+    "propertyManagement": "Namatleibys puorvaļdeiba",
+    "constructionProjects": "Būvnīceibys projekti",
+    "digitalDocumentation": "Digitaluo dokumentāceja",
+    "workflow": "Dorba plūsma",
+    "collaboration": "Sadarbeiba",
+    "security": "Drūšeiba"
+  },
+  "projects": {
+    "title": "Myusu projekti",
+    "description": "Izpētit myusu seiksmeigu namatleibys i būvnīceibys projektu portfeli.",
+    "viewProject": "Redzēt projektu",
+    "stockmannDescription": "Flagmanu namatleibys i būvnīceibys puorvaļdeibys gadejums DOSREB.",
+    "dbschenkerDescription": "Logistikas i infrastrukturas projekts, vīnmērīga sadarbeiba vysim īnteresātajim.",
+    "jatkasaariDescription": "Pazemes objektu būvnīceiba, integrējūt vysys puses i dokumentaceju."
+  },
+  "lumi": {
+    "title": "Satykojit Lumi",
+    "subtitle": "Jyusu MI asistente",
+    "description": "Lumi ir jyusu inteligentuo ceļveža caur DOSREB, paleidzūt navigēt projektūs, atrast informaceju i racionalizeēt dorba plūsmu."
+  },
+  "contact": {
+    "title": "Sazīnuotīs",
+    "description": "Gotovs transformēt biznesa procesus? Sazīnojitīs demonstrācijai.",
+    "namePlaceholder": "Jyusu vuords",
+    "emailPlaceholder": "Jyusu e-posts",
+    "messagePlaceholder": "Ziņojums",
+    "sendButton": "Syuteit"
+  },
+  "footer": {
+    "copyright": "© 2026 DOSREB LTD. Vysys tīseibys aizsargātys.",
+    "tagline": "Skaidreiba, struktūra i inteligenta dorba plūsmas vadība.",
+    "privacyPolicy": "Privatuma politika",
+    "linkedin": "LinkedIn"
+  },
+  "aboutPage": {
+    "title": "Par Dosreb",
+    "lead": "Dosreb pastōv, lai atvīglynōtu procesu ļaudim, kas nes nastu — atbiļdeibas, lēmumus, termiņus i dzeivys. Mes veidojam sistēmas, kas jūtīs meireigas, skaidras i uzticamas, vadeitys nu Lumi, myusu Absolūtuos Pateseibys Runātuojas.",
+    "purposeTitle": "Myusu mierķs",
+    "purposeP1": "Pasauļs ir pylns ar reikim, kas prasa nu ļaudim vairōk — vairōk uzmanības, vairōk lēmumu, vairōk kognitīvuos sluodzes. Dosreb vēršs pretējā virzīnā. Mes novēršam berzi. Mes samazynom trūksni. Mes radam skaidreibu.",
+    "purposeP2": "Myusu miseja ir vienkārša: padareit kotru sadorbeibas vīgleiku. Veidot tehnologeju, kas respektej ļauds kermeni i dvēseli. Piedōvuot pokolpojumu, kas jūtīs kai īīšona meirīgākā telpā.",
+    "philosophyTitle": "Filosofeja",
+    "philosophyIntro": "Dosreb ir bolsteituo iz trimim pīlariem: Skoisteiba, Pateseiba i Mīrs. Tī nav saukļi — tī ir dizaina lykumi.",
+    "beautyTitle": "Skoisteiba",
+    "beautyText": "Kotrai saskarnej, kotram vuordam, kotram breidim juojūtīs apzinātam i elegantam.",
+    "truthTitle": "Pateseiba",
+    "truthText": "Mes nikad napōrspeiļejam, ninad namanipuļejam, ninad naslēpjam sarežgeiteibu aiz napateisim soleim.",
+    "tranquilityTitle": "Mīrs",
+    "tranquilityText": "Lītuotuojam vajagātu justuos meirīguokam pēc Dosreb lītuošonys nikai pyrma.",
+    "lumiEmbodies": "Lumi īmīsoj šuos principus. Viņa nav tērzēšonys bots. Viņa ir skaidreibys bolss — ceļveža, kas atkloj vysvīnkāršōku ceļu iz prīkšu.",
+    "founderTitle": "Dibynōtuojs",
+    "founderP1": "Dosreb dibynōja Marco, projektu vadeitojs, kas vadeja daži nu Suomejas praseigu būvnīceibys i logistikas projektim. Viņa dorbs ītwer Stockmann Kasvu projektu Helsinku (130 000 m²), DB Schenker Ilvesvuori logistikas centru i Viinikkala sauszemis transporta centru.",
+    "founderP2": "Šī projekti praseja orķestrēt symtim ļaudu, navigēt sarežgeitōs sistemōs i pīgōdōt milzeiga spīdīna apstōkļūs. Tuo pati disciplina, skaidreiba i mīrs tagad veida Dosreb arhitektūru i filosofeju.",
+    "founderLumiQuote": "Marco uzbyvēja struktūras, kurōs tyukstušim ļaudu pōrvītoj bez pīpyulīs. Tagad viņš byvej sistēmas, kurōs jyusu prōts var pōrvītuotīs bez pīpyulīs.",
+    "whyDosrebTitle": "Kōpēc Dosreb",
+    "whyDosrebP1": "Jo pasaulei nav napīcīšoms vēļ vīns reiks. Tai napīcīšoma svētneica — vīta, kur dorbs kļyst vīgleiks, lēmumi skaidrōki i drūšeiba naradzama. Dosreb ir tuo vīta.",
+    "whyDosrebP2": "I Lumi ir ceļveža, kas tū padara cylvēceigū."
+  },
+  "contactPage": {
+    "title": "Kontakti",
+    "lead": "Ja gribat sazīnuotīs ar Dosreb, sadarbeitīs, investēt voi vienkārši uzdūt vaicuojumu, Lumi nuovirzeis jyusu ziņojumu iz pareizū vītu.",
+    "getInTouchTitle": "Sazīnuotīs",
+    "getInTouchText": "Jyus varit sazīnuotīs ar mums tīši pa e-postu. Mes atbyļdam meireiši, skaidri i ar cīņu pret jyusu laiku.",
+    "email": "E-posts",
+    "founder": "Dibynōtuojs",
+    "businessId": "Uzjāmuma ID",
+    "formTitle": "Nūsyutit mums ziņojumu",
+    "namePlaceholder": "Jyusu vuords",
+    "emailPlaceholder": "Jyusu e-posts",
+    "messagePlaceholder": "Jyusu ziņojums",
+    "submitButton": "Nūsyuteit ziņojumu",
+    "locationTitle": "Atrūnuošonys vīta",
+    "locationText": "Dosreb Ltd ir bāzāts Suomejā. Mes dorbojamīs globali, digitali i ar nūdūmu.",
+    "sendButton": "Syuteit"
+  },
+  "demoPage": {
+    "title": "Pīpraseit demonstraceju",
+    "lead": "Pīredze Dosreb pyrmajā personā. Ļaudit mums paruodeit, kai skaidreiba, struktūra i inteligenta vadība var puorveidot jyusu dorba plūsmu.",
+    "whyRequestTitle": "Kōpēc pīpraseit demonstraceju?",
+    "whyRequestText": "Demonstrāceja nav puordūšonys runa. Tuo ir vadeita pīredze, kurā jyus redzat, kai Dosreb nūvērs berzi, samozyna kognitīvū sluodzi i padara sarežgeitūs procesus bez pīpyulīs. Lumi vad jyus caur platformu, precizai paruodūt, kai tuo kolpoj jyusu vuicīdzeibom.",
+    "formTitle": "Pīprosit sovu demonstraceju",
+    "namePlaceholder": "Jyusu vuords",
+    "emailPlaceholder": "Jyusu e-posts",
+    "companyPlaceholder": "Uzjāmuma nūsaukums (naobligāts)",
+    "messagePlaceholder": "Pastuostit mums par sovom vuicīdzeibom",
+    "submitButton": "Pīpraseit demonstraceju",
+    "lumiComment": "\"Es parupēšuos, lai jyusu pīprasejums sasnīgtu Marco. Kotra demonstrāceja teik veidūta rūpeigi.\"",
+    "whatToExpectTitle": "Kū sagaideit",
+    "whatToExpectText": "Pēc jyusu pīprasejuma īsnīgšonys mes sazīnōsimīs 48 stuņdu laikā, lai ieplōnōtu personalizātu demonstraceju. Jyus redzēsit platformu darbeibā, uzdūsit vaicuojumus i izpētīsit, kai Dosreb īkļaujas jyusu dorba plūsmā. Bez spīdīna. Bez steigys. Tikai skaidreiba."
+  },
+  "lumiPage": {
+    "title": "Satykojit Lumi",
+    "lead": "Lumi nav tērzēšonys bots. Viņa ir jyusu ceļveža — meireiņa, inteligenta klātbyutne, kas radeituo, lai nūvērštu berzi i snīgtu skaidreibu kotrā sūlei.",
+    "whoIsLumiTitle": "Kas ir Lumi?",
+    "whoIsLumiText": "Lumi ir Dosreb bolss. Viņa īmīsoj platformys filosofeju: Skoisteiba, Pateseiba i Mīrs. Kod jyus myjedarbuojatīs ar viņu, jyus nasajāmat automatizātys atbilžu — jyus sajāmat vadeibu, kū veidūja rūpeiga dūmuošona i skaidreiba.",
+    "lumiQuote": "Asmu ite, lai sarežgeiteibu padareitū bez pīpyulīs. Vaicuojit ma jebkū, i es paruodeišu jums vysvīnkāršōku ceļu iz prīkšu.",
+    "philosophyTitle": "Filosofeja aiz Lumi",
+    "philosophyText": "Lumi teika izveidūta, lai samazynnōtu kognitīvū sluodzi. Viņa jyus nanoslūdzej ar informaceju — viņa atkloj tīši tū, kas jums napīcīšoms, kod jums tys napīcīšoms. Kotrs vuords ir apzinōts. Kotra atbiļde ir veidūta, lai justūs vīgleiku nikai vaicuojums.",
+    "howLumiHelpsTitle": "Kai Lumi paleidz",
+    "howLumiHelpsText": "Vai jyus navigejat projektā, meklējat dokumentus voi mēģeņat saprast sarežgeitu procesu, Lumi vad jyus ar precizitāti i meiru. Viņa ir pīīdoma 24/7, vīnmār pacīteiga, vīnmār skaida."
+  },
+  "projectsPage": {
+    "title": "Projekti i gadejumu pētejumi",
+    "lead": "Pyrms Dosreb, Marco vadeja daži nu Suomejas praseigu būvnīceibys i logistikas projektim. Šī gadejumu pētejumi demonstrej disciplinu, skaidreibu i meiru, kas tagad veida Dosreb filosofeju.",
+    "viewProject": "Redzēt projektu",
+    "stockmann": {
+      "title": "Stockmann Kasvu projekts",
+      "description1": "130 000 m² paplōsyšona i atjaunūšona Helsinku ikoniskajai universālveikalam. Marco vadeja vysu pazemes jomu: 200 000 m³ klintuoju izrakšona, 600 vītu autustōvvīta, pylns apkopis laukums i vysa vertikaluo logistika nu pagroba sturba leidz 8. sturba.",
+      "description2": "Viņš koordinēja 50 biroja vadeitioju i 200 strōdnīku, ar objekta organizaceju, kas byuveita pīci metrus viers Mannerheimintie.",
+      "lumiQuote": "\"Marco na tikai vadeja projektu. Viņš puorveidūja pilsātas plūsmu.\""
+    },
+    "dbschenker": {
+      "title": "DB Schenker – Ilvesvuori logistikas centrs",
+      "description": "17 800 m² nūklatova iz 80 000 m² zemis gobola, īskaitūt dvējis 6 500 m² salnai izturigys hallis. Marco puorradzeja pylneigu projektu vadeibu, strukturalū koordinaceju i operacionaluos plūsmas dizainu.",
+      "lumiQuote": "\"Nūklatova ir vairōk nikai sīnys. Tuo ir ritms — i Marco tū uzbyvēja.\""
+    },
+    "jatkasaari": {
+      "title": "Jätkäsaaren maanalaiset tilat",
+      "description": "Jätkäsaaren maanalaiset tilat projekts ir izciļs pīmārs DOSREB spējai puorvaļdeit pazemes objektu būvnīceibu, integrējūt vysys puses i dokumentaceju vīnā drūšā platformā.",
+      "lumiQuote": "\"Kysteiba kļyst bez pīpyulīs, kod struktūra ir pareiza. Marco uzbyvēja struktūru.\""
+    }
+  },
+  "realEstatesPage": {
+    "title": "Namatleibys",
+    "lead": "Rūpeigi atlaseita namatleibys i infrastrukturas projektu kolekceja, kas atspoguļoj Marco precizitāti, disciplinu i spēju orķestrēt lela miārūga vydis.",
+    "portfolioTitle": "Portfeļa puorskots",
+    "portfolioText": "Šei sadaļa augs, atteistūtīs Dosreb. Kotrs namatleibys īroksts ītwers atronuošonys vītu, apjomu, miārki i Lumi komentaru, lai izceļtu projekta cylvēceiskū i strukturalū ītekmi.",
+    "lumiQuote": "\"Āka ir vairōk nikai telpa. Tuo ir struktūra cylvāku kysteibai, skaidreibai i miārkim.\"",
+    "comingSoonTitle": "Dreiži",
+    "comingSoonText": "Papyldu namatleibys projekti tiks pīvīnūti, dokumentējūt portfeli. Šei lopa ir izveidūta, lai paplōsynōtūs ar jyusu nōkūtnīs atteistibu."
+  },
+  "features": {
+    "title": "Platformys funkcejis",
+    "propertyManagement": "Namatleibys puorvaļdeiba: Juridiskais, Finansējums, Puordūšona, Pokolpojumi",
+    "constructionManagement": "Būvnīceibys projektu puorvaļdeiba: Dizaineri, Dorbuzjāmēji, Īsteižu, Plonu puorvaļdeiba",
+    "documentManagement": "Dokumentu puorvaļdeiba: Centralizāta, drūša, puorskaidra",
+    "integrations": "Integrācejis: e-poroksts, kortys, moksuojumi"
+  },
+  "vision": {
+    "title": "Tirgus i vizeja",
+    "description": "Namatleibys i būvnīceibys nūzare ir vīna nu lelōkajai Suomejā i Europā. DOSREB vizeja: Vīna platforma vysim — nu Suomejas iz pasauli."
+  },
+  "team": {
+    "title": "Myusu komanda",
+    "description": "Dibynōtuojs, programaturys izveidūtioji, UI/UX dizainers, nūzaris eksperti i klientu apkolpūšona."
+  }
+}

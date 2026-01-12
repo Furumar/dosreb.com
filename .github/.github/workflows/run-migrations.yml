@@ -1,0 +1,38 @@
+name: Run DB Migrations
+
+on:
+  workflow_dispatch:
+    inputs:
+      confirm:
+        description: 'Type "yes" to confirm running migrations'
+        required: false
+        default: 'no'
+  push:
+    paths:
+      - 'db/migrations/**'
+
+jobs:
+  migrate:
+    name: Apply SQL migrations
+    runs-on: ubuntu-latest
+    if: github.event_name != 'workflow_dispatch' || github.event.inputs.confirm == 'yes'
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Run migrations via postgres docker image
+        env:
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+        run: |
+          if [ -z "$DATABASE_URL" ]; then
+            echo "DATABASE_URL secret is not set. Aborting." >&2
+            exit 1
+          fi
+          echo "Applying migrations from db/migrations/*.sql"
+          docker run --rm -v "${{ github.workspace }}:/workspace" -e DATABASE_URL="$DATABASE_URL" postgres:15 bash -lc "for f in /workspace/db/migrations/*.sql; do echo '---' $f; psql \"$DATABASE_URL\" -f \"$f\"; done"
+
+      - name: List tables (verification)
+        env:
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+        run: |
+          docker run --rm -e DATABASE_URL="$DATABASE_URL" postgres:15 bash -lc "psql \"$DATABASE_URL\" -c '\\dt'"

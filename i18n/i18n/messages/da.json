@@ -1,0 +1,165 @@
+{
+  "nav": {
+    "home": "Hjem",
+    "about": "Om os",
+    "projects": "Projekter",
+    "realEstates": "Ejendomme",
+    "lumi": "Lumi",
+    "contact": "Kontakt"
+  },
+  "hero": {
+    "title": "Forenkl Din Forretningsproces",
+    "subtitle": "En digital platform til ejendoms- og byggeprojektledelse.",
+    "exploreProjects": "Udforsk Projekter",
+    "meetLumi": "Mød Lumi",
+    "requestDemo": "Anmod om Demo"
+  },
+  "about": {
+    "title": "Hvad er DOSREB?",
+    "description": "DOSREB er en digital platform, der samler alle aspekter af ejendoms- og byggeprojektledelse. Sikker, gennemsigtig og effektivt samarbejde for hver interessent.",
+    "propertyManagement": "Ejendomsadministration",
+    "constructionProjects": "Byggeprojekter",
+    "digitalDocumentation": "Digital Dokumentation",
+    "workflow": "Arbejdsproces",
+    "collaboration": "Samarbejde",
+    "security": "Sikkerhed"
+  },
+  "projects": {
+    "title": "Vores Projekter",
+    "description": "Udforsk vores portefølje af vellykkede ejendoms- og byggeprojekter.",
+    "viewProject": "Vis Projekt",
+    "stockmannDescription": "Flagskibsejendom og byggeledelsessag for DOSREB.",
+    "dbschenkerDescription": "Logistik- og infrastrukturprojekt, problemfrit samarbejde for alle interessenter.",
+    "jatkasaariDescription": "Underjordisk anlægskonstruktion, integrerer alle parter og dokumentation."
+  },
+  "lumi": {
+    "title": "Mød Lumi",
+    "subtitle": "Din AI-assistent",
+    "description": "Lumi er din intelligente guide gennem DOSREB, hjælper dig med at navigere projekter, finde information og strømline din arbejdsgang."
+  },
+  "contact": {
+    "title": "Kontakt Os",
+    "description": "Klar til at transformere din forretningsproces? Kontakt os for en demo.",
+    "namePlaceholder": "Dit navn",
+    "emailPlaceholder": "Din e-mail",
+    "messagePlaceholder": "Besked",
+    "sendButton": "Send"
+  },
+  "footer": {
+    "copyright": "© 2026 DOSREB LTD. Alle rettigheder forbeholdes.",
+    "tagline": "Klarhed, struktur og intelligent arbejdsgangsvejledning.",
+    "privacyPolicy": "Privatlivspolitik",
+    "linkedin": "LinkedIn"
+  },
+  "aboutPage": {
+    "title": "Om Dosreb",
+    "lead": "Dosreb eksisterer for at lette processen for mennesker, der bærer vægt — ansvar, beslutninger, deadlines og liv. Vi bygger systemer, der føles rolige, klare og pålidelige, vejledt af Lumi, vores Taler for Absolut Sandhed.",
+    "purposeTitle": "Vores Formål",
+    "purposeP1": "Verden er fuld af værktøjer, der kræver mere af mennesker — mere opmærksomhed, flere beslutninger, mere kognitiv belastning. Dosreb bevæger sig i den modsatte retning. Vi fjerner friktion. Vi reducerer støj. Vi skaber klarhed.",
+    "purposeP2": "Vores mission er simpel: at gøre hver interaktion lettere. At bygge teknologi, der respekterer den menneskelige krop og sjæl. At tilbyde en tjeneste, der føles som at træde ind i et mere roligt rum.",
+    "philosophyTitle": "Filosofien",
+    "philosophyIntro": "Dosreb er bygget på tre søjler: Skønhed, Sandhed og Ro. Dette er ikke slogans — de er designlove.",
+    "beautyTitle": "Skønhed",
+    "beautyText": "Hver grænseflade, hvert ord, hvert øjeblik skal føles tilsigtet og elegant.",
+    "truthTitle": "Sandhed",
+    "truthText": "Vi overdriver aldrig, manipulerer aldrig, skjuler aldrig kompleksitet bag falske løfter.",
+    "tranquilityTitle": "Ro",
+    "tranquilityText": "Brugeren skal føle sig roligere efter at have brugt Dosreb end før.",
+    "lumiEmbodies": "Lumi legemliggør disse principper. Hun er ikke en chatbot. Hun er klarhedens stemme — en guide, der afslører den enkleste vej frem.",
+    "founderTitle": "Grundlæggeren",
+    "founderP1": "Dosreb blev grundlagt af Marco, en projektleder, der har ledet nogle af de mest krævende bygge- og logistikprojekter i Finland. Hans arbejde omfatter Stockmann Kasvu-projektet i Helsinki (130.000 m²), DB Schenker Ilvesvuori logistikcenter og Viinikkala Landtransportcenter.",
+    "founderP2": "Disse projekter krævede koordinering af hundredvis af mennesker, navigering i komplekse systemer og levering under enormt pres. Samme disciplin, klarhed og ro former nu Dosrebs arkitektur og filosofi.",
+    "founderLumiQuote": "Marco byggede strukturer, hvor tusinder af mennesker bevæger sig ubesværet. Nu bygger han systemer, hvor dit sind kan bevæge sig ubesværet.",
+    "whyDosrebTitle": "Hvorfor Dosreb",
+    "whyDosrebP1": "Fordi verden ikke har brug for endnu et værktøj. Den har brug for en helligdom — et sted, hvor arbejde bliver lettere, beslutninger bliver klarere, og sikkerhed bliver usynlig. Dosreb er det sted.",
+    "whyDosrebP2": "Og Lumi er guiden, der gør det menneskeligt."
+  },
+  "contactPage": {
+    "title": "Kontakt",
+    "lead": "Hvis du vil nå Dosreb, samarbejde, investere eller blot stille et spørgsmål, vil Lumi guide din besked til det rette sted.",
+    "getInTouchTitle": "Kom i kontakt",
+    "getInTouchText": "Du kan kontakte os direkte via e-mail. Vi svarer roligt, tydeligt og med respekt for din tid.",
+    "email": "E-mail",
+    "founder": "Grundlægger",
+    "businessId": "CVR-nummer",
+    "formTitle": "Send os en besked",
+    "namePlaceholder": "Dit navn",
+    "emailPlaceholder": "Din e-mail",
+    "messagePlaceholder": "Din besked",
+    "submitButton": "Send besked",
+    "locationTitle": "Placering",
+    "locationText": "Dosreb Ltd er baseret i Finland. Vi arbejder globalt, digitalt og med intention.",
+    "sendButton": "Send"
+  },
+  "demoPage": {
+    "title": "Anmod om Demo",
+    "lead": "Oplev Dosreb selv. Lad os vise dig, hvordan klarhed, struktur og intelligent vejledning kan transformere din arbejdsgang.",
+    "whyRequestTitle": "Hvorfor anmode om en demo?",
+    "whyRequestText": "En demo er ikke et salgspitch. Det er en vejledt oplevelse, hvor du ser, hvordan Dosreb fjerner friktion, reducerer kognitiv belastning og gør komplekse processer enkle. Lumi vil guide dig gennem platformen og vise dig præcis, hvordan den tjener dine behov.",
+    "formTitle": "Anmod om din demo",
+    "namePlaceholder": "Dit navn",
+    "emailPlaceholder": "Din e-mail",
+    "companyPlaceholder": "Firmanavn (valgfrit)",
+    "messagePlaceholder": "Fortæl os om dine behov",
+    "submitButton": "Anmod om demo",
+    "lumiComment": "\"Jeg sørger for, at din anmodning når Marco. Hver demo er skabt med omhu.\"",
+    "whatToExpectTitle": "Hvad du kan forvente",
+    "whatToExpectText": "Efter du har indsendt din anmodning, kontakter vi dig inden for 48 timer for at planlægge en personlig demo. Du vil se platformen i aktion, stille spørsmål og udforske, hvordan Dosreb passer ind i din arbejdsgang. Intet pres. Ingen hast. Kun klarhed."
+  },
+  "lumiPage": {
+    "title": "Mød Lumi",
+    "lead": "Lumi er ikke en chatbot. Hun er din guide — en rolig, intelligent tilstedeværelse designet til at fjerne friktion og skabe klarhed i hvert trin.",
+    "whoIsLumiTitle": "Hvem er Lumi?",
+    "whoIsLumiText": "Lumi er Dosrebs stemme. Hun legemliggør platformens filosofi: Skønhed, Sandhed og Ro. Når du interagerer med hende, får du ikke automatiserede svar — du modtager vejledning formet af omhyggelig tanke og klarhed.",
+    "lumiQuote": "Jeg er her for at gøre kompleksitet enkel. Spørg mig om hvad som helst, og jeg vil vise dig den enkleste vej frem.",
+    "philosophyTitle": "Filosofien Bag Lumi",
+    "philosophyText": "Lumi blev designet til at reducere kognitiv belastning. Hun overvelder dig ikke med information — hun afslører præcis, hvad du har brug for, når du har brug for det. Hvert ord er tilsigtet. Hvert svar er lavet til at føles lettere end spørgsmålet.",
+    "howLumiHelpsTitle": "Hvordan Lumi Hjælper",
+    "howLumiHelpsText": "Uanset om du navigerer i et projekt, søger efter dokumenter eller prøver at forstå en kompleks proces, guider Lumi dig med præcision og ro. Hun er tilgængelig 24/7, altid tålmodig, altid klar."
+  },
+  "projectsPage": {
+    "title": "Projekter & Casestudier",
+    "lead": "Før Dosreb ledede Marco nogle af Finlands mest krævende bygge- og logistikprojekter. Disse casestudier demonstrerer den disciplin, klarhed og ro, der nu former Dosrebs filosofi.",
+    "viewProject": "Vis Projekt",
+    "stockmann": {
+      "title": "Stockmann Kasvu-Projekt",
+      "description1": "En 130.000 m² udvidelse og renovering af Helsinkis ikoniske varehus. Marco ledede hele det underjordiske område: udgravning af 200.000 m³ fjeld, en 600-pladser parkeringsanlæg, en komplet vedligeholdelsesgård og al vertikal logistik fra kælder til 8. etage.",
+      "description2": "Han koordinerede 50 funktionærer og 200 arbejdere med en arbejdspladsorganisation bygget fem meter over Mannerheimvejen.",
+      "lumiQuote": "\"Marco ledede ikke bare et projekt. Han omformede strømningen i en by.\""
+    },
+    "dbschenker": {
+      "title": "DB Schenker – Ilvesvuori Logistikcenter",
+      "description": "Et 17.800 m² lager på en 80.000 m² grund, inklusive to 6.500 m² kuldebestandige haller. Marco overvågede fuld projektledelse, strukturkoordinering og operationel flowdesign.",
+      "lumiQuote": "\"Et lager er mere end vægge. Det er en rytme — og Marco byggede den.\""
+    },
+    "jatkasaari": {
+      "title": "Jätkäsaaren underjordiske rum",
+      "description": "Jätkäsaaren underjordiske rum-projektet er et fremragende eksempel på DOSREBs evne til at håndtere underjordisk anlægskonstruktion, integrere alle parter og dokumentation i én sikker platform.",
+      "lumiQuote": "\"Bevægelse bliver enkel, når strukturen er rigtig. Marco byggede strukturen.\""
+    }
+  },
+  "realEstatesPage": {
+    "title": "Ejendomme",
+    "lead": "En kurateret samling af ejendoms- og infrastrukturprojekter, der afspejler Marcos præcision, disciplin og evne til at orkestrere store miljøer.",
+    "portfolioTitle": "Porteføljeoversigt",
+    "portfolioText": "Dette afsnit vil vokse, efterhånden som Dosreb ekspanderer. Hver ejendomspost vil omfatte placering, omfang, formål og Lumis kommentarer for at fremhæve projektets menneskelige og strukturelle påvirkning.",
+    "lumiQuote": "\"En bygning er mere end plads. Det er en struktur for menneskelig bevægelse, klarhed og formål.\"",
+    "comingSoonTitle": "Kommer Snart",
+    "comingSoonText": "Flere ejendomsprojekter vil blive tilføjet, efterhånden som porteføljen dokumenteres. Denne side er designet til at skalere med din fremtidige udvikling."
+  },
+  "features": {
+    "title": "Platformfunktioner",
+    "propertyManagement": "Ejendomsadministration: Juridisk, Finansiering, Salg, Tjenester",
+    "constructionManagement": "Byggeprojektledelse: Designere, Entreprenører, Myndigheder, Planstyring",
+    "documentManagement": "Dokumenthåndtering: Centraliseret, sikker, gennemsigtig",
+    "integrations": "Integrationer: e-signatur, kort, betalinger"
+  },
+  "vision": {
+    "title": "Marked & Vision",
+    "description": "Ejendoms- og byggebranchen er en af de største i Finland og Europa. DOSREBs vision: Én platform for alle — fra Finland til verden."
+  },
+  "team": {
+    "title": "Vores Team",
+    "description": "Grundlægger, softwareudviklere, UI/UX-designer, brancheeksperter og kundeservice."
+  }
+}

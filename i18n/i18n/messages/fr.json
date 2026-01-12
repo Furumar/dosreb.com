@@ -1,0 +1,165 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "about": "À propos",
+    "projects": "Projets",
+    "realEstates": "Immobilier",
+    "lumi": "Lumi",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Simplifiez vos processus d'affaires",
+    "subtitle": "Une plateforme numérique pour la gestion immobilière et de construction.",
+    "exploreProjects": "Explorer les projets",
+    "meetLumi": "Rencontrez Lumi",
+    "requestDemo": "Demander une démo"
+  },
+  "about": {
+    "title": "Qu'est-ce que DOSREB ?",
+    "description": "DOSREB est une plateforme numérique qui rassemble tous les aspects de la gestion de projets immobiliers et de construction. Collaboration sécurisée, transparente et efficace pour chaque partie prenante.",
+    "propertyManagement": "Gestion immobilière",
+    "constructionProjects": "Projets de construction",
+    "digitalDocumentation": "Documentation numérique",
+    "workflow": "Flux de travail",
+    "collaboration": "Collaboration",
+    "security": "Sécurité"
+  },
+  "projects": {
+    "title": "Nos projets",
+    "description": "Explorez notre portefeuille de projets immobiliers et de construction réussis.",
+    "viewProject": "Voir le projet",
+    "stockmannDescription": "Cas phare de gestion immobilière et de construction pour DOSREB.",
+    "dbschenkerDescription": "Projet de logistique et d'infrastructure, collaboration fluide pour toutes les parties prenantes.",
+    "jatkasaariDescription": "Construction d'installations souterraines, intégrant toutes les parties et la documentation."
+  },
+  "lumi": {
+    "title": "Rencontrez Lumi",
+    "subtitle": "Votre assistante IA",
+    "description": "Lumi est votre guide intelligente à travers DOSREB, vous aidant à naviguer dans les projets, trouver des informations et optimiser votre flux de travail."
+  },
+  "contact": {
+    "title": "Prenez contact",
+    "description": "Prêt à transformer vos processus d'affaires ? Contactez-nous pour une démonstration.",
+    "namePlaceholder": "Votre nom",
+    "emailPlaceholder": "Votre email",
+    "messagePlaceholder": "Message",
+    "sendButton": "Envoyer"
+  },
+  "footer": {
+    "copyright": "© 2026 DOSREB LTD. Tous droits réservés.",
+    "tagline": "Clarté, structure et orientation intelligente du flux de travail.",
+    "privacyPolicy": "Politique de confidentialité",
+    "linkedin": "LinkedIn"
+  },
+  "aboutPage": {
+    "title": "À propos de Dosreb",
+    "lead": "Dosreb existe pour alléger le processus des personnes qui portent un poids — responsabilité, décisions, délais et vies. Nous construisons des systèmes qui se sentent calmes, clairs et dignes de confiance, guidés par Lumi, notre Porte-parole de la Vérité Absolue.",
+    "purposeTitle": "Notre objectif",
+    "purposeP1": "Le monde est plein d'outils qui exigent plus des gens — plus d'attention, plus de décisions, plus de charge cognitive. Dosreb va dans la direction opposée. Nous éliminons les frictions. Nous réduisons le bruit. Nous créons de la clarté.",
+    "purposeP2": "Notre mission est simple : faire en sorte que chaque interaction semble plus légère. Construire une technologie qui respecte le corps et l'âme humains. Offrir un service qui ressemble à entrer dans un espace plus calme.",
+    "philosophyTitle": "La philosophie",
+    "philosophyIntro": "Dosreb repose sur trois piliers : Beauté, Vérité et Tranquillité. Ce ne sont pas des slogans — ce sont des lois de conception.",
+    "beautyTitle": "Beauté",
+    "beautyText": "Chaque interface, chaque mot, chaque moment doit sembler intentionnel et élégant.",
+    "truthTitle": "Vérité",
+    "truthText": "Nous n'exagérons jamais, ne manipulons jamais, ne cachons jamais la complexité derrière de fausses promesses.",
+    "tranquilityTitle": "Tranquillité",
+    "tranquilityText": "L'utilisateur devrait se sentir plus calme après avoir utilisé Dosreb qu'avant.",
+    "lumiEmbodies": "Lumi incarne ces principes. Elle n'est pas un chatbot. Elle est la voix de la clarté — un guide qui révèle le chemin le plus simple vers l'avant.",
+    "founderTitle": "Le fondateur",
+    "founderP1": "Dosreb a été fondée par Marco, un chef de projet qui a dirigé certains des projets de construction et de logistique les plus exigeants de Finlande. Son travail comprend le projet Stockmann Kasvu à Helsinki (130 000 m²), le centre logistique DB Schenker Ilvesvuori et le Centre de transport terrestre de Viinikkala.",
+    "founderP2": "Ces projets ont nécessité d'orchestrer des centaines de personnes, de naviguer dans des systèmes complexes et de livrer sous une pression immense. La même discipline, clarté et calme façonnent maintenant l'architecture et la philosophie de Dosreb.",
+    "founderLumiQuote": "Marco a construit des structures où des milliers de personnes se déplacent sans effort. Maintenant, il construit des systèmes où votre esprit peut se déplacer sans effort.",
+    "whyDosrebTitle": "Pourquoi Dosreb",
+    "whyDosrebP1": "Parce que le monde n'a pas besoin d'un autre outil. Il a besoin d'un sanctuaire — un lieu où le travail devient plus léger, les décisions plus claires et la sécurité invisible. Dosreb est ce lieu.",
+    "whyDosrebP2": "Et Lumi est le guide qui le rend humain."
+  },
+  "contactPage": {
+    "title": "Contact",
+    "lead": "Si vous souhaitez contacter Dosreb, collaborer, investir ou simplement poser une question, Lumi guidera votre message vers le bon endroit.",
+    "getInTouchTitle": "Prenez contact",
+    "getInTouchText": "Vous pouvez nous contacter directement par email. Nous répondons calmement, clairement et avec respect pour votre temps.",
+    "email": "Email",
+    "founder": "Fondateur",
+    "businessId": "ID d'entreprise",
+    "formTitle": "Envoyez-nous un message",
+    "namePlaceholder": "Votre nom",
+    "emailPlaceholder": "Votre email",
+    "messagePlaceholder": "Votre message",
+    "submitButton": "Envoyer le message",
+    "locationTitle": "Localisation",
+    "locationText": "Dosreb Ltd est basée en Finlande. Nous travaillons mondialement, numériquement et avec intention.",
+    "sendButton": "Envoyer"
+  },
+  "demoPage": {
+    "title": "Demander une démo",
+    "lead": "Découvrez Dosreb de première main. Laissez-nous vous montrer comment la clarté, la structure et l'orientation intelligente peuvent transformer votre flux de travail.",
+    "whyRequestTitle": "Pourquoi demander une démo ?",
+    "whyRequestText": "Une démo n'est pas un discours de vente. C'est une expérience guidée où vous voyez comment Dosreb élimine les frictions, réduit la charge cognitive et rend les processus complexes sans effort. Lumi vous guidera à travers la plateforme, vous montrant exactement comment elle sert vos besoins.",
+    "formTitle": "Demandez votre démo",
+    "namePlaceholder": "Votre nom",
+    "emailPlaceholder": "Votre email",
+    "companyPlaceholder": "Nom de l'entreprise (optionnel)",
+    "messagePlaceholder": "Parlez-nous de vos besoins",
+    "submitButton": "Demander une démo",
+    "lumiComment": "\"Je m'assurerai que votre demande parvienne à Marco. Chaque démo est conçue avec soin.\"",
+    "whatToExpectTitle": "À quoi s'attendre",
+    "whatToExpectText": "Après avoir soumis votre demande, nous vous contacterons dans les 48 heures pour planifier une démo personnalisée. Vous verrez la plateforme en action, poserez des questions et explorerez comment Dosreb s'intègre dans votre flux de travail. Pas de pression. Pas de précipitation. Juste de la clarté."
+  },
+  "lumiPage": {
+    "title": "Rencontrez Lumi",
+    "lead": "Lumi n'est pas un chatbot. Elle est votre guide — une présence calme et intelligente conçue pour éliminer les frictions et apporter de la clarté à chaque étape.",
+    "whoIsLumiTitle": "Qui est Lumi ?",
+    "whoIsLumiText": "Lumi est la voix de Dosreb. Elle incarne la philosophie de la plateforme : Beauté, Vérité et Tranquillité. Lorsque vous interagissez avec elle, vous n'obtenez pas de réponses automatisées — vous recevez des conseils façonnés par une réflexion attentive et la clarté.",
+    "lumiQuote": "Je suis là pour rendre la complexité sans effort. Posez-moi n'importe quelle question et je vous montrerai le chemin le plus simple vers l'avant.",
+    "philosophyTitle": "La philosophie derrière Lumi",
+    "philosophyText": "Lumi a été conçue pour réduire la charge cognitive. Elle ne vous submerge pas d'informations — elle révèle exactement ce dont vous avez besoin, quand vous en avez besoin. Chaque mot est intentionnel. Chaque réponse est conçue pour sembler plus légère que la question.",
+    "howLumiHelpsTitle": "Comment Lumi aide",
+    "howLumiHelpsText": "Que vous naviguiez dans un projet, recherchiez des documents ou essayiez de comprendre un processus complexe, Lumi vous guide avec précision et calme. Elle est disponible 24/7, toujours patiente, toujours claire."
+  },
+  "projectsPage": {
+    "title": "Projets et études de cas",
+    "lead": "Avant Dosreb, Marco a dirigé certains des projets de construction et de logistique les plus exigeants de Finlande. Ces études de cas démontrent la discipline, la clarté et le calme qui façonnent maintenant la philosophie de Dosreb.",
+    "viewProject": "Voir le projet",
+    "stockmann": {
+      "title": "Projet Stockmann Kasvu",
+      "description1": "Une extension et rénovation de 130 000 m² du grand magasin emblématique d'Helsinki. Marco a dirigé tout le domaine souterrain : excavation de 200 000 m³ de roche, un parking de 600 places, une cour de maintenance complète et toute la logistique verticale du sous-sol au 8ème étage.",
+      "description2": "Il a coordonné 50 cadres et 200 ouvriers, avec une organisation de chantier construite cinq mètres au-dessus de Mannerheimintie.",
+      "lumiQuote": "\"Marco n'a pas seulement géré un projet. Il a remodelé le flux d'une ville.\""
+    },
+    "dbschenker": {
+      "title": "DB Schenker – Centre logistique d'Ilvesvuori",
+      "description": "Un entrepôt de 17 800 m² sur un terrain de 80 000 m², comprenant deux halls résistants au froid de 6 500 m². Marco a supervisé la gestion complète du projet, la coordination structurelle et la conception du flux opérationnel.",
+      "lumiQuote": "\"Un entrepôt est plus que des murs. C'est un rythme — et Marco l'a construit.\""
+    },
+    "jatkasaari": {
+      "title": "Jätkäsaaren maanalaiset tilat",
+      "description": "Le projet Jätkäsaaren maanalaiset tilat est un excellent exemple de la capacité de DOSREB à gérer la construction d'installations souterraines, intégrant toutes les parties et la documentation dans une plateforme sécurisée.",
+      "lumiQuote": "\"Le mouvement devient sans effort lorsque la structure est correcte. Marco a construit la structure.\""
+    }
+  },
+  "realEstatesPage": {
+    "title": "Immobilier",
+    "lead": "Une collection organisée de projets immobiliers et d'infrastructure qui reflètent la précision, la discipline et la capacité de Marco à orchestrer des environnements à grande échelle.",
+    "portfolioTitle": "Aperçu du portefeuille",
+    "portfolioText": "Cette section s'élargira au fur et à mesure que Dosreb se développe. Chaque entrée immobilière comprendra l'emplacement, la portée, l'objectif et le commentaire de Lumi pour mettre en évidence l'impact humain et structural du projet.",
+    "lumiQuote": "\"Un bâtiment est plus qu'un espace. C'est une structure pour le mouvement humain, la clarté et l'objectif.\"",
+    "comingSoonTitle": "Prochainement",
+    "comingSoonText": "D'autres projets immobiliers seront ajoutés au fur et à mesure que le portefeuille sera documenté. Cette page est conçue pour évoluer avec vos futurs développements."
+  },
+  "features": {
+    "title": "Fonctionnalités de la plateforme",
+    "propertyManagement": "Gestion immobilière : Juridique, Financement, Ventes, Services",
+    "constructionManagement": "Gestion de projets de construction : Concepteurs, Entrepreneurs, Autorités, Gestion des plans",
+    "documentManagement": "Gestion des documents : Centralisée, sécurisée, transparente",
+    "integrations": "Intégrations : signature électronique, cartes, paiements"
+  },
+  "vision": {
+    "title": "Marché et vision",
+    "description": "L'industrie de l'immobilier et de la construction est l'une des plus importantes en Finlande et en Europe. Vision de DOSREB : Une plateforme pour tous — de la Finlande au monde entier."
+  },
+  "team": {
+    "title": "Notre équipe",
+    "description": "Fondateur, développeurs de logiciels, designer UI/UX, experts du secteur et service client."
+  }
+}
