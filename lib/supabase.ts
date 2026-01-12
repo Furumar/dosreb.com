@@ -1,5 +1,3 @@
-import { createClient } from '@supabase/supabase-js'
-}
 import { db } from '../lib/db'
 import { createClient } from '@supabase/supabase-js'
 export async function getProjects(userId: string) {
