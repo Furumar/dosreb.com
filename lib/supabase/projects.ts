@@ -56,7 +56,7 @@ export async function createProject(input: CreateProjectInput, userId: string) {
     insertData.metadata = input.metadata;
   }
 
-  const { data, error } = await supabase
+  const { data, error } = await db
     .from('projects')
     .insert(insertData)
     .select()
@@ -73,7 +73,7 @@ export async function createProject(input: CreateProjectInput, userId: string) {
 export async function getProjects(userId: string) {
   if (!supabase) throw new Error('Supabase not initialized');
 
-  const { data, error } = await supabase
+  const { data, error } = await db
     .from('projects')
     .select('*')
     .eq('owner', userId)
@@ -90,7 +90,7 @@ export async function getProjects(userId: string) {
 export async function getProject(projectId: string) {
   if (!supabase) throw new Error('Supabase not initialized');
 
-  const { data, error } = await supabase
+  const { data, error } = await db
     .from('projects')
     .select('*')
     .eq('id', projectId)
@@ -107,7 +107,7 @@ export async function getProject(projectId: string) {
 export async function updateProject(projectId: string, input: UpdateProjectInput) {
   if (!supabase) throw new Error('Supabase not initialized');
 
-  const { data, error } = await supabase
+  const { data, error } = await db
     .from('projects')
     .update({
       ...input,
@@ -142,7 +142,7 @@ export async function deleteProject(projectId: string) {
 export async function searchProjects(query: string, userId: string) {
   if (!supabase) throw new Error('Supabase not initialized');
 
-  const { data, error } = await supabase
+  const { data, error } = await db
     .from('projects')
     .select('*')
     .eq('owner', userId)

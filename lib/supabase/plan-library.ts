@@ -41,7 +41,7 @@ export interface PlanCategory {
 
 // Get all categories
 export async function getCategories(): Promise<PlanCategory[]> {
-  const { data, error } = await supabase
+  const { data, error } = await db
     .from('plan_categories')
     .select('*')
     .order('name');
@@ -96,7 +96,7 @@ export async function getPlans(filters?: {
 
 // Get a single plan
 export async function getPlan(planId: string): Promise<PlanLibraryItem> {
-  const { data, error } = await supabase
+  const { data, error } = await db
     .from('plan_library')
     .select('*')
     .eq('id', planId)
@@ -111,7 +111,7 @@ export async function createPlan(
   planData: Partial<PlanLibraryItem>,
   userId: string
 ): Promise<PlanLibraryItem> {
-  const { data, error } = await supabase
+  const { data, error } = await db
     .from('plan_library')
     .insert({
       ...planData,
@@ -130,7 +130,7 @@ export async function updatePlan(
   planId: string,
   planData: Partial<PlanLibraryItem>
 ): Promise<PlanLibraryItem> {
-  const { data, error } = await supabase
+  const { data, error } = await db
     .from('plan_library')
     .update(planData)
     .eq('id', planId)
@@ -172,7 +172,7 @@ export async function linkPlanToProject(
 
 // Get plans linked to a project
 export async function getProjectPlans(projectId: string): Promise<any[]> {
-  const { data, error } = await supabase
+  const { data, error } = await db
     .from('project_plans')
     .select(`
       *,
@@ -200,7 +200,7 @@ export async function unlinkPlanFromProject(
 
 // Get user's favorites
 export async function getFavorites(userId: string): Promise<PlanLibraryItem[]> {
-  const { data, error } = await supabase
+  const { data, error } = await db
     .from('plan_favorites')
     .select(`
       *,
@@ -237,7 +237,7 @@ export async function removeFromFavorites(userId: string, planId: string): Promi
 
 // Get most used plans
 export async function getMostUsedPlans(limit: number = 10): Promise<PlanLibraryItem[]> {
-  const { data, error } = await supabase
+  const { data, error } = await db
     .from('plan_library')
     .select('*')
     .eq('visibility', 'public')
@@ -250,7 +250,7 @@ export async function getMostUsedPlans(limit: number = 10): Promise<PlanLibraryI
 
 // Search plans with full-text search
 export async function searchPlans(searchTerm: string): Promise<PlanLibraryItem[]> {
-  const { data, error } = await supabase
+  const { data, error } = await db
     .from('plan_library')
     .select('*')
     .or(`title.ilike.%${searchTerm}%,description.ilike.%${searchTerm}%`)

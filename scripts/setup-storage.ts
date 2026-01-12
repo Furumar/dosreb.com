@@ -46,7 +46,7 @@ async function setupStorage() {
     } else {
       console.log('📦 Creating "projects" bucket...');
       
-      const { data, error } = await supabase.storage.createBucket('projects', {
+      const { data, error } = await db.storage.createBucket('projects', {
         public: true, // Public bucket for easier access to project images
         fileSizeLimit: 52428800, // 50MB
         allowedMimeTypes: [

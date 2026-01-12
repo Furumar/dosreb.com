@@ -46,7 +46,7 @@ export interface FileMetadata {
 export async function initializeStorageBucket() {
   if (!supabase) throw new Error('Supabase not initialized');
   
-  const { data, error } = await supabase.storage.createBucket(STORAGE_BUCKET, {
+  const { data, error } = await db.storage.createBucket(STORAGE_BUCKET, {
     public: false,
     fileSizeLimit: 52428800, // 50MB
     allowedMimeTypes: [
@@ -76,7 +76,7 @@ export async function uploadFile({ projectId, file, folder = 'documents' }: Uplo
   const sanitizedName = file.name.replace(/[^a-zA-Z0-9.-]/g, '_');
   const storagePath = `${projectId}/${folder}/${timestamp}_${sanitizedName}`;
 
-  const { data, error } = await supabase.storage
+  const { data, error } = await db.storage
     .from(STORAGE_BUCKET)
     .upload(storagePath, file, {
       cacheControl: '3600',
@@ -108,7 +108,7 @@ export async function getFileUrl(storagePath: string, expiresIn = 3600) {
   }
 
   // Fall back to signed URL if bucket is private
-  const { data, error } = await supabase.storage
+  const { data, error } = await db.storage
     .from(STORAGE_BUCKET)
     .createSignedUrl(storagePath, expiresIn);
 
@@ -138,7 +138,7 @@ export async function listProjectFiles(projectId: string, folder?: string) {
 
   const path = folder ? `${projectId}/${folder}` : projectId;
 
-  const { data, error } = await supabase.storage
+  const { data, error } = await db.storage
     .from(STORAGE_BUCKET)
     .list(path, {
       sortBy: { column: 'created_at', order: 'desc' },

@@ -12,7 +12,7 @@ export async function GET(request: NextRequest) {
     const id = searchParams.get('id');
 
     if (id) {
-      const { data, error } = await supabase
+      const { data, error } = await db
         .from('real_estates')
         .select('*')
         .eq('id', id)
@@ -22,7 +22,7 @@ export async function GET(request: NextRequest) {
       return NextResponse.json(data);
     }
 
-    const { data, error } = await supabase
+    const { data, error } = await db
       .from('real_estates')
       .select('*')
       .order('created_at', { ascending: false });
@@ -50,7 +50,7 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    const { data, error } = await supabase
+    const { data, error } = await db
       .from('real_estates')
       .insert([{ title, description, location, size, price, status }])
       .select()
@@ -79,7 +79,7 @@ export async function PUT(request: NextRequest) {
       );
     }
 
-    const { data, error } = await supabase
+    const { data, error } = await db
       .from('real_estates')
       .update({ title, description, location, size, price, status })
       .eq('id', id)

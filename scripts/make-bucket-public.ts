@@ -19,7 +19,7 @@ async function makeBucketPublic() {
   console.log('🔧 Making "projects" bucket public...\n');
 
   try {
-    const { data, error } = await supabase.storage.updateBucket('projects', {
+    const { data, error } = await db.storage.updateBucket('projects', {
       public: true,
     });
 

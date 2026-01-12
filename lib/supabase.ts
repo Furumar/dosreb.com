@@ -1,7 +1,7 @@
-import supabase from './supabaseClient'
-
+import { db } from '../../../lib/db'
+import { createClient } from '@supabase/supabase-js'
 export async function getProjects(userId: string) {
-  const { data, error } = await supabase
+  const { data, error } = await db
     .from('projects')
     .select(`
       id,

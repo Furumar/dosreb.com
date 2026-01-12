@@ -60,7 +60,7 @@ export async function createFileRecord(input: CreateFileInput) {
     insertData.metadata = input.metadata;
   }
 
-  const { data, error } = await supabase
+  const { data, error } = await db
     .from('files')
     .insert(insertData)
     .select()
@@ -77,7 +77,7 @@ export async function createFileRecord(input: CreateFileInput) {
 export async function getProjectFiles(projectId: string) {
   if (!supabase) throw new Error('Supabase not initialized');
 
-  const { data, error } = await supabase
+  const { data, error } = await db
     .from('files')
     .select('*')
     .eq('project_id', projectId)
@@ -94,7 +94,7 @@ export async function getProjectFiles(projectId: string) {
 export async function getFile(fileId: string) {
   if (!supabase) throw new Error('Supabase not initialized');
 
-  const { data, error } = await supabase
+  const { data, error } = await db
     .from('files')
     .select('*')
     .eq('id', fileId)
@@ -125,7 +125,7 @@ export async function deleteFileRecord(fileId: string) {
 export async function getFilesByFolder(projectId: string, folder: string) {
   if (!supabase) throw new Error('Supabase not initialized');
 
-  const { data, error } = await supabase
+  const { data, error } = await db
     .from('files')
     .select('*')
     .eq('project_id', projectId)

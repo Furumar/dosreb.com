@@ -19,7 +19,7 @@ async function testCreate() {
 
   console.log('Data to insert:', testData);
 
-  const { data, error } = await supabase
+  const { data, error } = await db
     .from('real_estates')
     .insert([testData])
     .select()

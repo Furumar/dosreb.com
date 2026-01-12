@@ -8,7 +8,7 @@ const supabase = createClient(
 async function checkTable() {
   console.log('Checking real_estates table structure...\n');
 
-  const { data, error } = await supabase
+  const { data, error } = await db
     .from('real_estates')
     .select('*')
     .limit(1);

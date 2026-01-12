@@ -17,7 +17,7 @@ async function testCreate() {
 
   console.log('Attempting to create with data:', body);
 
-  const { data, error } = await supabase
+  const { data, error } = await db
     .from('real_estates')
     .insert([body])
     .select()

@@ -15,7 +15,7 @@ async function setupRealEstates() {
 
   try {
     // Test if table exists by trying to select from it
-    const { data, error } = await supabase
+    const { data, error } = await db
       .from('real_estates')
       .select('id')
       .limit(1);
