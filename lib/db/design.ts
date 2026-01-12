@@ -4,7 +4,7 @@ import {
   DesignGroup,
   DesignSubgroup,
   DesignItem,
-  ProjectDesignGroup
+  ProjectDesignGroup 
 } from '../supabase/types'
 
 export async function getDesignGroups(): Promise<DesignGroup[]> {
