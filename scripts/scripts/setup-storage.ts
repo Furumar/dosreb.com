@@ -1,4 +1,5 @@
 /**
+import { db } from '../../lib/db'
  * Setup script for Supabase Storage
  * Creates the 'projects' bucket if it doesn't exist
  * Run with: npx tsx scripts/setup-storage.ts

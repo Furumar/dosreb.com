@@ -1,4 +1,5 @@
 // Database operations for projects
+import { db } from '../../lib/db'
 import { createClient } from '@supabase/supabase-js';
 
 // Use service role key for project operations (server-side only)

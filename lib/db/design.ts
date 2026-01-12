@@ -1,4 +1,7 @@
 import { createClient } from '@supabase/supabase-js'
+export {}
+import { db } from '../../lib/db'
+import { createClient } from '@supabase/supabase-js'
 
 export const db = createClient(
   process.env.NEXT_PUBLIC_SUPABASE_URL!,

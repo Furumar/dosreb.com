@@ -1,4 +1,5 @@
 // Supabase Storage helpers for file uploads and management
+import { db } from '../../lib/db'
 import { createClient } from '@supabase/supabase-js';
 
 // Use service role key for storage operations (server-side only)
