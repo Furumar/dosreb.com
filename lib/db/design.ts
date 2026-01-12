@@ -1,5 +1,9 @@
-import { supabase } from '../supabase/client'
+import { createClient } from '@supabase/supabase-js'
 
+export const db = createClient(
+  process.env.NEXT_PUBLIC_SUPABASE_URL!,
+  process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
+)
 import {
   DesignGroup,
   DesignSubgroup,
@@ -8,7 +12,7 @@ import {
 } from '../supabase/types'
 
 export async function getDesignGroups(): Promise<DesignGroup[]> {
-  const { data, error } = await supabase
+  const { data, error } = await db
     .from('design_groups')
     .select('*')
     .order('name')
@@ -18,7 +22,7 @@ export async function getDesignGroups(): Promise<DesignGroup[]> {
 }
 
 export async function getSubgroupsByGroup(groupId: string): Promise<DesignSubgroup[]> {
-  const { data, error } = await supabase
+  const { data, error } = await db
     .from('design_subgroups')
     .select('*')
     .eq('group_id', groupId)
@@ -29,7 +33,7 @@ export async function getSubgroupsByGroup(groupId: string): Promise<DesignSubgro
 }
 
 export async function getItemsBySubgroup(subgroupId: string): Promise<DesignItem[]> {
-  const { data, error } = await supabase
+  const { data, error } = await db
     .from('design_items')
     .select('*')
     .eq('subgroup_id', subgroupId)
@@ -43,7 +47,7 @@ export async function addDesignGroupToProject(
   projectId: string,
   groupId: string
 ): Promise<ProjectDesignGroup> {
-  const { data, error } = await supabase
+  const { data, error } = await db
     .from('project_design_groups')
     .insert({
       project_id: projectId,
@@ -60,7 +64,7 @@ export async function removeDesignGroupFromProject(
   projectId: string,
   groupId: string
 ): Promise<void> {
-  const { error } = await supabase
+  const { error } = await db
     .from('project_design_groups')
     .delete()
     .eq('project_id', projectId)
