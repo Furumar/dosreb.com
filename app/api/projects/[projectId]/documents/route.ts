@@ -1,7 +1,10 @@
-import { db } from '../../../../../lib/db/design'
+import { db } from '../../../../../lib/db'
 import { NextResponse } from 'next/server'
-import { cookies } from 'next/headers'
-export async function GET(request: Request, { params }: { params: { projectId: string } }) {
+
+export async function GET(
+  request: Request,
+  { params }: { params: { projectId: string } }
+) {
   const projectId = params.projectId
 
   const { data, error } = await db
@@ -23,31 +26,15 @@ export async function GET(request: Request, { params }: { params: { projectId: s
         subgroup_id,
         design_subgroups (
           id,
-          name,
-          group_id,
-          design_groups (
-            id,
-            name
-          )
+          name
         )
-      ),
-      document_versions (
-        id,
-        version_label,
-        file_name,
-        storage_path,
-        uploaded_at,
-        uploaded_by,
-        notes
       )
     `)
     .eq('project_id', projectId)
-    .order('uploaded_at', { ascending: false })
 
   if (error) {
-    console.error('Error fetching documents:', error)
-    return NextResponse.json({ error: 'Failed to load documents' }, { status: 500 })
+    return NextResponse.json({ error: error.message }, { status: 500 })
   }
 
-  return NextResponse.json({ documents: data })
+  return NextResponse.json({ documents: data }, { status: 200 })
 }
