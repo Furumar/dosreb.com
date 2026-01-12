@@ -1,9 +1,6 @@
 import { createClient } from '@supabase/supabase-js';
 checkTable();
-import { db } from 'lib/db'
-import { createClient } from '@supabase/supabase-js';
-checkTable();
-import { createClient } from '@supabase/supabase-js';
+import { db } from './lib/db'
 
 const supabase = createClient(
   process.env.NEXT_PUBLIC_SUPABASE_URL!,
