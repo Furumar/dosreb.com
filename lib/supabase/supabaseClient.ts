@@ -1,4 +1,4 @@
-import { db } from '../../../lib/db'
+import { db } from '../../lib/db'
 import { createClient, SupabaseClient } from '@supabase/supabase-js'
 
 const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL

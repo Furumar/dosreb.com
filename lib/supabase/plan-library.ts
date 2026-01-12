@@ -1,8 +1,9 @@
 import { createClient } from '@supabase/supabase-js';
-}
+
 import { db } from '../../lib/db'
+
 import { createClient } from '@supabase/supabase-js';
-}
+
 import { createClient } from '@supabase/supabase-js';
 
 const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
