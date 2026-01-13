@@ -5,7 +5,7 @@ import {
 } from '../supabase/types';
 
 // ✅ Fetch all design groups
-export async function getDesignGroups(): Promise<DesignGroup[]> {
+export async function getDesignGroup(): Promise<DesignGroup[]> {
   const { data, error } = await db
     .from('design_groups')
     .select('*')
