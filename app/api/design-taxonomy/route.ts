@@ -23,5 +23,6 @@ export async function GET() {
     return NextResponse.json({ error: 'Failed to load taxonomy' }, { status: 500 })
   }
 
-  return NextResponse.json({ groups: data })
+  // ✅ Add this:
+  return NextResponse.json(data)
 }
