@@ -1,31 +1,40 @@
-export const langs = [
-  'en', // English
-  'sg'  // Singaporean
-] as const;
+// i18n/request.ts
+// Ready-to-copy TypeScript module for locale config and message loading.
 
-export type Lang = (typeof langs)[number];
+export const locales = ['en', 'sg'] as const;
+export type Locale = (typeof locales)[number];
 
-type getRequestConfigParams = {
+type GetRequestConfigParams = {
   lang?: string | Promise<string> | undefined;
 };
 
-export default getRequestConfig(async (params: getRequestConfigParams) => {
-  // Typically corresponds to the '[lang]' segment
-  let lang = await params.lang;
+export default async function getRequestConfig(params: GetRequestConfigParams) {
+  // Resolve possible Promise<string> or undefined
+  let lang = await params?.lang;
 
-  // Validate that the incoming 'lang' parameter is valid
-  if (!lang || !langs.includes(lang as Lang)) {
-    lang = 'en'; // default fallback
+  // Normalize and validate
+  if (typeof lang === 'string') {
+    lang = lang.toLowerCase();
   }
 
-  const messages = (await import(`./messages/${lang}.json`)).default;
+  if (!lang || !locales.includes(lang as Locale)) {
+    lang = 'en';
+  }
+
+  // Load messages with graceful fallback
+  let messages: Record<string, any> = {};
+  try {
+    messages = (await import(`./messages/${lang}.json`)).default;
+  } catch (err) {
+    try {
+      messages = (await import(`./messages/en.json`)).default;
+    } catch {
+      messages = {};
+    }
+  }
 
   return {
     lang,
     messages
   };
-});
-function getRequestConfig(arg0: (params: getRequestConfigParams) => Promise<{ lang: string; messages: any; }>) {
-  throw new Error("Function not implemented.");
 }
-
