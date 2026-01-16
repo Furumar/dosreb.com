@@ -3,7 +3,7 @@
 
 import { useState, useRef, useEffect } from "react";
 import Image from "next/image";
-import { uselang, useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 
 type ChatMessage = {
   from: "lumi" | "user";
@@ -119,7 +119,7 @@ const sendButtonTexts: Record<string, string> = {
 };
 
 export default function LumiChat() {
-  const lang = uselang();
+  const lang = useLocale();
   const [open, setOpen] = useState(false);
   const [messages, setMessages] = useState<ChatMessage[]>([
     { from: "lumi", text: greetings[lang] || greetings.en }
