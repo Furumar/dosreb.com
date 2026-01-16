@@ -69,8 +69,8 @@ Once database is set up:
    - `lib/supabase/plan-library.ts` - Database functions
    
 3. **UI**:
-   - `app/[locale]/plan-library/page.tsx` - Main library page
-   - `app/[locale]/components/PlanLibraryBrowser.tsx` - Browser component
+   - `app/[lang]/plan-library/page.tsx` - Main library page
+   - `app/[lang]/components/PlanLibraryBrowser.tsx` - Browser component
 
 ### Benefits:
 

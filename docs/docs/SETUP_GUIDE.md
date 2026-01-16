@@ -131,8 +131,8 @@ Currently using a mock user ID. To add real authentication:
    - Enable providers (Email, Google, etc.)
 
 2. Update API routes to use real user:
-   - Replace `MOCK_USER_ID` in `/app/[locale]/api/projects/route.ts`
-   - Replace `MOCK_USER_ID` in `/app/[locale]/api/files/route.ts`
+   - Replace `MOCK_USER_ID` in `/app/[lang]/api/projects/route.ts`
+   - Replace `MOCK_USER_ID` in `/app/[lang]/api/files/route.ts`
 
 Example with Supabase Auth:
 ```typescript

@@ -1,8 +1,8 @@
 "use client";
 
-import { useLocale } from 'next-intl';
+import { uselang } from 'next-intl';
 import { useRouter, usePathname } from 'next/navigation';
-import { locales } from '@/i18n/request';
+import { langs } from '@/i18n/request';
 
 const languageNames: Record<string, string> = {
   en: 'English',
@@ -23,26 +23,26 @@ const languageNames: Record<string, string> = {
 };
 
 export default function LanguageSwitcher() {
-  const locale = useLocale();
+  const lang = uselang();
   const router = useRouter();
   const pathname = usePathname();
 
-  const handleLanguageChange = (newLocale: string) => {
-    // Remove the current locale from the pathname
-    const pathWithoutLocale = pathname.replace(/^\/[a-z]{2,3}/, '');
-    // Navigate to the new locale
-    router.push(`/${newLocale}${pathWithoutLocale}`);
+  const handleLanguageChange = (newlang: string) => {
+    // Remove the current lang from the pathname
+    const pathWithoutlang = pathname.replace(/^\/[a-z]{2,3}/, '');
+    // Navigate to the new lang
+    router.push(`/${newlang}${pathWithoutlang}`);
   };
 
   return (
     <div className="language-switcher">
       <select
-        value={locale}
+        value={lang}
         onChange={(e) => handleLanguageChange(e.target.value)}
         className="language-select"
         aria-label="Select language"
       >
-        {locales.map((loc) => (
+        {langs.map((loc) => (
           <option key={loc} value={loc}>
             {languageNames[loc]}
           </option>

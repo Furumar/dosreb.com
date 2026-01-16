@@ -2,7 +2,7 @@ import { getRequestConfig } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 
 // Can be imported from a shared config
-export const locales = [
+export const langs = [
   'en',
   'sv', // Swedish
   'fi', // Finnish
@@ -20,19 +20,19 @@ export const locales = [
   'sgs', // Samogitian
 ] as const;
 
-export type Locale = (typeof locales)[number];
+export type lang = (typeof langs)[number];
 
-export default getRequestConfig(async ({ requestLocale }) => {
-  // Typically corresponds to the `[locale]` segment
-  let locale = await requestLocale;
+export default getRequestConfig(async ({ requestlang }) => {
+  // Typically corresponds to the `[lang]` segment
+  let lang = await requestlang;
   
-  // Validate that the incoming `locale` parameter is valid
-  if (!locale || !locales.includes(locale as Locale)) {
-    locale = 'en'; // default fallback
+  // Validate that the incoming `lang` parameter is valid
+  if (!lang || !langs.includes(lang as lang)) {
+    lang = 'en'; // default fallback
   }
 
   return {
-    locale,
-    messages: (await import(`./messages/${locale}.json`)).default
+    lang,
+    messages: (await import(`./messages/${lang}.json`)).default
   };
 });

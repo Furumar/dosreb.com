@@ -3,7 +3,7 @@
 
 import { useState, useRef, useEffect } from "react";
 import Image from "next/image";
-import { useLocale, useTranslations } from 'next-intl';
+import { uselang, useTranslations } from 'next-intl';
 
 type ChatMessage = {
   from: "lumi" | "user";
@@ -119,19 +119,19 @@ const sendButtonTexts: Record<string, string> = {
 };
 
 export default function LumiChat() {
-  const locale = useLocale();
+  const lang = uselang();
   const [open, setOpen] = useState(false);
   const [messages, setMessages] = useState<ChatMessage[]>([
-    { from: "lumi", text: greetings[locale] || greetings.en }
+    { from: "lumi", text: greetings[lang] || greetings.en }
   ]);
   const [input, setInput] = useState("");
   const [loading, setLoading] = useState(false);
   const chatEndRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    // Update greeting when locale changes
-    setMessages([{ from: "lumi", text: greetings[locale] || greetings.en }]);
-  }, [locale]);
+    // Update greeting when lang changes
+    setMessages([{ from: "lumi", text: greetings[lang] || greetings.en }]);
+  }, [lang]);
 
   useEffect(() => {
     if (open && chatEndRef.current) {
@@ -162,7 +162,7 @@ export default function LumiChat() {
           messages: [
             {
               role: "system",
-              content: systemPrompts[locale] || systemPrompts.en
+              content: systemPrompts[lang] || systemPrompts.en
             },
             ...messages.map((m) => ({
               role: m.from === "user" ? "user" : "assistant",
@@ -187,7 +187,7 @@ export default function LumiChat() {
         ...prev,
         {
           from: "lumi",
-          text: errorMessages[locale] || errorMessages.en
+          text: errorMessages[lang] || errorMessages.en
         }
       ]);
     } finally {
@@ -243,7 +243,7 @@ export default function LumiChat() {
             ))}
             {loading && (
               <div className="lumi-msg-lumi">
-                {thinkingMessages[locale] || thinkingMessages.en}
+                {thinkingMessages[lang] || thinkingMessages.en}
               </div>
             )}
             <div ref={chatEndRef} />
@@ -254,11 +254,11 @@ export default function LumiChat() {
               type="text"
               value={input}
               onChange={(e) => setInput(e.target.value)}
-              placeholder={inputPlaceholders[locale] || inputPlaceholders.en}
+              placeholder={inputPlaceholders[lang] || inputPlaceholders.en}
               autoFocus
             />
             <button type="submit" disabled={loading}>
-              {sendButtonTexts[locale] || sendButtonTexts.en}
+              {sendButtonTexts[lang] || sendButtonTexts.en}
             </button>
           </form>
         </div>

@@ -16,10 +16,10 @@ interface ProjectListProps {
   projects: Project[];
   onEdit: (project: Project) => void;
   onDelete: (projectId: string) => void;
-  locale: string;
+  lang: string;
 }
 
-export default function ProjectList({ projects, onEdit, onDelete, locale }: ProjectListProps) {
+export default function ProjectList({ projects, onEdit, onDelete, lang }: ProjectListProps) {
   const [searchQuery, setSearchQuery] = useState('');
   const [contextMenu, setContextMenu] = useState<{ x: number; y: number; project: Project } | null>(null);
 
@@ -29,7 +29,7 @@ export default function ProjectList({ projects, onEdit, onDelete, locale }: Proj
   );
 
   const formatDate = (dateString: string) => {
-    return new Date(dateString).toLocaleDateString('en-US', {
+    return new Date(dateString).tolangDateString('en-US', {
       year: 'numeric',
       month: 'short',
       day: 'numeric',
@@ -92,7 +92,7 @@ export default function ProjectList({ projects, onEdit, onDelete, locale }: Proj
               </div>
 
               <div className="project-actions">
-                <Link href={`/${locale}/projects/manage?id=${project.id}`} className="btn-view">
+                <Link href={`/${lang}/projects/manage?id=${project.id}`} className="btn-view">
                   View
                 </Link>
                 <button
@@ -129,7 +129,7 @@ export default function ProjectList({ projects, onEdit, onDelete, locale }: Proj
           }}>
             ✏️ Edit
           </button>
-          <Link href={`/${locale}/projects/manage?id=${contextMenu.project.id}`}>
+          <Link href={`/${lang}/projects/manage?id=${contextMenu.project.id}`}>
             👁️ View
           </Link>
           <button onClick={() => {

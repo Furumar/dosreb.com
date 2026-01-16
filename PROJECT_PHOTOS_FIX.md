@@ -34,7 +34,7 @@
 
 ## How to Upload Photos
 
-1. Navigate to `/en/projects/admin` (or any other locale)
+1. Navigate to `/en/projects/admin` (or any other lang)
 2. Select the project from the dropdown (Stockmann, DB Schenker, or Jätkäsaari)
 3. Click "Choose Images to Upload" and select multiple images
 4. Images will be uploaded to `projects/{project-name}/photos/` in Supabase Storage

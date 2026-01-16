@@ -22,7 +22,7 @@ Your DOSREB platform now supports 14 languages with seamless switching:
 ## How It Works
 
 ### URL Structure
-The platform uses locale-prefixed URLs:
+The platform uses lang-prefixed URLs:
 - English: `http://localhost:3000/en/`
 - Swedish: `http://localhost:3000/sv/`
 - Chinese: `http://localhost:3000/zh/`
@@ -36,7 +36,7 @@ All pages automatically work with all languages:
 ### Language Switcher
 A dropdown menu in the header allows users to switch languages instantly. The switcher:
 - Maintains the current page when switching languages
-- Updates the URL with the new locale prefix
+- Updates the URL with the new lang prefix
 - Reloads content in the selected language
 
 ## Technical Implementation
@@ -44,18 +44,18 @@ A dropdown menu in the header allows users to switch languages instantly. The sw
 ### Key Files
 
 #### 1. **i18n/request.ts**
-Core internationalization configuration defining all supported locales and message loading.
+Core internationalization configuration defining all supported langs and message loading.
 
 #### 2. **middleware.ts**
-Handles automatic locale detection and routing. Redirects users to their preferred language.
+Handles automatic lang detection and routing. Redirects users to their preferred language.
 
-#### 3. **app/[locale]/layout.tsx**
+#### 3. **app/[lang]/layout.tsx**
 Wraps all pages with the NextIntlClientProvider to make translations available throughout the app.
 
-#### 4. **app/[locale]/components/LanguageSwitcher.tsx**
+#### 4. **app/[lang]/components/LanguageSwitcher.tsx**
 Dropdown component for language selection in the header.
 
-#### 5. **i18n/messages/[locale].json**
+#### 5. **i18n/messages/[lang].json**
 Translation files for each language containing all UI text.
 
 ### Translation Keys Structure
@@ -98,9 +98,9 @@ export default async function MyPage() {
 
 To add a new language:
 
-1. Add the locale code to `i18n/request.ts`:
+1. Add the lang code to `i18n/request.ts`:
 ```typescript
-export const locales = [
+export const langs = [
   'en', 'sv', 'no', 'da', 'es', 'fr', 'de', 'zh', 'ru', 'lt', 'lv', 'ltg', 'sgs', 'pt',
   'fi' // Add Finnish
 ] as const;
@@ -178,7 +178,7 @@ Build the production version:
 npm run build
 ```
 
-The build generates static pages for all locale combinations automatically.
+The build generates static pages for all lang combinations automatically.
 
 ## Notes
 
