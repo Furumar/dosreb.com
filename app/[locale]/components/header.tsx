@@ -2,12 +2,12 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useTranslations, uselang } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
 import LanguageSwitcher from "./LanguageSwitcher";
 
 export default function Header() {
   const pathname = usePathname();
-  const lang = uselang();
+  const lang = useLocale();
   const t = useTranslations('nav');
 
   const isActive = (path: string) => {
