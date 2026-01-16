@@ -1,38 +1,31 @@
-import { getRequestConfig } from 'next-intl/server';
-import { notFound } from 'next/navigation';
-
-// Can be imported from a shared config
 export const langs = [
-  'en',
-  'sv', // Swedish
-  'fi', // Finnish
-  'no', // Norwegian
-  'da', // Danish
-  'es', // Spanish
-  'pt', // Portuguese
-  'fr', // French
-  'de', // German
-  'zh', // Chinese
-  'ru', // Russian
-  'lt', // Lithuanian
-  'lv', // Latvian
-  'ltg', // Latgalian
-  'sgs', // Samogitian
+  'en', // English
+  'sg'  // Singaporean
 ] as const;
 
-export type lang = (typeof langs)[number];
+export type Lang = (typeof langs)[number];
 
-export default getRequestConfig(async ({ requestlang }) => {
-  // Typically corresponds to the `[lang]` segment
-  let lang = await requestlang;
-  
-  // Validate that the incoming `lang` parameter is valid
-  if (!lang || !langs.includes(lang as lang)) {
+type getRequestConfigParams = {
+  lang?: string | Promise<string> | undefined;
+};
+
+export default getRequestConfig(async (params: getRequestConfigParams) => {
+  // Typically corresponds to the '[lang]' segment
+  let lang = await params.lang;
+
+  // Validate that the incoming 'lang' parameter is valid
+  if (!lang || !langs.includes(lang as Lang)) {
     lang = 'en'; // default fallback
   }
 
+  const messages = (await import(`./messages/${lang}.json`)).default;
+
   return {
     lang,
-    messages: (await import(`./messages/${lang}.json`)).default
+    messages
   };
 });
+function getRequestConfig(arg0: (params: getRequestConfigParams) => Promise<{ lang: string; messages: any; }>) {
+  throw new Error("Function not implemented.");
+}
+
