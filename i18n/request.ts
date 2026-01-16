@@ -1,27 +1,28 @@
 // i18n/request.ts
-// Ready-to-copy TypeScript module for locale config and message loading.
+// Kopioitavaksi: vie sekä 'langs' että 'locales' ja default-exportin getRequestConfig
 
-export const locales = ['en', 'sg'] as const;
-export type Locale = (typeof locales)[number];
+export const langs = ['en', 'sg'] as const;
+export const locales = langs; // alias, jotta molemmat import‑nimet toimivat
+export type Locale = (typeof langs)[number];
 
 type GetRequestConfigParams = {
   lang?: string | Promise<string> | undefined;
 };
 
 export default async function getRequestConfig(params: GetRequestConfigParams) {
-  // Resolve possible Promise<string> or undefined
+  // Resolvoi mahdollinen Promise<string>
   let lang = await params?.lang;
 
-  // Normalize and validate
+  // Normalisoi ja validoi
   if (typeof lang === 'string') {
     lang = lang.toLowerCase();
   }
 
-  if (!lang || !locales.includes(lang as Locale)) {
+  if (!lang || !langs.includes(lang as Locale)) {
     lang = 'en';
   }
 
-  // Load messages with graceful fallback
+  // Lataa kielitiedosto turvallisesti, fallback englantiin tai tyhjään objektiin
   let messages: Record<string, any> = {};
   try {
     messages = (await import(`./messages/${lang}.json`)).default;
