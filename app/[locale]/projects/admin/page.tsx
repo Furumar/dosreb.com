@@ -739,7 +739,9 @@ export default function AdminDashboard() {
                       justifyContent: 'space-between',
                       alignItems: 'start'
                     }}
-                  >
+                  >DesignGroupAssignment
+                      projectId={project.id}
+                      assignedGroups=DesignGroup ?? []
                     
                     <div style={{ flex: 1 }}>
                       <h4 style={{ color: '#ffd700', marginBottom: '0.5rem' }}>{project.title}</h4>
