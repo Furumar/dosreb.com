@@ -1,6 +1,7 @@
-{
-  "welcome": "Welcome",
-  "otherKey": "Other text",
+@@
+   "welcome": "Welcome",
+-  "otherKey": "Other text"
++  "otherKey": "Other text",
 
   "nav": {
     "home": "Home",
