@@ -10,8 +10,7 @@ export default function StockmannProject() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Fetch images from Supabase storage for Stockmann project
-    // Format: /api/files?project=stockmann&folder=photos
+
     fetch('/api/files?project=stockmann&folder=photos')
       .then(res => res.json())
       .then(data => {

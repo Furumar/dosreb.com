@@ -1,4 +1,3 @@
-// components/ClientIntlProvider.tsx (tai app/[locale]/components/ClientIntlProvider.tsx)
 "use client";
 
 import React from "react";

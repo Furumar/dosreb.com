@@ -1,4 +1,3 @@
-// app/contact/page.tsx
 "use client";
 
 import { getTranslations } from 'next-intl/server';
