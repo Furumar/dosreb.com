@@ -1,8 +1,7 @@
-// korvaa koko tiedosto: app/[locale]/layout.tsx
+// app/[locale]/layout.tsx
 import React from "react";
 import type { Metadata } from "next";
 import getRequestConfig, { locales } from "@/i18n/request";
-// korvaa mahdollinen "@/components/ClientIntlProvider" tai muu virheellinen import
 import ClientIntlProvider from "./components/ClientIntlProvider";
 
 export const metadata: Metadata = {
@@ -16,12 +15,16 @@ export function generateStaticParams() {
 
 type LocaleLayoutProps = {
   children: React.ReactNode;
-  params: { locale: string };
+  params?: { locale?: string };
 };
 
 export default async function LocaleLayout({ children, params }: LocaleLayoutProps) {
-  const { locale } = params;
-  const { messages } = await getRequestConfig({ lang: locale });
+  // Varmista, että locale on merkkijono; fallback 'en'
+  const locale = (params && params.locale) ? String(params.locale) : "en";
+
+  // Hae messages serverissä; getRequestConfig palauttaa { lang, messages }
+  const cfg = await getRequestConfig({ lang: locale });
+  const messages = cfg?.messages ?? {};
 
   return (
     <html lang={locale}>

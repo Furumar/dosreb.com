@@ -1,4 +1,7 @@
 {
+  "welcome": "Welcome",
+  "otherKey": "Other text",
+
   "nav": {
     "home": "Home",
     "about": "About",

@@ -1,4 +1,4 @@
-// uusi tiedosto: components/ClientIntlProvider.tsx
+// components/ClientIntlProvider.tsx (tai app/[locale]/components/ClientIntlProvider.tsx)
 "use client";
 
 import React from "react";
@@ -11,8 +11,9 @@ type Props = {
 };
 
 export default function ClientIntlProvider({ children, locale, messages }: Props) {
+  // Varmista, että locale on merkkijono ja messages on objekti
   return (
-    <NextIntlClientProvider locale={locale} messages={messages}>
+    <NextIntlClientProvider locale={String(locale)} messages={messages ?? {}}>
       {children}
     </NextIntlClientProvider>
   );
