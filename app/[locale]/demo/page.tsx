@@ -1,3 +1,5 @@
+"use client";
+
 // app/demo/page.tsx
 import { getTranslations } from 'next-intl/server';
 

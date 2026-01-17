@@ -1,4 +1,6 @@
 // app/contact/page.tsx
+"use client";
+
 import { getTranslations } from 'next-intl/server';
 
 export default async function ContactPage() {

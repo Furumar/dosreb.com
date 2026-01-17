@@ -740,10 +740,7 @@ export default function AdminDashboard() {
                       alignItems: 'start'
                     }}
                   >
-                    <DesignGroupAssignment
-                      projectId={project.id}
-                      assignedGroups={project.design_groups ?? []}
-                    />
+                    
                     <div style={{ flex: 1 }}>
                       <h4 style={{ color: '#ffd700', marginBottom: '0.5rem' }}>{project.title}</h4>
                       <p style={{ color: 'rgba(255, 251, 230, 0.8)', fontSize: '0.9rem', marginBottom: '0.5rem' }}>

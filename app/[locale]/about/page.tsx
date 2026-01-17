@@ -1,3 +1,5 @@
+"use client";
+
 // app/about/page.tsx
 import Image from "next/image";
 import { useTranslations } from 'next-intl';
